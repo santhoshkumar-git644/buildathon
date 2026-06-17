@@ -7,9 +7,12 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "seed": "node seed.js"
   },
   "dependencies": {
+    "dotenv": "^17.4.2",
+    "mongodb": "^7.3.0",
     "react": "^19.2.6",
     "react-dom": "^19.2.6"
   },
