@@ -1,0 +1,3132 @@
+[{"salonId": "SAL-001","name": "The Scissors Story","city": "Hyderabad","locality": "Gachibowli","rating": 4.6,"reviewCount": 420,"priceRange": "$$",
+"specialties": ["Wolf Cut", "Balayage", "Hair Spa"],
+"services": [
+{"service": "Wolf Cut", "price": 1200},
+{"service": "Balayage", "price": 5500},
+{"service": "Hair Spa", "price": 1800}
+],
+"experienceYears": 8,
+"genderPreference": "Unisex",
+"availableSlots": ["10:00 AM", "02:30 PM", "05:00 PM"],
+"reviews": [
+"Excellent staff and great balayage results.",
+"The wolf cut was perfectly executed, loved it!",
+"Very professional service and hygienic environment.",
+"A bit expensive but absolutely worth the price.",
+"Great experience, will definitely visit again.",
+"The hair spa was incredibly relaxing."
+],
+"portfolioStyles": ["wolf cut", "balayage", "curls"],
+"contact": "+91 98765 43210",
+"verified": true
+},
+{
+"salonId": "SAL-002",
+"name": "Vogue Touch Lounge",
+"city": "Bangalore",
+"locality": "Indiranagar",
+"rating": 4.8,
+"reviewCount": 1250,
+"priceRange": "$$$",
+"specialties": ["Korean Layer Cut", "Keratin Treatment", "Hair Coloring"],
+"services": [
+{"service": "Korean Layer Cut", "price": 1500},
+{"service": "Keratin Treatment", "price": 6000},
+{"service": "Hair Coloring", "price": 4500}
+],
+"experienceYears": 12,
+"genderPreference": "Unisex",
+"availableSlots": ["11:00 AM", "01:00 PM", "04:30 PM", "07:00 PM"],
+"reviews": [
+"Amazing Korean layer cut! Exactly what I wanted.",
+"The best keratin treatment in town.",
+"Staff is polite and very knowledgeable.",
+"Highly recommend their hair coloring services.",
+"Premium experience all around.",
+"Loved the service, booking ahead is a must."
+],
+"portfolioStyles": ["korean layer cut", "keratin shine", "global brown"],
+"contact": "+91 87654 32109",
+"verified": true
+},
+{
+"salonId": "SAL-003",
+"name": "Envy Unisex Salon",
+"city": "Mumbai",
+"locality": "Bandra West",
+"rating": 4.5,
+"reviewCount": 890,
+"priceRange": "$$$",
+"specialties": ["Balayage", "Bridal Makeup", "Hair Smoothening"],
+"services": [
+{"service": "Balayage", "price": 7000},
+{"service": "Bridal Makeup", "price": 25000},
+{"service": "Hair Smoothening", "price": 5000}
+],
+"experienceYears": 10,
+"genderPreference": "Unisex",
+"availableSlots": ["09:30 AM", "12:00 PM", "03:30 PM"],
+"reviews": [
+"They did an absolute miracle with my bridal makeup!",
+"Superb balayage highlights, seamlessly blended.",
+"Great staff, though waiting time was a bit high.",
+"The hair smoothening looks so natural and soft.",
+"Clean, luxury ambience and skilled professionals."
+],
+"portfolioStyles": ["caramel balayage", "bridal glam", "sleek straight"],
+"contact": "+91 76543 21098",
+"verified": true
+},
+{
+"salonId": "SAL-004",
+"name": "Ziva Luxury Salon",
+"city": "Chennai",
+"locality": "Adyar",
+"rating": 4.2,
+"reviewCount": 310,
+"priceRange": "$$","specialties": ["Hair Straightening", "Hair Spa", "Beard Styling"],"services": [{"service": "Hair Straightening", "price": 4000},{"service": "Hair Spa", "price": 1500},{"service": "Beard Styling", "price": 400}],"experienceYears": 6,"genderPreference": "Unisex","availableSlots": ["10:30 AM", "01:30 PM", "06:00 PM"],"reviews": ["Excellent beard grooming and styling options.","Hair straightening was effective and durable.","Nice ambience, friendly receptionist.","The hair spa massage was fantastic.","Affordable luxury prices."],"portfolioStyles": ["fade beard", "classic straight", "hydrated look"],"contact": "+91 65432 10987","verified": true},{"salonId": "SAL-005","name": "Urban Clippers","city": "Delhi","locality": "Connaught Place","rating": 3.9,"reviewCount": 180,"priceRange": "$$",
+"specialties": ["Beard Styling", "Wolf Cut", "Hair Coloring"],
+"services": [
+{"service": "Beard Styling", "price": 350},
+{"service": "Wolf Cut", "price": 950},
+{"service": "Hair Coloring", "price": 3500}
+],
+"experienceYears": 5,
+"genderPreference": "Men",
+"availableSlots": ["12:00 PM", "04:00 PM", "08:00 PM"],
+"reviews": [
+"Good place for men's grooming needs.",
+"Tried the wolf cut here, turned out decent.",
+"The pricing is reasonable for CP area.",
+"Beard shaping was clean and sharp.",
+"Staff could be a bit quicker with slots."
+],
+"portfolioStyles": ["sharp beard", "messy wolf cut", "ash blonde"],
+"contact": "+91 54321 09876",
+"verified": false
+},
+{
+"salonId": "SAL-006",
+"name": "Mane & Mode Studio",
+"city": "Pune",
+"locality": "Koregaon Park",
+"rating": 4.7,
+"reviewCount": 640,
+"priceRange": "$$$",
+"specialties": ["Korean Layer Cut", "Balayage", "Keratin Treatment"],
+"services": [
+{"service": "Korean Layer Cut", "price": 1600},
+{"service": "Balayage", "price": 6500},
+{"service": "Keratin Treatment", "price": 5500}
+],
+"experienceYears": 9,
+"genderPreference": "Unisex",
+"availableSlots": ["11:30 AM", "03:00 PM", "06:30 PM"],
+"reviews": [
+"Beautifully done Korean layer cut. Will return!",
+"The balayage looks incredible under sunlight.",
+"Top-tier customer service and great experts.",
+"Keratin treatment has made my hair so manageable.",
+"Highly recommended for premium hair makeovers."
+],
+"portfolioStyles": ["korean layers", "blonde balayage", "smooth silk"],
+"contact": "+91 93210 98765",
+"verified": true
+},
+{
+"salonId": "SAL-007",
+"name": "Glow & Glitter Lounge",
+"city": "Kolkata",
+"locality": "Salt Lake",
+"rating": 4.4,
+"reviewCount": 510,
+"priceRange": "$$","specialties": ["Bridal Makeup", "Hair Smoothening", "Hair Spa"],"services": [{"service": "Bridal Makeup", "price": 18000},{"service": "Hair Smoothening", "price": 4500},{"service": "Hair Spa", "price": 1200}],"experienceYears": 11,"genderPreference": "Women","availableSlots": ["10:00 AM", "01:00 PM", "04:00 PM"],"reviews": ["Perfect place for traditional bridal makeup.","My hair feels incredibly soft after the smoothening.","The spa session was deeply relaxing.","Punctual and helpful stylists.","Value for money services."],"portfolioStyles": ["bengali bridal", "straight sleek", "deep conditioning"],"contact": "+91 82109 87654","verified": true},{"salonId": "SAL-008","name": "Aura Hair Aesthetics","city": "Hyderabad","locality": "Jubilee Hills","rating": 4.9,"reviewCount": 2150,"priceRange": "$$$","specialties": ["Keratin Treatment", "Wolf Cut", "Hair Coloring"],"services": [{"service": "Keratin Treatment", "price": 7500},{"service": "Wolf Cut", "price": 1800},{"service": "Hair Coloring", "price": 6000}],"experienceYears": 15,"genderPreference": "Unisex","availableSlots": ["09:00 AM", "11:30 AM", "02:00 PM", "05:30 PM"],"reviews": ["The gold standard for hair care in Hyderabad.","Amazing execution of the trendy wolf cut.","Their global hair coloring technique is flawless.","A luxury experience right from the entrance.","Courteous staff and outstanding outcomes."],"portfolioStyles": ["premium wolf cut", "rich global tint", "silky gloss"],"contact": "+91 71098 76543","verified": true},{"salonId": "SAL-009","name": "Mirror Mirror Unisex","city": "Bangalore","locality": "Jayanagar","rating": 4.1,"reviewCount": 290,"priceRange": "$$",
+"specialties": ["Hair Straightening", "Beard Styling", "Hair Spa"],
+"services": [
+{"service": "Hair Straightening", "price": 3500},
+{"service": "Beard Styling", "price": 300},
+{"service": "Hair Spa", "price": 1100}
+],
+"experienceYears": 4,
+"genderPreference": "Unisex",
+"availableSlots": ["10:30 AM", "03:30 PM", "07:30 PM"],
+"reviews": [
+"Decent straightening job, lasts long.",
+"Prompt service and neat beard trimming.",
+"The hair spa package was cost-effective.",
+"Nice local salon with expert stylists.",
+"Clean tools used, highly hygienic."
+],
+"portfolioStyles": ["straight look", "trim beard", "nourishing spa"],
+"contact": "+91 61098 76542",
+"verified": false
+},
+{
+"salonId": "SAL-010",
+"name": "The Grooming Club",
+"city": "Mumbai",
+"locality": "Andheri West",
+"rating": 4.3,
+"reviewCount": 460,
+"priceRange": "$$","specialties": ["Beard Styling", "Hair Coloring", "Hair Smoothening"],"services": [{"service": "Beard Styling", "price": 450},{"service": "Hair Coloring", "price": 4000},{"service": "Hair Smoothening", "price": 4800}],"experienceYears": 7,"genderPreference": "Men","availableSlots": ["11:00 AM", "02:00 PM", "06:00 PM"],"reviews": ["Top choice for beard design and grooming.","Excellent hair tinting service.","Friendly atmosphere and nice music.","Smoothening did wonders for my unruly hair.","Reliable and professional staff."],"portfolioStyles": ["contour beard", "burgundy touch", "smooth textures"],"contact": "+91 91234 56789","verified": true},{"salonId": "SAL-011","name": "Style Mantra","city": "Chennai","locality": "T Nagar","rating": 4.0,"reviewCount": 140,"priceRange": "$",
+"specialties": ["Hair Spa", "Hair Straightening", "Bridal Makeup"],
+"services": [
+{"service": "Hair Spa", "price": 999},
+{"service": "Hair Straightening", "price": 3200},
+{"service": "Bridal Makeup", "price": 15000}
+],
+"experienceYears": 5,
+"genderPreference": "Women",
+"availableSlots": ["10:00 AM", "01:00 PM", "04:30 PM"],
+"reviews": [
+"Pocket-friendly prices and pleasant staff.",
+"The bridal makeup trial went perfectly.",
+"Satisfactory hair straightening treatment.",
+"The basic hair spa was good.",
+"Nice, cozy neighborhood salon."
+],
+"portfolioStyles": ["traditional look", "neat straight", "classic spa"],
+"contact": "+91 81234 56780",
+"verified": true
+},
+{
+"salonId": "SAL-012",
+"name": "Glitz & Glam Studio",
+"city": "Delhi",
+"locality": "South Extension",
+"rating": 4.7,
+"reviewCount": 1100,
+"priceRange": "$$$",
+"specialties": ["Korean Layer Cut", "Balayage", "Bridal Makeup"],
+"services": [
+{"service": "Korean Layer Cut", "price": 1800},
+{"service": "Balayage", "price": 7500},
+{"service": "Bridal Makeup", "price": 30000}
+],
+"experienceYears": 14,
+"genderPreference": "Unisex",
+"availableSlots": ["11:00 AM", "02:30 PM", "05:30 PM", "08:00 PM"],
+"reviews": [
+"They created a stunning Balayage effect on my long hair.",
+"Absolute masterclass in Korean styling cuts.",
+"High end premium setup, very elite vibe.",
+"Flawless and high-definition bridal look.",
+"The senior hair technician is incredibly talented."
+],
+"portfolioStyles": ["korean fringe", "sun-kissed balayage", "hd bridal"],
+"contact": "+91 71234 56781",
+"verified": true
+},
+{
+"salonId": "SAL-013",
+"name": "Enriching Looks",
+"city": "Pune",
+"locality": "Viman Nagar",
+"rating": 4.4,
+"reviewCount": 530,
+"priceRange": "$$",
+"specialties": ["Keratin Treatment", "Wolf Cut", "Hair Spa"],
+"services": [
+{"service": "Keratin Treatment", "price": 5000},
+{"service": "Wolf Cut", "price": 1100},
+{"service": "Hair Spa", "price": 1400}
+],
+"experienceYears": 8,
+"genderPreference": "Unisex",
+"availableSlots": ["10:00 AM", "01:30 PM", "05:00 PM"],
+"reviews": [
+"Love my new wolf cut, highly stylish!",
+"Keratin service left my frizzy hair silky smooth.",
+"Very prompt response and clean setups.",
+"Relaxing herbal hair spa experience.",
+"Good recommendations by the hair expert."
+],
+"portfolioStyles": ["edgy wolf", "keratin finish", "nourished hair"],
+"contact": "+91 61234 56782",
+"verified": true
+},
+{
+"salonId": "SAL-014",
+"name": "Renaissance Salon",
+"city": "Kolkata",
+"locality": "Park Street",
+"rating": 4.6,
+"reviewCount": 720,
+"priceRange": "$$$",
+"specialties": ["Hair Coloring", "Korean Layer Cut", "Hair Smoothening"],
+"services": [
+{"service": "Hair Coloring", "price": 5000},
+{"service": "Korean Layer Cut", "price": 1400},
+{"service": "Hair Smoothening", "price": 5500}
+],
+"experienceYears": 10,
+"genderPreference": "Unisex",
+"availableSlots": ["11:00 AM", "03:00 PM", "06:30 PM"],
+"reviews": [
+"Stunning global hair coloring option selected by the stylist.",
+"The Korean layer cut added immense volume.",
+"Beautiful ambience located in the heart of Park Street.",
+"Hair smoothening was done with utmost precision.",
+"Courteous staff, highly skilled professionals."
+],
+"portfolioStyles": ["copper global", "layered volume", "sleek finish"],
+"contact": "+91 99887 76655",
+"verified": true
+},
+{
+"salonId": "SAL-015",
+"name": "Urban Edge Unisex",
+"city": "Hyderabad",
+"locality": "Madhapur",
+"rating": 4.3,
+"reviewCount": 380,
+"priceRange": "$$",
+"specialties": ["Beard Styling", "Wolf Cut", "Hair Spa"],
+"services": [
+{"service": "Beard Styling", "price": 350},
+{"service": "Wolf Cut", "price": 1000},
+{"service": "Hair Spa", "price": 1600}
+],
+"experienceYears": 6,
+"genderPreference": "Unisex",
+"availableSlots": ["10:30 AM", "02:00 PM", "05:00 PM"],
+"reviews": [
+"Best place for a precise fade beard grooming.",
+"Trendy wolf cuts delivered at reasonable rates.",
+"The deep conditioning spa is amazing.",
+"Friendly professionals who guide you well.",
+"A quick and satisfying salon experience."
+],
+"portfolioStyles": ["fade beard cut", "shaggy wolf", "spa shine"],
+"contact": "+91 88877 66554",
+"verified": true
+},
+{
+"salonId": "SAL-016",
+"name": "Bounce & Shine",
+"city": "Bangalore",
+"locality": "Koramangala",
+"rating": 4.5,
+"reviewCount": 940,
+"priceRange": "$$",
+"specialties": ["Balayage", "Keratin Treatment", "Hair Straightening"],
+"services": [
+{"service": "Balayage", "price": 6000},
+{"service": "Keratin Treatment", "price": 5200},
+{"service": "Hair Straightening", "price": 4200}
+],
+"experienceYears": 9,
+"genderPreference": "Unisex",
+"availableSlots": ["11:30 AM", "03:30 PM", "07:00 PM"],
+"reviews": [
+"Extremely happy with my caramel balayage.",
+"The keratin treatment worked flawlessly.",
+"Courteous staff and hygienic process.",
+"Straightening service has good durability.",
+"Nice modern lounge ambiance."
+],
+"portfolioStyles": ["caramel glow", "keratin straight", "silk flow"],
+"contact": "+91 77766 55443",
+"verified": true
+},
+{
+"salonId": "SAL-017",
+"name": "Crimson Cuts",
+"city": "Mumbai",
+"locality": "Juhu",
+"rating": 4.7,
+"reviewCount": 1340,
+"priceRange": "$$$",
+"specialties": ["Bridal Makeup", "Korean Layer Cut", "Hair Coloring"],
+"services": [
+{"service": "Bridal Makeup", "price": 28000},
+{"service": "Korean Layer Cut", "price": 1700},
+{"service": "Hair Coloring", "price": 5500}
+],
+"experienceYears": 13,
+"genderPreference": "Women",
+"availableSlots": ["09:00 AM", "01:00 PM", "04:30 PM", "07:30 PM"],
+"reviews": [
+"Stunning airbrush bridal makeup done here.",
+"Masterful execution of the Korean layered style.",
+"Love their choice of premium hair color tones.",
+"Splendid salon, celebrity-grade feeling.",
+"Experienced experts who don't rush the work."
+],
+"portfolioStyles": ["airbrush bridal", "voluminous layers", "vibrant streaks"],
+"contact": "+91 66655 44332",
+"verified": true
+},
+{
+"salonId": "SAL-018",
+"name": "Roots & Wings",
+"city": "Chennai",
+"locality": "Velachery",
+"rating": 4.1,
+"reviewCount": 210,
+"priceRange": "$$",
+"specialties": ["Hair Smoothening", "Hair Spa", "Beard Styling"],
+"services": [
+{"service": "Hair Smoothening", "price": 4200},
+{"service": "Hair Spa", "price": 1300},
+{"service": "Beard Styling", "price": 380}
+],
+"experienceYears": 5,
+"genderPreference": "Unisex",
+"availableSlots": ["10:00 AM", "02:30 PM", "06:00 PM"],
+"reviews": [
+"Very neat smoothening hair texture achieved.",
+"Refreshing hair spa routine, loved the head rub.",
+"Decent and clean sharp beard grooming.",
+"Value for money packages available.",
+"Cooperative staff."
+],
+"portfolioStyles": ["soft smoothening", "refresh spa", "boxed beard"],
+"contact": "+91 95544 33221",
+"verified": false
+},
+{
+"salonId": "SAL-019",
+"name": "Scissors Edge",
+"city": "Delhi",
+"locality": "Rajouri Garden",
+"rating": 4.4,
+"reviewCount": 490,
+"priceRange": "$$",
+"specialties": ["Wolf Cut", "Hair Coloring", "Keratin Treatment"],
+"services": [
+{"service": "Wolf Cut", "price": 1100},
+{"service": "Hair Coloring", "price": 4200},
+{"service": "Keratin Treatment", "price": 4900}
+],
+"experienceYears": 7,
+"genderPreference": "Unisex",
+"availableSlots": ["11:00 AM", "03:00 PM", "07:00 PM"],
+"reviews": [
+"They deliver amazing edgy wolf cuts.",
+"Love the balayage highlights blend.",
+"Great hair salon options in West Delhi.",
+"Keratin smoothing made my texture pristine.",
+"Courteous crew and swift service."
+],
+"portfolioStyles": ["textured wolf", "blonde lights", "keratin gloss"],
+"contact": "+91 85543 22110",
+"verified": true
+},
+{
+"salonId": "SAL-020",
+"name": "Prism Hair Concept",
+"city": "Pune",
+"locality": "Baner",
+"rating": 4.6,
+"reviewCount": 580,
+"priceRange": "$$",
+"specialties": ["Korean Layer Cut", "Balayage", "Hair Spa"],
+"services": [
+{"service": "Korean Layer Cut", "price": 1350},
+{"service": "Balayage", "price": 5800},
+{"service": "Hair Spa", "price": 1500}
+],
+"experienceYears": 8,
+"genderPreference": "Unisex",
+"availableSlots": ["10:30 AM", "02:00 PM", "05:30 PM"],
+"reviews": [
+"Fabulous experience with the Korean cut.",
+"The ash brown balayage looks phenomenal.",
+"Great attention to cleanliness and sanitize routines.",
+"Superb scalp massage during the hair spa.",
+"Extremely creative hair technicians."
+],
+"portfolioStyles": ["korean flow", "ash brown balayage", "moisturized mane"],
+"contact": "+91 75532 11009",
+"verified": true
+},
+{
+"salonId": "SAL-021",
+"name": "The Crown Royale",
+"city": "Kolkata",
+"locality": "Ballygunge",
+"rating": 4.8,
+"reviewCount": 1620,
+"priceRange": "$$$",
+"specialties": ["Bridal Makeup", "Keratin Treatment", "Hair Straightening"],
+"services": [
+{"service": "Bridal Makeup", "price": 35000},
+{"service": "Keratin Treatment", "price": 6500},
+{"service": "Hair Straightening", "price": 5000}
+],
+"experienceYears": 16,
+"genderPreference": "Women",
+"availableSlots": ["09:30 AM", "01:30 PM", "04:30 PM", "07:30 PM"],
+"reviews": [
+"Outstanding bridal luxury contouring and makeup.",
+"My go-to place for high quality keratin hair.",
+"Perfect poker straight hair styling.",
+"Highly premium treatment with expert stylists.",
+"Flawless results every single time."
+],
+"portfolioStyles": ["royal bridal", "keratin smooth", "poker straight"],
+"contact": "+91 96432 18765",
+"verified": true
+},
+{
+"salonId": "SAL-022",
+"name": "Chop Chop Unisex",
+"city": "Hyderabad",
+"locality": "Kondapur",
+"rating": 4.0,
+"reviewCount": 240,
+"priceRange": "$","specialties": ["Beard Styling", "Hair Spa", "Hair Straightening"],"services": [{"service": "Beard Styling", "price": 280},{"service": "Hair Spa", "price": 1000},{"service": "Hair Straightening", "price": 3500}],"experienceYears": 4,"genderPreference": "Unisex","availableSlots": ["10:00 AM", "03:00 PM", "06:30 PM"],"reviews": ["Affordable hair spa options with great service.","Decent trim and beard fade work.","Straightening was done carefully.","Nice salon for quick regular styling.","Staff is respectful and polite."],"portfolioStyles": ["trimmed beard", "classic spa", "straight sleek"],"contact": "+91 86432 18764","verified": true},{"salonId": "SAL-023","name": "Trendz Studio","city": "Bangalore","locality": "HSR Layout","rating": 4.4,"reviewCount": 780,"priceRange": "$$",
+"specialties": ["Wolf Cut", "Hair Coloring", "Hair Smoothening"],
+"services": [
+{"service": "Wolf Cut", "price": 1200},
+{"service": "Hair Coloring", "price": 4500},
+{"service": "Hair Smoothening", "price": 4800}
+],
+"experienceYears": 7,
+"genderPreference": "Unisex",
+"availableSlots": ["11:00 AM", "02:30 PM", "06:00 PM"],
+"reviews": [
+"Perfect wolf cut structure given to my hair.",
+"Fabulous mahogany global tint achieved.",
+"Smoothening treatment has left it gorgeous.",
+"Good salon environment and expert tips.",
+"Quick service and easy booking."
+],
+"portfolioStyles": ["shag wolf", "mahogany tint", "smooth strands"],
+"contact": "+91 76432 18763",
+"verified": true
+},
+{
+"salonId": "SAL-024",
+"name": "The Tress Room",
+"city": "Mumbai",
+"locality": "Colaba",
+"rating": 4.7,
+"reviewCount": 1050,
+"priceRange": "$$$",
+"specialties": ["Korean Layer Cut", "Balayage", "Keratin Treatment"],
+"services": [
+{"service": "Korean Layer Cut", "price": 1800},
+{"service": "Balayage", "price": 7200},
+{"service": "Keratin Treatment", "price": 6200}
+],
+"experienceYears": 11,
+"genderPreference": "Unisex",
+"availableSlots": ["10:30 AM", "01:30 PM", "04:30 PM", "07:30 PM"],
+"reviews": [
+"Exceptional Korean style styling hair cuts.",
+"Beautifully painted honey gold balayage.",
+"Elite ambience and warm hospitality.",
+"Keratin hair therapy worked wonders.",
+"Highly professional crew members."
+],
+"portfolioStyles": ["korean layers", "honey gold balayage", "keratin glow"],
+"contact": "+91 66432 18762",
+"verified": true
+},
+{
+"salonId": "SAL-025",
+"name": "Mane Craft",
+"city": "Chennai",
+"locality": "Nungambakkam",
+"rating": 4.3,
+"reviewCount": 410,
+"priceRange": "$$","specialties": ["Hair Smoothening", "Hair Spa", "Beard Styling"],"services": [{"service": "Hair Smoothening", "price": 4600},{"service": "Hair Spa", "price": 1400},{"service": "Beard Styling", "price": 400}],"experienceYears": 6,"genderPreference": "Unisex","availableSlots": ["11:00 AM", "03:30 PM", "07:00 PM"],"reviews": ["Very neat smoothening process done patiently.","The deep moisturising spa was magnificent.","Great detailing on the mustache and beard.","Clean interior setup and fast checks.","Satisfied with the overall behavior of staff."],"portfolioStyles": ["smoothened locks", "nourish therapy", "stubble design"],"contact": "+91 97321 65498","verified": true},{"salonId": "SAL-026","name": "Glance Luxury Salon","city": "Delhi","locality": "Greater Kailash","rating": 4.6,"reviewCount": 980,"priceRange": "$$$","specialties": ["Bridal Makeup", "Wolf Cut", "Hair Coloring"],"services": [{"service": "Bridal Makeup", "price": 27000},{"service": "Wolf Cut", "price": 1500},{"service": "Hair Coloring", "price": 5200}],"experienceYears": 12,"genderPreference": "Women","availableSlots": ["10:00 AM", "01:00 PM", "04:00 PM", "07:00 PM"],"reviews": ["Amazing bridal styling work by the senior artist.","Got an edgy layered wolf cut, totally in love.","Rich deep hair tones executed brilliantly.","High level hospitality and expert assistance.","Clean environment, following premium standards."],"portfolioStyles": ["glam bride", "wild wolf cut", "burgundy global"],"contact": "+91 87321 65497","verified": true},{"salonId": "SAL-027","name": "Mirror Magic","city": "Pune","locality": "Kothrud","rating": 4.2,"reviewCount": 330,"priceRange": "$$",
+"specialties": ["Korean Layer Cut", "Keratin Treatment", "Hair Spa"],
+"services": [
+{"service": "Korean Layer Cut", "price": 1100},
+{"service": "Keratin Treatment", "price": 4800},
+{"service": "Hair Spa", "price": 1200}
+],
+"experienceYears": 6,
+"genderPreference": "Unisex",
+"availableSlots": ["10:30 AM", "02:30 PM", "06:00 PM"],
+"reviews": [
+"Nice Korean layered style given to my hair.",
+"Keratin hair treatment helped reduce texture frizz.",
+"Relaxing spa options at decent pricing.",
+"Very friendly local studio environment.",
+"Prompt execution of predefined slots."
+],
+"portfolioStyles": ["korean vibe", "frizz free hair", "spa shine"],
+"contact": "+91 77321 65496",
+"verified": false
+},
+{
+"salonId": "SAL-028",
+"name": "Urban Fringe",
+"city": "Kolkata",
+"locality": "Gariahat",
+"rating": 4.5,
+"reviewCount": 610,
+"priceRange": "$$","specialties": ["Balayage", "Hair Straightening", "Beard Styling"],"services": [{"service": "Balayage", "price": 5500},{"service": "Hair Straightening", "price": 4000},{"service": "Beard Styling", "price": 350}],"experienceYears": 8,"genderPreference": "Unisex","availableSlots": ["11:00 AM", "03:00 PM", "06:30 PM"],"reviews": ["Stunning chocolate balayage look accomplished.","Straightening execution was professional and neat.","Beard shaping style was accurate and sharp.","Helpful tips shared for daily maintenance.","Good salon choice in South Kolkata."],"portfolioStyles": ["chocolate balayage", "sleek long", "beard fade"],"contact": "+91 67321 65495","verified": true},{"salonId": "SAL-029","name": "The Hair Lab","city": "Hyderabad","locality": "Banjara Hills","rating": 4.8,"reviewCount": 1850,"priceRange": "$$$","specialties": ["Keratin Treatment", "Balayage", "Korean Layer Cut"],"services": [{"service": "Keratin Treatment", "price": 7000},{"service": "Balayage", "price": 6800},{"service": "Korean Layer Cut", "price": 1600}],"experienceYears": 13,"genderPreference": "Unisex","availableSlots": ["09:00 AM", "12:00 PM", "03:00 PM", "06:00 PM"],"reviews": ["Elite keratin work, totally transformed my split ends.","Superb hand-painted balayage details.","Loved the authentic Korean aesthetic haircut.","Staff treats you with unmatched care.","Luxury layout and comforting beverages provided."],"portfolioStyles": ["sleek keratin", "premium balayage", "korean fringe"],"contact": "+91 91122 33445","verified": true},{"salonId": "SAL-030","name": "Vogue Vision Salon","city": "Bangalore","locality": "Whitefield","rating": 4.4,"reviewCount": 820,"priceRange": "$$",
+"specialties": ["Wolf Cut", "Bridal Makeup", "Hair Spa"],
+"services": [
+{"service": "Wolf Cut", "price": 1300},
+{"service": "Bridal Makeup", "price": 22000},
+{"service": "Hair Spa", "price": 1600}
+],
+"experienceYears": 7,
+"genderPreference": "Unisex",
+"availableSlots": ["10:30 AM", "01:30 PM", "05:00 PM"],
+"reviews": [
+"Modern wolf cut variant done exactly to prompt.",
+"Highly impressive bridal makeup detailing.",
+"The hair spa head wash was very relaxing.",
+"Well-maintained salon area with proper sanitizers.",
+"Punctual and professional technicians."
+],
+"portfolioStyles": ["wolf texture", "bridal glow", "deep hydration"],
+"contact": "+91 81122 33445",
+"verified": true
+},
+{
+"salonId": "SAL-031",
+"name": "剪 (Jian) Hair Studio",
+"city": "Mumbai",
+"locality": "Powai",
+"rating": 4.6,
+"reviewCount": 710,
+"priceRange": "$$$",
+"specialties": ["Korean Layer Cut", "Hair Coloring", "Hair Smoothening"],
+"services": [
+{"service": "Korean Layer Cut", "price": 1650},
+{"service": "Hair Coloring", "price": 5000},
+{"service": "Hair Smoothening", "price": 5200}
+],
+"experienceYears": 9,
+"genderPreference": "Unisex",
+"availableSlots": ["11:00 AM", "02:30 PM", "06:00 PM"],
+"reviews": [
+"The best place for actual East Asian style layer cuts.",
+"Beautiful ash blonde hair color highlights.",
+"Smooth results on my frizzy curly textures.",
+"Comfortable luxury space and great vibe.",
+"Very precise detailing by the core team."
+],
+"portfolioStyles": ["korean chop", "ash highlights", "silky hair"],
+"contact": "+91 71122 33445",
+"verified": true
+},
+{
+"salonId": "SAL-032",
+"name": "Enchanted Waves",
+"city": "Chennai",
+"locality": "OMR Sholinganallur",
+"rating": 3.8,
+"reviewCount": 160,
+"priceRange": "$$","specialties": ["Hair Straightening", "Hair Spa", "Beard Styling"],"services": [{"service": "Hair Straightening", "price": 3800},{"service": "Hair Spa", "price": 1100},{"service": "Beard Styling", "price": 300}],"experienceYears": 4,"genderPreference": "Unisex","availableSlots": ["10:00 AM", "02:00 PM", "05:30 PM"],"reviews": ["Decent straighten job, fits the pricing matrix.","The hair spa was soothing after a long work week.","Regular beard grooming option, pretty safe.","Staff could improve on slot management delays.","Satisfied with basic hygiene criteria."],"portfolioStyles": ["straight look", "soothing spa", "line beard"],"contact": "+91 61122 33445","verified": false},{"salonId": "SAL-033","name": "The Royal Touch","city": "Delhi","locality": "Karol Bagh","rating": 4.3,"reviewCount": 540,"priceRange": "$$",
+"specialties": ["Bridal Makeup", "Hair Smoothening", "Beard Styling"],
+"services": [
+{"service": "Bridal Makeup", "price": 20000},
+{"service": "Hair Smoothening", "price": 4500},
+{"service": "Beard Styling", "price": 400}
+],
+"experienceYears": 10,
+"genderPreference": "Unisex",
+"availableSlots": ["11:30 AM", "03:30 PM", "07:00 PM"],
+"reviews": [
+"Traditional bridal makeup here is spot on.",
+"Good smoothening effect on thick rough hair.",
+"Beard alignment done carefully.",
+"Experienced staff who understand Indian hair types.",
+"Busy salon, suggest early reservations."
+],
+"portfolioStyles": ["traditional bridal", "smooth hair texture", "groomed beard"],
+"contact": "+91 92233 44556",
+"verified": true
+},
+{
+"salonId": "SAL-034",
+"name": "Elegance Hair Lounge",
+"city": "Pune",
+"locality": "Hinjewadi",
+"rating": 4.1,
+"reviewCount": 420,
+"priceRange": "$$","specialties": ["Wolf Cut", "Keratin Treatment", "Hair Spa"],"services": [{"service": "Wolf Cut", "price": 1000},{"service": "Keratin Treatment", "price": 4600},{"service": "Hair Spa", "price": 1300}],"experienceYears": 5,"genderPreference": "Unisex","availableSlots": ["10:00 AM", "01:00 PM", "04:30 PM"],"reviews": ["Tried the wolf cut, turned out nice and messy.","Keratin hair treatment done very systematically.","Relaxing hair wash and intense head spa massage.","Perfect weekend grooming spot for IT folks.","Fair pricing metrics."],"portfolioStyles": ["messy wolf", "keratin lock", "spa glow"],"contact": "+91 82233 44556","verified": true},{"salonId": "SAL-035","name": "Nirvana Hair Studio","city": "Kolkata","locality": "New Town","rating": 4.6,"reviewCount": 680,"priceRange": "$$",
+"specialties": ["Korean Layer Cut", "Balayage", "Hair Coloring"],
+"services": [
+{"service": "Korean Layer Cut", "price": 1400},
+{"service": "Balayage", "price": 6000},
+{"service": "Hair Coloring", "price": 4800}
+],
+"experienceYears": 8,
+"genderPreference": "Unisex",
+"availableSlots": ["11:00 AM", "02:00 PM", "05:00 PM", "08:00 PM"],
+"reviews": [
+"Stunning Korean layers done with modern accuracy.",
+"Love the caramel tint on the balayage.",
+"Wonderful global color finish achieved.",
+"Great team and welcoming atmosphere.",
+"Cleanliness standards are highly precise."
+],
+"portfolioStyles": ["korean volume", "caramel balayage", "global glow"],
+"contact": "+91 72233 44556",
+"verified": true
+},
+{
+"salonId": "SAL-036",
+"name": "Mane Street Unisex",
+"city": "Hyderabad",
+"locality": "Begumpet",
+"rating": 4.2,
+"reviewCount": 310,
+"priceRange": "$$","specialties": ["Hair Straightening", "Hair Spa", "Beard Styling"],"services": [{"service": "Hair Straightening", "price": 3800},{"service": "Hair Spa", "price": 1200},{"service": "Beard Styling", "price": 350}],"experienceYears": 6,"genderPreference": "Unisex","availableSlots": ["10:30 AM", "03:00 PM", "06:30 PM"],"reviews": ["Decent and uniform hair straightening work.","Refreshing massage during the hair spa session.","Beard mustache grooming was clean.","Polite staff who handle clients very patiently.","Good standard salon experience."],"portfolioStyles": ["poker straight look", "refresh spa", "trimmed beard"],"contact": "+91 62233 44556","verified": true},{"salonId": "SAL-037","name": "The Hair Symphony","city": "Bangalore","locality": "Malleswaram","rating": 4.5,"reviewCount": 590,"priceRange": "$$",
+"specialties": ["Wolf Cut", "Balayage", "Keratin Treatment"],
+"services": [
+{"service": "Wolf Cut", "price": 1250},
+{"service": "Balayage", "price": 6200},
+{"service": "Keratin Treatment", "price": 5400}
+],
+"experienceYears": 9,
+"genderPreference": "Unisex",
+"availableSlots": ["10:00 AM", "01:30 PM", "05:00 PM"],
+"reviews": [
+"The wolf cut looks edgy and frames my face beautifully.",
+"Fabulous balayage highlights blend, look super rich.",
+"Keratin hair therapy made managing curls a breeze.",
+"Professional touch and sterilized modern equipment.",
+"Definitely my new permanent hair destination."
+],
+"portfolioStyles": ["shaggy wolf cuts", "golden balayage", "keratin straight"],
+"contact": "+91 93344 55667",
+"verified": true
+},
+{
+"salonId": "SAL-038",
+"name": "Crown and Comb",
+"city": "Mumbai",
+"locality": "Khar West",
+"rating": 4.8,
+"reviewCount": 1410,
+"priceRange": "$$$",
+"specialties": ["Korean Layer Cut", "Bridal Makeup", "Hair Coloring"],
+"services": [
+{"service": "Korean Layer Cut", "price": 1800},
+{"service": "Bridal Makeup", "price": 32000},
+{"service": "Hair Coloring", "price": 5800}
+],
+"experienceYears": 14,
+"genderPreference": "Unisex",
+"availableSlots": ["11:00 AM", "02:30 PM", "05:30 PM", "08:00 PM"],
+"reviews": [
+"Incredible Korean frame cuts, done by top experts.",
+"Breathtaking celebrity style bridal look provided.",
+"Gorgeous shade of copper global tone achieved.",
+"Highly premium ambiance and excellent snacks.",
+"Highly skilled hair master professionals."
+],
+"portfolioStyles": ["korean layers", "luxury bride", "copper hair glow"],
+"contact": "+91 83344 55667",
+"verified": true
+},
+{
+"salonId": "SAL-039",
+"name": "Sassy Styles",
+"city": "Chennai",
+"locality": "Mylapore",
+"rating": 4.0,
+"reviewCount": 220,
+"priceRange": "$$","specialties": ["Hair Smoothening", "Hair Spa", "Beard Styling"],"services": [{"service": "Hair Smoothening", "price": 4300},{"service": "Hair Spa", "price": 1250},{"service": "Beard Styling", "price": 320}],"experienceYears": 5,"genderPreference": "Unisex","availableSlots": ["10:00 AM", "01:00 PM", "04:30 PM"],"reviews": ["Smoothening process was detailed and well done.","The spa treatment left hair soft and smelling wonderful.","Nice stubble line shaping work.","Cooperative staff, nice local traditional layout.","Decent cost structure."],"portfolioStyles": ["smooth hair look", "spa soft hair", "line beard"],"contact": "+91 73344 55667","verified": false},{"salonId": "SAL-040","name": "The Glam Room","city": "Delhi","locality": "Pari Chowk Greater Noida","rating": 4.4,"reviewCount": 360,"priceRange": "$$",
+"specialties": ["Wolf Cut", "Hair Coloring", "Keratin Treatment"],
+"services": [
+{"service": "Wolf Cut", "price": 1150},
+{"service": "Hair Coloring", "price": 4400},
+{"service": "Keratin Treatment", "price": 5000}
+],
+"experienceYears": 7,
+"genderPreference": "Unisex",
+"availableSlots": ["11:00 AM", "03:00 PM", "06:30 PM"],
+"reviews": [
+"Excellent multi-layered wolf cut done beautifully.",
+"Vibrant global brown coloring with soft specs.",
+"Keratin smoothing made hair fully soft.",
+"Friendly team, fast booking online process.",
+"Neat setup and professional touch."
+],
+"portfolioStyles": ["layered wolf", "global brown", "keratin silky"],
+"contact": "+91 63344 55667",
+"verified": true
+},
+{
+"salonId": "SAL-041",
+"name": "Stylissimo Lounge",
+"city": "Pune",
+"locality": "Magarpatta",
+"rating": 4.3,
+"reviewCount": 490,
+"priceRange": "$$","specialties": ["Korean Layer Cut", "Balayage", "Hair Spa"],"services": [{"service": "Korean Layer Cut", "price": 1400},{"service": "Balayage", "price": 6000},{"service": "Hair Spa", "price": 1350}],"experienceYears": 6,"genderPreference": "Unisex","availableSlots": ["10:30 AM", "02:00 PM", "05:30 PM"],"reviews": ["Loved the Korean style layers, added bounce.","Beautiful ash brown painted balayage highlights.","Relaxing hair deep conditioning routine.","Punctual staff, no unwanted waiting delays.","Highly clean tools and comfortable seating."],"portfolioStyles": ["bouncy layers", "ash brown balayage", "conditioned mane"],"contact": "+91 94455 66778","verified": true},{"salonId": "SAL-042","name": "Radiant Aura","city": "Kolkata","locality": "Alipore","rating": 4.7,"reviewCount": 830,"priceRange": "$$$","specialties": ["Bridal Makeup", "Keratin Treatment", "Hair Smoothening"],"services": [{"service": "Bridal Makeup", "price": 28000},{"service": "Keratin Treatment", "price": 6000},{"service": "Hair Smoothening", "price": 5300}],"experienceYears": 11,"genderPreference": "Women","availableSlots": ["09:30 AM", "01:00 PM", "04:00 PM", "07:00 PM"],"reviews": ["Stunning royal bridal look made for my big day.","Superb keratin treatment quality, long lasting results.","Hair smoothening was done with expert care.","High level luxury ambiance in South Kolkata.","Professional and extremely sweet staff."],"portfolioStyles": ["royal gold bride", "keratin gloss", "smooth long strands"],"contact": "+91 84455 66778","verified": true},{"salonId": "SAL-043","name": "Urban Locks Co.","city": "Hyderabad","locality": "Kukatpally","rating": 4.1,"reviewCount": 270,"priceRange": "$$",
+"specialties": ["Beard Styling", "Hair Spa", "Hair Straightening"],
+"services": [
+{"service": "Beard Styling", "price": 300},
+{"service": "Hair Spa", "price": 1100},
+{"service": "Hair Straightening", "price": 3600}
+],
+"experienceYears": 5,
+"genderPreference": "Unisex",
+"availableSlots": ["10:00 AM", "02:30 PM", "06:00 PM"],
+"reviews": [
+"Clean sharp beard trimming done here.",
+"The hair spa head rub was very soothing.",
+"Straightening treatment looks neat and sleek.",
+"Good neighborhood option with professional staff.",
+"Decent price structure for budget styling."
+],
+"portfolioStyles": ["sharp trim", "spa shine hair", "straight finish"],
+"contact": "+91 74455 66778",
+"verified": true
+},
+{
+"salonId": "SAL-044",
+"name": "Capello Luxury Salon",
+"city": "Bangalore",
+"locality": "Jp Nagar",
+"rating": 4.6,
+"reviewCount": 1120,
+"priceRange": "$$$",
+"specialties": ["Wolf Cut", "Balayage", "Keratin Treatment"],
+"services": [
+{"service": "Wolf Cut", "price": 1400},
+{"service": "Balayage", "price": 6600},
+{"service": "Keratin Treatment", "price": 5800}
+],
+"experienceYears": 10,
+"genderPreference": "Unisex",
+"availableSlots": ["11:00 AM", "03:00 PM", "06:00 PM", "08:30 PM"],
+"reviews": [
+"The wolf cut style gave me a fantastic bold vibe.",
+"Perfect sun-kissed blonde balayage highlight work.",
+"Keratin care made my hair texture fully elite.",
+"Beautiful luxury theme and polite salon members.",
+"Highly recommend the principal stylist."
+],
+"portfolioStyles": ["bold wolf style", "sun-kissed blonde", "premium keratin straight"],
+"contact": "+91 64455 66778",
+"verified": true
+},
+{
+"salonId": "SAL-045",
+"name": "The Mirror Image",
+"city": "Mumbai",
+"locality": "Goregaon East",
+"rating": 4.3,
+"reviewCount": 430,
+"priceRange": "$$","specialties": ["Korean Layer Cut", "Hair Coloring", "Hair Smoothening"],"services": [{"service": "Korean Layer Cut", "price": 1450},{"service": "Hair Coloring", "price": 4600},{"service": "Hair Smoothening", "price": 4900}],"experienceYears": 7,"genderPreference": "Unisex","availableSlots": ["10:30 AM", "01:30 PM", "05:00 PM"],"reviews": ["Got the trending Korean layers, looks very clean.","Global hair color depth came out beautifully.","Hair smoothening completely tamed down frizz.","Friendly team members and speedy bookings.","Nice ambiance and very clean tools."],"portfolioStyles": ["korean clear cuts", "deep global tone", "frizz-free silk"],"contact": "+91 95566 77889","verified": true},{"salonId": "SAL-046","name": "Bella Donna Lounge","city": "Chennai","locality": "Anna Nagar","rating": 4.5,"reviewCount": 740,"priceRange": "$$",
+"specialties": ["Bridal Makeup", "Hair Smoothening", "Hair Spa"],
+"services": [
+{"service": "Bridal Makeup", "price": 24000},
+{"service": "Hair Smoothening", "price": 4800},
+{"service": "Hair Spa", "price": 1400}
+],
+"experienceYears": 9,
+"genderPreference": "Women",
+"availableSlots": ["10:00 AM", "02:00 PM", "05:30 PM"],
+"reviews": [
+"The bridal look was customized elegantly to my saree.",
+"Smoothening texture feels highly premium and shiny.",
+"The hair spa was deep conditioning and highly soothing.",
+"Well-known place in Anna Nagar for weddings.",
+"Professional crew and neat processes."
+],
+"portfolioStyles": ["saree bride glow", "sleek smooth hair", "spa bounce"],
+"contact": "+91 85566 77889",
+"verified": true
+},
+{
+"salonId": "SAL-047",
+"name": "Cut & Color Studio",
+"city": "Delhi",
+"locality": "Dwarka Sector 10",
+"rating": 3.9,
+"reviewCount": 190,
+"priceRange": "$$","specialties": ["Beard Styling", "Wolf Cut", "Hair Coloring"],"services": [{"service": "Beard Styling", "price": 320},{"service": "Wolf Cut", "price": 1050},{"service": "Hair Coloring", "price": 3800}],"experienceYears": 4,"genderPreference": "Unisex","availableSlots": ["11:30 AM", "03:30 PM", "07:00 PM"],"reviews": ["Decent look for normal regular haircuts.","Tried the wolf cut shape, fits nicely.","The beard trimming line styling is clear.","Affordable hair coloring alternative in Dwarka.","Polite guys at the work floor."],"portfolioStyles": ["regular beard outline", "wolf chop", "brown coloring"],"contact": "+91 75566 77889","verified": false},{"salonId": "SAL-048","name": "Enzo Hair Concept","city": "Pune","locality": "Pimple Saudagar","rating": 4.4,"reviewCount": 510,"priceRange": "$$",
+"specialties": ["Korean Layer Cut", "Keratin Treatment", "Hair Spa"],
+"services": [
+{"service": "Korean Layer Cut", "price": 1300},
+{"service": "Keratin Treatment", "price": 5200},
+{"service": "Hair Spa", "price": 1250}
+],
+"experienceYears": 8,
+"genderPreference": "Unisex",
+"availableSlots": ["10:00 AM", "01:00 PM", "04:30 PM"],
+"reviews": [
+"Loved the airy layers given in Korean cut format.",
+"Keratin hair treatment outcome is long lasting.",
+"Deep moisture hair spa cured my scalp dryness.",
+"Very neat salon layout with warm vibes.",
+"Skilled set of professionals."
+],
+"portfolioStyles": ["airy layers", "keratin straight silk", "scalp spa care"],
+"contact": "+91 65566 77889",
+"verified": true
+},
+{
+"salonId": "SAL-049",
+"name": "Glitz N Gloss Studio",
+"city": "Kolkata",
+"locality": "Salt Lake Sector 5",
+"rating": 4.3,
+"reviewCount": 460,
+"priceRange": "$$","specialties": ["Balayage", "Hair Straightening", "Hair Spa"],"services": [{"service": "Balayage", "price": 5800},{"service": "Hair Straightening", "price": 4200},{"service": "Hair Spa", "price": 1300}],"experienceYears": 6,"genderPreference": "Unisex","availableSlots": ["11:00 AM", "02:30 PM", "06:00 PM"],"reviews": ["Beautiful mahogany balayage tone painted.","Straightening process was detailed and flat straight.","The tea and head massage combo during spa was elite.","Perfect corporate employee friendly timings.","Good staff interaction."],"portfolioStyles": ["mahogany balayage style", "flat straight long", "spa recovery"],"contact": "+91 96677 88990","verified": true},{"salonId": "SAL-050","name": "The Razor & Comb","city": "Hyderabad","locality": "Hitech City","rating": 4.7,"reviewCount": 1560,"priceRange": "$$$","specialties": ["Keratin Treatment", "Balayage", "Beard Styling"],"services": [{"service": "Keratin Treatment", "price": 6800},{"service": "Balayage", "price": 6500},{"service": "Beard Styling", "price": 450}],"experienceYears": 11,"genderPreference": "Unisex","availableSlots": ["09:00 AM", "12:00 PM", "03:30 PM", "07:00 PM"],"reviews": ["Fabulous keratin shine texture achieved on rough ends.","The blonde balayage strokes blend smoothly.","Expert level beard detailing and hot towel shave.","Very stylish premium infrastructure.","Top salon destination for modern IT techies."],"portfolioStyles": ["keratin sleek shine", "blonde hair lines", "hot towel beard fade"],"contact": "+91 86677 88990","verified": true},{"salonId": "SAL-051","name": "Mane Attraction","city": "Bangalore","locality": "Frazer Town","rating": 4.5,"reviewCount": 630,"priceRange": "$$",
+"specialties": ["Wolf Cut", "Korean Layer Cut", "Hair Coloring"],
+"services": [
+{"service": "Wolf Cut", "price": 1300},
+{"service": "Korean Layer Cut", "price": 1400},
+{"service": "Hair Coloring", "price": 4600}
+],
+"experienceYears": 8,
+"genderPreference": "Unisex",
+"availableSlots": ["10:30 AM", "02:00 PM", "05:30 PM"],
+"reviews": [
+"Excellent wolf cut edge detailing.",
+"Authentic soft Korean layered frame style.",
+"Rich deep coffee global coloring finish.",
+"Professional and hygienic practices followed.",
+"Helpful tips shared for regular volume retention."
+],
+"portfolioStyles": ["edgy wolf line", "korean frame cut", "coffee global hair"],
+"contact": "+91 76677 88990",
+"verified": true
+},
+{
+"salonId": "SAL-052",
+"name": "Elite Hair Craft",
+"city": "Mumbai",
+"locality": "Malad West",
+"rating": 4.4,
+"reviewCount": 540,
+"priceRange": "$$","specialties": ["Keratin Treatment", "Bridal Makeup", "Hair Spa"],"services": [{"service": "Keratin Treatment", "price": 5500},{"service": "Bridal Makeup", "price": 23000},{"service": "Hair Spa", "price": 1400}],"experienceYears": 7,"genderPreference": "Women","availableSlots": ["10:00 AM", "01:30 PM", "05:00 PM"],"reviews": ["The keratin treatment flattened all unwanted curls nicely.","Stunning high definition bridal makeup done.","Superb stressbuster spa treatment.","Neat individual changing rooms and clean stations.","Cooperative behavior from everyone."],"portfolioStyles": ["keratin sleek straight", "hd bride look", "spa deep moisture"],"contact": "+91 66677 88990","verified": true},{"salonId": "SAL-053","name": "scissors & more","city": "Chennai","locality": "Chromepet","rating": 3.7,"reviewCount": 95,"priceRange": "$",
+"specialties": ["Hair Straightening", "Hair Spa", "Beard Styling"],
+"services": [
+{"service": "Hair Straightening", "price": 3300},
+{"service": "Hair Spa", "price": 950},
+{"service": "Beard Styling", "price": 280}
+],
+"experienceYears": 3,
+"genderPreference": "Unisex",
+"availableSlots": ["11:00 AM", "03:00 PM", "06:30 PM"],
+"reviews": [
+"Budget friendly hair straightening job.",
+"Decent oil massage treatment and steam spa.",
+"Fast and accurate beard line shaving.",
+"Good choice for low cost monthly maintenance.",
+"Polite small team."
+],
+"portfolioStyles": ["straight look basic", "oil spa finish", "clean line beard"],
+"contact": "+91 97788 99001",
+"verified": false
+},
+{
+"salonId": "SAL-054",
+"name": "The Hair Palace",
+"city": "Delhi",
+"locality": "Hauz Khas",
+"rating": 4.6,
+"reviewCount": 1020,
+"priceRange": "$$$",
+"specialties": ["Korean Layer Cut", "Balayage", "Hair Coloring"],
+"services": [
+{"service": "Korean Layer Cut", "price": 1750},
+{"service": "Balayage", "price": 7000},
+{"service": "Hair Coloring", "price": 5200}
+],
+"experienceYears": 12,
+"genderPreference": "Unisex",
+"availableSlots": ["11:30 AM", "02:30 PM", "05:30 PM", "08:00 PM"],
+"reviews": [
+"Authentic gorgeous Korean layers with fine fringe.",
+"Incredible copper bronze balayage transition.",
+"Flawless professional global tint application.",
+"Elite interior lounge setup in Hauz Khas.",
+"Extremely creative hair senior master."
+],
+"portfolioStyles": ["korean fringe cut", "copper bronze balayage", "global coloring tone"],
+"contact": "+91 87788 99001",
+"verified": true
+},
+{
+"salonId": "SAL-055",
+"name": "Urban Wave Salon",
+"city": "Pune",
+"locality": "Wakad",
+"rating": 4.2,
+"reviewCount": 390,
+"priceRange": "$$",
+"specialties": ["Wolf Cut", "Hair Smoothening", "Hair Spa"],
+"services": [
+{"service": "Wolf Cut", "price": 1050},
+{"service": "Hair Smoothening", "price": 4700},
+{"service": "Hair Spa", "price": 1300}
+],
+"experienceYears": 5,
+"genderPreference": "Unisex",
+"availableSlots": ["10:00 AM", "01:00 PM", "04:30 PM"],
+"reviews": [
+"The wolf cut looks nice and voluminous.",
+"Smoothening cleared my frizzy hair texture cleanly.",
+"The hair spa was deeply soothing after long travel.",
+"Clean local setup and professional staff behavior.",
+"Affordable rates."
+],
+"portfolioStyles": ["voluminous wolf look", "smooth silk layer", "spa condition"],
+"contact": "+91 77788 99001",
+"verified": true
+},
+{
+"salonId": "SAL-056",
+"name": "Persona Luxury Lounge",
+"city": "Kolkata",
+"locality": "Jadavpur",
+"rating": 4.4,
+"reviewCount": 520,
+"priceRange": "$$",
+"specialties": ["Bridal Makeup", "Keratin Treatment", "Beard Styling"],
+"services": [
+{"service": "Bridal Makeup", "price": 21000},
+{"service": "Keratin Treatment", "price": 5400},
+{"service": "Beard Styling", "price": 380}
+],
+"experienceYears": 9,
+"genderPreference": "Unisex",
+"availableSlots": ["11:00 AM", "03:00 PM", "06:30 PM"],
+"reviews": [
+"Stunning and subtle regional bridal cosmetic work.",
+"Keratin hair care texture came out premium.",
+"Excellent crisp sideburn fade beard line.",
+"Professional team with neat management tracking.",
+"Very comfortable chairs."
+],
+"portfolioStyles": ["subtle bride look", "keratin smooth finish", "sideburn fade beard"],
+"contact": "+91 67788 99001",
+"verified": true
+},
+{
+"salonId": "SAL-057",
+"name": "Envy Premium Lounge",
+"city": "Hyderabad",
+"locality": "Secunderabad",
+"rating": 4.3,
+"reviewCount": 410,
+"priceRange": "$$",
+"specialties": ["Korean Layer Cut", "Balayage", "Hair Spa"],
+"services": [
+{"service": "Korean Layer Cut", "price": 1350},
+{"service": "Balayage", "price": 5900},
+{"service": "Hair Spa", "price": 1400}
+],
+"experienceYears": 7,
+"genderPreference": "Unisex",
+"availableSlots": ["10:30 AM", "01:30 PM", "05:00 PM"],
+"reviews": [
+"Excellent implementation of Korean style layer frame.",
+"Beautifully painted honey highlights balayage.",
+"Extremely nourishing deep hair spa session.",
+"Very neat and tidy room management.",
+"Polite professionals who guide correctly."
+],
+"portfolioStyles": ["korean layer frame", "honey highlights balayage", "nourished spa hair"],
+"contact": "+91 98899 00112",
+"verified": true
+},
+{
+"salonId": "SAL-058",
+"name": "Vogue Craft Salon",
+"city": "Bangalore",
+"locality": "Sadashivanagar",
+"rating": 4.7,
+"reviewCount": 1150,
+"priceRange": "$$$",
+"specialties": ["Wolf Cut", "Keratin Treatment", "Hair Coloring"],
+"services": [
+{"service": "Wolf Cut", "price": 1500},
+{"service": "Keratin Treatment", "price": 6200},
+{"service": "Hair Coloring", "price": 5500}
+],
+"experienceYears": 12,
+"genderPreference": "Unisex",
+"availableSlots": ["11:00 AM", "02:30 PM", "05:30 PM", "08:00 PM"],
+"reviews": [
+"Amazing structural wolf cut design done.",
+"Keratin smoothing made hair shine beautifully.",
+"Wonderful rich mahogany color global tint.",
+"High level luxury ambiance and warm greetings.",
+"Premium senior stylists available."
+],
+"portfolioStyles": ["structural wolf lines", "keratin shine straight", "mahogany global tint"],
+"contact": "+91 88899 00112",
+"verified": true
+},
+{
+"salonId": "SAL-059",
+"name": "The Scissors Lounge",
+"city": "Mumbai",
+"locality": "Borivali West",
+"rating": 4.4,
+"reviewCount": 680,
+"priceRange": "$$",
+"specialties": ["Hair Smoothening", "Hair Straightening", "Beard Styling"],
+"services": [
+{"service": "Hair Smoothening", "price": 4600},
+{"service": "Hair Straightening", "price": 4000},
+{"service": "Beard Styling", "price": 380}
+],
+"experienceYears": 8,
+"genderPreference": "Unisex",
+"availableSlots": ["10:00 AM", "02:00 PM", "05:30 PM"],
+"reviews": [
+"Smoothening results are highly durable and neat.",
+"Perfect flat straightening job done on long hair.",
+"Clear crisp outline for my classic beard profile.",
+"Hygienic salon setup with polite professionals.",
+"Suggested helpful post care products."
+],
+"portfolioStyles": ["durable smooth hair", "flat straight long look", "classic beard profile"],
+"contact": "+91 78899 00112",
+"verified": true
+},
+{
+"salonId": "SAL-060",
+"name": "Princes & Princesses",
+"city": "Chennai",
+"locality": "Teynampet",
+"rating": 4.1,
+"reviewCount": 240,
+"priceRange": "$$",
+"specialties": ["Bridal Makeup", "Hair Spa", "Hair Coloring"],
+"services": [
+{"service": "Bridal Makeup", "price": 22000},
+{"service": "Hair Spa", "price": 1300},
+{"service": "Hair Coloring", "price": 4200}
+],
+"experienceYears": 6,
+"genderPreference": "Women",
+"availableSlots": ["10:30 AM", "01:30 PM", "05:00 PM"],
+"reviews": [
+"The wedding makeup look was neat and non-cakey.",
+"Very relaxing spa conditioning mask used.",
+"Nice even distribution of the dark brown hair color.",
+"Polite ladies handle the core sections patiently.",
+"Good neighborhood boutique salon feel."
+],
+"portfolioStyles": ["non-cakey bridal glam", "spa mask hair shine", "dark brown global tint"],
+"contact": "+91 68899 00112",
+"verified": false
+},
+{
+"salonId": "SAL-061",
+"name": "Aura Luxury Hair",
+"city": "Delhi",
+"locality": "Vasant Kunj",
+"rating": 4.8,
+"reviewCount": 1390,
+"priceRange": "$$$",
+"specialties": ["Korean Layer Cut", "Balayage", "Keratin Treatment"],
+"services": [
+{"service": "Korean Layer Cut", "price": 1800},
+{"service": "Balayage", "price": 7500},
+{"service": "Keratin Treatment", "price": 6500}
+],
+"experienceYears": 13,
+"genderPreference": "Unisex",
+"availableSlots": ["11:00 AM", "03:00 PM", "06:00 PM", "08:30 PM"],
+"reviews": [
+"Flawless authentic East Asian layered cut style.",
+"Stunning sun-kissed caramel tone painted balayage.",
+"Keratin straight therapy completely revived broken cuticles.",
+"High profile elegant setting and extreme care.",
+"Elite senior master hairstylists are wonderful."
+],
+"portfolioStyles": ["east asian layered style", "caramel tone balayage", "keratin cuticle repair"],
+"contact": "+91 99900 11223",
+"verified": true
+},
+{
+"salonId": "SAL-062",
+"name": "Mirror Mirror Studio",
+"city": "Pune",
+"locality": "Aundh",
+"rating": 4.3,
+"reviewCount": 450,
+"priceRange": "$$",
+"specialties": ["Wolf Cut", "Hair Coloring", "Hair Spa"],
+"services": [
+{"service": "Wolf Cut", "price": 1100},
+{"service": "Hair Coloring", "price": 4400},
+{"service": "Hair Spa", "price": 1250}
+],
+"experienceYears": 6,
+"genderPreference": "Unisex",
+"availableSlots": ["10:00 AM", "01:00 PM", "04:30 PM"],
+"reviews": [
+"Excellent messy variant wolf cut executed.",
+"Beautiful burgundy streaks coloring done nicely.",
+"Very soothing scalp care spa oil rub.",
+"Prompt handling of custom booked slots.",
+"Hygienic setup with polite team."
+],
+"portfolioStyles": ["messy variant wolf cut", "burgundy streaks coloring", "scalp care spa hair"],
+"contact": "+91 89900 11223",
+"verified": true
+},
+{
+"salonId": "SAL-063",
+"name": "The Glamour Hub",
+"city": "Kolkata",
+"locality": "Behala",
+"rating": 4.0,
+"reviewCount": 190,
+"priceRange": "$$",
+"specialties": ["Bridal Makeup", "Hair Smoothening", "Beard Styling"],
+"services": [
+{"service": "Bridal Makeup", "price": 18000},
+{"service": "Hair Smoothening", "price": 4400},
+{"service": "Beard Styling", "price": 320}
+],
+"experienceYears": 5,
+"genderPreference": "Unisex",
+"availableSlots": ["11:30 AM", "03:30 PM", "07:00 PM"],
+"reviews": [
+"Satisfactory regional bridal dress up and cosmetics.",
+"Smoothening texture came out clean and frizz free.",
+"Good quick mustache beard shaping alignment.",
+"Pocket friendly local family salon option.",
+"Courteous crew."
+],
+"portfolioStyles": ["regional bridal glam", "clean smoothened strands", "mustache beard alignment"],
+"contact": "+91 79900 11223",
+"verified": false
+},
+{
+"salonId": "SAL-064",
+"name": "Scissors Craft Unisex",
+"city": "Hyderabad",
+"locality": "Miyapur",
+"rating": 4.2,
+"reviewCount": 290,
+"priceRange": "$$",
+"specialties": ["Hair Straightening", "Hair Spa", "Beard Styling"],
+"services": [
+{"service": "Hair Straightening", "price": 3600},
+{"service": "Hair Spa", "price": 1150},
+{"service": "Beard Styling", "price": 300}
+],
+"experienceYears": 5,
+"genderPreference": "Unisex",
+"availableSlots": ["10:00 AM", "02:30 PM", "06:00 PM"],
+"reviews": [
+"Decent flat straightening job done safely.",
+"The nourishing tea tree hair spa was calming.",
+"Good quick professional beard contour shaping.",
+"Reasonable pricing for residential families.",
+"Respectful team members."
+],
+"portfolioStyles": ["flat straight look", "tea tree spa finish", "beard contour shape"],
+"contact": "+91 69900 11223",
+"verified": true
+},
+{
+"salonId": "SAL-065",
+"name": "Urban Tress Lounge",
+"city": "Bangalore",
+"locality": "Yelahanka",
+"rating": 4.4,
+"reviewCount": 480,
+"priceRange": "$$",
+"specialties": ["Wolf Cut", "Korean Layer Cut", "Keratin Treatment"],
+"services": [
+{"service": "Wolf Cut", "price": 1200},
+{"service": "Korean Layer Cut", "price": 1350},
+{"service": "Keratin Treatment", "price": 5000}
+],
+"experienceYears": 7,
+"genderPreference": "Unisex",
+"availableSlots": ["11:00 AM", "02:00 PM", "05:30 PM"],
+"reviews": [
+"Love the bold framing lines of my wolf cut.",
+"Excellent bouncy Korean style layer cut format.",
+"Keratin hair treatment made texture extremely smooth.",
+"Modern interior with sterilized standard items.",
+"Helpful staff with good advice."
+],
+"portfolioStyles": ["bold wolf lines", "bouncy korean layers", "smooth keratin coating"],
+"contact": "+91 91212 34345",
+"verified": true
+},
+{
+"salonId": "SAL-066",
+"name": "Mane Luxury Concept",
+"city": "Mumbai",
+"locality": "Santacruz West",
+"rating": 4.7,
+"reviewCount": 1210,
+"priceRange": "$$$",
+"specialties": ["Balayage", "Bridal Makeup", "Hair Coloring"],
+"services": [
+{"service": "Balayage", "price": 7000},
+{"service": "Bridal Makeup", "price": 30000},
+{"service": "Hair Coloring", "price": 5400}
+],
+"experienceYears": 12,
+"genderPreference": "Unisex",
+"availableSlots": ["10:30 AM", "01:30 PM", "04:30 PM", "07:30 PM"],
+"reviews": [
+"Stunning copper blend hand-painted balayage details.",
+"Fabulous elegant elite celebrity level bridal glam.",
+"Beautiful choice of honey ash global colors.",
+"High end premium lounge atmosphere.",
+"Senior expert hair professionals are amazing."
+],
+"portfolioStyles": ["copper painted balayage", "celebrity bridal glam", "honey ash global colors"],
+"contact": "+91 81212 34345",
+"verified": true
+},
+{
+"salonId": "SAL-067",
+"name": "Glow Lounge",
+"city": "Chennai",
+"locality": "Porur",
+"rating": 3.9,
+"reviewCount": 150,
+"priceRange": "$$",
+"specialties": ["Hair Smoothening", "Hair Spa", "Beard Styling"],
+"services": [
+{"service": "Hair Smoothening", "price": 4200},
+{"service": "Hair Spa", "price": 1100},
+{"service": "Beard Styling", "price": 320}
+],
+"experienceYears": 4,
+"genderPreference": "Unisex",
+"availableSlots": ["10:00 AM", "01:00 PM", "05:00 PM"],
+"reviews": [
+"Frizz control via smoothening was satisfactory.",
+"Nice standard relaxing deep conditioning spa.",
+"Quick beard trim lines completed cleanly.",
+"Decent pricing matrix for daily folks.",
+"Polite guys at desk."
+],
+"portfolioStyles": ["frizz control smoothening", "standard spa conditioning", "quick beard trim lines"],
+"contact": "+91 71212 34345",
+"verified": false
+},
+{
+"salonId": "SAL-068",
+"name": "Style Equation Lounge",
+"city": "Delhi",
+"locality": "Rohini Sector 9",
+"rating": 4.3,
+"reviewCount": 440,
+"priceRange": "$$",
+"specialties": ["Wolf Cut", "Hair Coloring", "Keratin Treatment"],
+"services": [
+{"service": "Wolf Cut", "price": 1100},
+{"service": "Hair Coloring", "price": 4300},
+{"service": "Keratin Treatment", "price": 5100}
+],
+"experienceYears": 7,
+"genderPreference": "Unisex",
+"availableSlots": ["11:30 AM", "03:00 PM", "06:30 PM"],
+"reviews": [
+"Edgy layered wolf cut variant delivered perfectly.",
+"Rich deep chocolate brown hair coloring global tone.",
+"Keratin routine left it soft and straight.",
+"Good service speed, minimal unwanted waiting.",
+"Clean individual stations setup neatly."
+],
+"portfolioStyles": ["layered wolf variant", "chocolate brown global tone", "soft straight keratin hair"],
+"contact": "+91 61212 34345",
+"verified": true
+},
+{
+"salonId": "SAL-069",
+"name": "Symphony Hair Craft",
+"city": "Pune",
+"locality": "Hadapsar",
+"rating": 4.5,
+"reviewCount": 560,
+"priceRange": "$$",
+"specialties": ["Korean Layer Cut", "Balayage", "Hair Spa"],
+"services": [
+{"service": "Korean Layer Cut", "price": 1350},
+{"service": "Balayage", "price": 6100},
+{"service": "Hair Spa", "price": 1300}
+],
+"experienceYears": 8,
+"genderPreference": "Unisex",
+"availableSlots": ["10:30 AM", "02:00 PM", "05:30 PM"],
+"reviews": [
+"Beautiful voluminous layers from the Korean cut.",
+"The dark chocolate painted balayage looks beautiful.",
+"Deep moisture hair mask treatment spa was perfect.",
+"Punctual staff members who handle bookings well.",
+"Hygienic standard and tidy seating area."
+],
+"portfolioStyles": ["voluminous layers look", "dark chocolate balayage", "moisture mask spa hair"],
+"contact": "+91 92323 45456",
+"verified": true
+},
+{
+"salonId": "SAL-070",
+"name": "The Velvet Room",
+"city": "Kolkata",
+"locality": "Salt Lake Sector 3",
+"rating": 4.6,
+"reviewCount": 790,
+"priceRange": "$$$",
+"specialties": ["Bridal Makeup", "Keratin Treatment", "Hair Smoothening"],
+"services": [
+{"service": "Bridal Makeup", "price": 26000},
+{"service": "Keratin Treatment", "price": 5800},
+{"service": "Hair Smoothening", "price": 5200}
+],
+"experienceYears": 11,
+"genderPreference": "Women",
+"availableSlots": ["09:30 AM", "01:00 PM", "04:30 PM", "07:00 PM"],
+"reviews": [
+"Stunning high definition flawless traditional bridal makeup.",
+"Keratin therapy left my long strands silk straight.",
+"Hair smoothening was done with meticulous precision.",
+"Premium aesthetic lounge setup in Salt Lake.",
+"Courteous and highly accommodating staff."
+],
+"portfolioStyles": ["flawless traditional bridal makeup", "silk straight long strands", "precision hair smoothening"],
+"contact": "+91 82323 45456",
+"verified": true
+},
+{
+"salonId": "SAL-071",
+"name": "Prism Colors Studio",
+"city": "Hyderabad",
+"locality": "Dilsukhnagar",
+"rating": 4.0,
+"reviewCount": 210,
+"priceRange": "$","specialties": ["Beard Styling", "Hair Spa", "Hair Straightening"],"services": [{"service": "Beard Styling", "price": 250},{"service": "Hair Spa", "price": 999},{"service": "Hair Straightening", "price": 3400}],"experienceYears": 4,"genderPreference": "Unisex","availableSlots": ["10:00 AM", "03:00 PM", "06:30 PM"],"reviews": ["Highly budget friendly hair straightening package.","Decent scalp massage during regular spa session.","Quick trim lines fade work on beard.","Good neighborhood salon option for family folks.","Polite floor crew guys."],"portfolioStyles": ["budget hair straightening", "regular scalp spa session", "trim lines fade beard"],"contact": "+91 72323 45456","verified": true},{"salonId": "SAL-072","name": "Vogue Avenue Salon","city": "Bangalore","locality": "Richmond Town","rating": 4.7,"reviewCount": 1080,"priceRange": "$$$","specialties": ["Wolf Cut", "Balayage", "Keratin Treatment"],"services": [{"service": "Wolf Cut", "price": 1450},{"service": "Balayage", "price": 6800},{"service": "Keratin Treatment", "price": 6000}],"experienceYears": 10,"genderPreference": "Unisex","availableSlots": ["11:00 AM", "02:30 PM", "05:30 PM", "08:00 PM"],"reviews": ["Incredible modern edgy structural wolf haircut.","Fabulous ash global transition painted balayage.","Premium keratin straight shield applied properly.","Luxury layout ambiance with refreshing drinks.","Senior expert hair professionals are amazing."],"portfolioStyles": ["edgy structural wolf haircut", "ash global painted balayage", "keratin straight shield hair"],"contact": "+91 62323 45456","verified": true},{"salonId": "SAL-073","name": "The Scissors Lounge","city": "Mumbai","locality": "Mulund West","rating": 4.3,"reviewCount": 490,"priceRange": "$$",
+"specialties": ["Korean Layer Cut", "Hair Coloring", "Hair Smoothening"],
+"services": [
+{"service": "Korean Layer Cut", "price": 1400},
+{"service": "Hair Coloring", "price": 4500},
+{"service": "Hair Smoothening", "price": 4800}
+],
+"experienceYears": 7,
+"genderPreference": "Unisex",
+"availableSlots": ["10:30 AM", "01:30 PM", "05:00 PM"],
+"reviews": [
+"Lovely face-framing bouncy Korean layered cuts.",
+"Deep mahogany global hair color came out beautiful.",
+"Smoothening treatment cleared texture frizz completely.",
+"Friendly team members and timely slot execution.",
+"Clean space with sanitized accessories."
+],
+"portfolioStyles": ["face-framing bouncy korean layers", "mahogany global hair color", "frizz free smoothened hair"],
+"contact": "+91 93434 56567",
+"verified": true
+},
+{
+"salonId": "SAL-074",
+"name": "Bella Craft Lounge",
+"city": "Chennai",
+"locality": "Tambaram",
+"rating": 4.1,
+"reviewCount": 260,
+"priceRange": "$$","specialties": ["Bridal Makeup", "Hair Smoothening", "Hair Spa"],"services": [{"service": "Bridal Makeup", "price": 20000},{"service": "Hair Smoothening", "price": 4500},{"service": "Hair Spa", "price": 1200}],"experienceYears": 6,"genderPreference": "Women","availableSlots": ["10:00 AM", "02:00 PM", "05:30 PM"],"reviews": ["Traditional heavy wedding bridal cosmetics done nicely.","Hair smoothening texture feels flat and shiny.","Deeply moisturizing standard spa hair layout.","Spacious clean setups for marriage bookings.","Polite behavior of staff members."],"portfolioStyles": ["traditional heavy bridal makeup", "flat shiny smoothened hair", "moisturizing standard spa hair"],"contact": "+91 83434 56567","verified": true},{"salonId": "SAL-075","name": "Elite Fringe Studio","city": "Delhi","locality": "Pitampura","rating": 4.5,"reviewCount": 590,"priceRange": "$$",
+"specialties": ["Wolf Cut", "Hair Coloring", "Keratin Treatment"],
+"services": [
+{"service": "Wolf Cut", "price": 1200},
+{"service": "Hair Coloring", "price": 4400},
+{"service": "Keratin Treatment", "price": 5200}
+],
+"experienceYears": 8,
+"genderPreference": "Unisex",
+"availableSlots": ["11:00 AM", "03:00 PM", "06:30 PM"],
+"reviews": [
+"Terrific messy wolf cut variant with fine edges.",
+"Vibrant light brown coloring shades executed nicely.",
+"Keratin hair therapy left strands soft and shiny.",
+"Prompt service management tracking, very clear.",
+"Clean interior look with modern furniture."
+],
+"portfolioStyles": ["messy wolf cut variant", "light brown coloring shades", "soft shiny keratin strands"],
+"contact": "+91 73434 56567",
+"verified": true
+},
+{
+"salonId": "SAL-076",
+"name": "The Hair Catalyst",
+"city": "Pune",
+"locality": "NIBM Road",
+"rating": 4.4,
+"reviewCount": 380,
+"priceRange": "$$","specialties": ["Korean Layer Cut", "Keratin Treatment", "Hair Spa"],"services": [{"service": "Korean Layer Cut", "price": 1300},{"service": "Keratin Treatment", "price": 5100},{"service": "Hair Spa", "price": 1250}],"experienceYears": 6,"genderPreference": "Unisex","availableSlots": ["10:00 AM", "01:00 PM", "04:30 PM"],"reviews": ["Loved the soft layered bounce from Korean styling.","Keratin alignment treatment has fine lasting strength.","Deep herbal conditioning hair spa was comforting.","Neat cozy studio ambience, quite peaceful.","Skilled and conversational specialists."],"portfolioStyles": ["soft layered bounce hair", "keratin alignment treatment", "herbal conditioning hair spa"],"contact": "+91 63434 56567","verified": false},{"salonId": "SAL-077","name": "Radiant Glamour Studio","city": "Kolkata","locality": "Kolkata Lake Town","rating": 4.3,"reviewCount": 420,"priceRange": "$$",
+"specialties": ["Balayage", "Hair Straightening", "Hair Spa"],
+"services": [
+{"service": "Balayage", "price": 5700},
+{"service": "Hair Straightening", "price": 4100},
+{"service": "Hair Spa", "price": 1300}
+],
+"experienceYears": 7,
+"genderPreference": "Unisex",
+"availableSlots": ["11:00 AM", "02:30 PM", "06:00 PM"],
+"reviews": [
+"Beautiful bronze highlights painted balayage details.",
+"Straightening routine done with high standard tools.",
+"The warm steam scalp spa was incredibly soothing.",
+"Helpful staff with multiple post salon guidelines.",
+"Clean tidy layout."
+],
+"portfolioStyles": ["bronze highlights painted balayage", "standard straightening look", "warm steam scalp spa hair"],
+"contact": "+91 94545 67678",
+"verified": true
+},
+{
+"salonId": "SAL-078",
+"name": "The Grooming Lounge",
+"city": "Hyderabad",
+"locality": "Ameerpet",
+"rating": 3.9,
+"reviewCount": 180,
+"priceRange": "$$","specialties": ["Beard Styling", "Wolf Cut", "Hair Coloring"],"services": [{"service": "Beard Styling", "price": 280},{"service": "Wolf Cut", "price": 999},{"service": "Hair Coloring", "price": 3600}],"experienceYears": 5,"genderPreference": "Men","availableSlots": ["12:00 PM", "03:30 PM", "07:00 PM"],"reviews": ["Decent option for fast men's hair grooming requirements.","Wolf cut profile shape was satisfactory.","The razor beard shaping line was clear.","Fair pricing scale for local college student crowds.","Cooperative hair cutters."],"portfolioStyles": ["basic men grooming lines", "wolf cut profile shape", "razor beard shaping line"],"contact": "+91 84545 67678","verified": false},{"salonId": "SAL-079","name": "Urban Scissors Concept","city": "Bangalore","locality": "BTM Layout","rating": 4.5,"reviewCount": 840,"priceRange": "$$",
+"specialties": ["Wolf Cut", "Korean Layer Cut", "Hair Coloring"],
+"services": [
+{"service": "Wolf Cut", "price": 1250},
+{"service": "Korean Layer Cut", "price": 1400},
+{"service": "Hair Coloring", "price": 4500}
+],
+"experienceYears": 8,
+"genderPreference": "Unisex",
+"availableSlots": ["10:30 AM", "02:00 PM", "05:30 PM"],
+"reviews": [
+"Love the fine shaggy outline of my wolf cut.",
+"Authentic airy Korean layers with rich volume.",
+"Global dark blonde tint color looks stunning.",
+"Well-maintained studio workspace with hygiene protocol.",
+"Prompt attention from senior hair technicians."
+],
+"portfolioStyles": ["shaggy outline wolf cut", "airy korean layers look", "dark blonde global tint hair"],
+"contact": "+91 74545 67678",
+"verified": true
+},
+{
+"salonId": "SAL-080",
+"name": "Mane Essence Lounge",
+"city": "Mumbai",
+"locality": "Vashi Navi Mumbai",
+"rating": 4.4,
+"reviewCount": 510,
+"priceRange": "$$","specialties": ["Keratin Treatment", "Bridal Makeup", "Hair Spa"],"services": [{"service": "Keratin Treatment", "price": 5400},{"service": "Bridal Makeup", "price": 22000},{"service": "Hair Spa", "price": 1350}],"experienceYears": 7,"genderPreference": "Women","availableSlots": ["10:00 AM", "01:30 PM", "05:00 PM"],"reviews": ["The keratin treatment smoothed out frizzy strands neatly.","Stunning subtle high definition wedding bridal cosmetic work.","Extremely therapeutic deep hair moisturizing spa.","Clean personal lockers and highly organized spacing.","Courteous and polite crew members."],"portfolioStyles": ["frizzy strand keratin smooth", "subtle hd bridal makeup", "therapeutic deep moisturizing spa"],"contact": "+91 64545 67678","verified": true},{"salonId": "SAL-081","name": "Cuts N Strokes","city": "Chennai","locality": "Perambur","rating": 3.6,"reviewCount": 85,"priceRange": "$",
+"specialties": ["Hair Straightening", "Hair Spa", "Beard Styling"],
+"services": [
+{"service": "Hair Straightening", "price": 3200},
+{"service": "Hair Spa", "price": 900},
+{"service": "Beard Styling", "price": 260}
+],
+"experienceYears": 3,
+"genderPreference": "Unisex",
+"availableSlots": ["11:00 AM", "03:00 PM", "06:30 PM"],
+"reviews": [
+"Budget straightening option for daily manageability.",
+"Decent scalp cream rub massage and hot towels.",
+"Fast basic beard line clipping work.",
+"Affordable monthly upkeep alternative option.",
+"Small helpful team."
+],
+"portfolioStyles": ["basic hair straightening look", "scalp cream rub massage hair", "basic beard line clipping"],
+"contact": "+91 95656 78789",
+"verified": false
+},
+{
+"salonId": "SAL-082",
+"name": "The Hair Horizon",
+"city": "Delhi",
+"locality": "Green Park",
+"rating": 4.7,
+"reviewCount": 1110,
+"priceRange": "$$$",
+"specialties": ["Korean Layer Cut", "Balayage", "Hair Coloring"],
+"services": [
+{"service": "Korean Layer Cut", "price": 1700},
+{"service": "Balayage", "price": 7200},
+{"service": "Hair Coloring", "price": 5400}
+],
+"experienceYears": 11,
+"genderPreference": "Unisex",
+"availableSlots": ["11:30 AM", "02:30 PM", "05:30 PM", "08:00 PM"],
+"reviews": [
+"Beautiful elegant Korean layers done meticulously.",
+"Incredible rich honey gold painted balayage layers.",
+"Professional deep global tone application done cleanly.",
+"Luxurious aesthetic boutique environment in Green Park.",
+"Highly creative senior hair director expert."
+],
+"portfolioStyles": ["elegant korean layers look", "honey gold painted balayage", "deep global tone application"],
+"contact": "+91 85656 78789",
+"verified": true
+},
+{
+"salonId": "SAL-083",
+"name": "Urban Styles Studio",
+"city": "Pune",
+"locality": "Kalyani Nagar",
+"rating": 4.5,
+"reviewCount": 620,
+"priceRange": "$$",
+"specialties": ["Wolf Cut", "Keratin Treatment", "Hair Spa"],
+"services": [
+{"service": "Wolf Cut", "price": 1200},
+{"service": "Keratin Treatment", "price": 5300},
+{"service": "Hair Spa", "price": 1350}
+],
+"experienceYears": 8,
+"genderPreference": "Unisex",
+"availableSlots": ["10:00 AM", "01:00 PM", "04:30 PM"],
+"reviews": [
+"The shaggy wolf cut turned out perfectly bold.",
+"Keratin hair treatment coating texture has superb shine.",
+"Relaxing intensive head scalp therapy hair spa.",
+"Modern interior setting with cozy clean seats.",
+"Highly professional core specialists team."
+],
+"portfolioStyles": ["shaggy bold wolf cut", "shiny keratin coating texture", "intensive head scalp therapy spa"],
+"contact": "+91 75656 78789",
+"verified": true
+},
+{
+"salonId": "SAL-084",
+"name": "The Crown Aesthetics",
+"city": "Kolkata",
+"locality": "Dum Dum",
+"rating": 4.1,
+"reviewCount": 310,
+"priceRange": "$$",
+"specialties": ["Bridal Makeup", "Hair Smoothening", "Beard Styling"],
+"services": [
+{"service": "Bridal Makeup", "price": 19000},
+{"service": "Hair Smoothening", "price": 4500},
+{"service": "Beard Styling", "price": 350}
+],
+"experienceYears": 6,
+"genderPreference": "Unisex",
+"availableSlots": ["11:00 AM", "03:00 PM", "06:30 PM"],
+"reviews": [
+"Satisfactory traditional wedding makeup implementation.",
+"Smoothening made curly wavy hair texture natural straight.",
+"Good sharp outline alignment for beard mustache.",
+"Affordable price structure for regional family bookings.",
+"Cooperative crew members."
+],
+"portfolioStyles": ["traditional bridal makeup look", "natural straight smoothened hair", "sharp outline beard alignment"],
+"contact": "+91 65656 78789",
+"verified": true
+},
+{
+"salonId": "SAL-085",
+"name": "Symphony Scissors",
+"city": "Hyderabad",
+"locality": "Kachiguda",
+"rating": 4.1,
+"reviewCount": 230,
+"priceRange": "$$",
+"specialties": ["Korean Layer Cut", "Balayage", "Hair Spa"],
+"services": [
+{"service": "Korean Layer Cut", "price": 1300},
+{"service": "Balayage", "price": 5800},
+{"service": "Hair Spa", "price": 1200}
+],
+"experienceYears": 6,
+"genderPreference": "Unisex",
+"availableSlots": ["10:30 AM", "01:30 PM", "05:00 PM"],
+"reviews": [
+"Nice face framing Korean style layered cut variant.",
+"Beautiful soft gold highlights painted balayage lines.",
+"Extremely soothing intensive nourishing hair spa.",
+"Neat standard room management setup.",
+"Respectful team who handle questions politely."
+],
+"portfolioStyles": ["korean style layered cut variant", "soft gold highlights balayage", "nourishing hair spa session"],
+"contact": "+91 96767 89012",
+"verified": true
+},
+{
+"salonId": "SAL-086",
+"name": "Vogue Studio Concept",
+"city": "Bangalore",
+"locality": "Rajajinagar",
+"rating": 4.6,
+"reviewCount": 920,
+"priceRange": "$$$",
+"specialties": ["Wolf Cut", "Keratin Treatment", "Hair Coloring"],
+"services": [
+{"service": "Wolf Cut", "price": 1400},
+{"service": "Keratin Treatment", "price": 5900},
+{"service": "Hair Coloring", "price": 5000}
+],
+"experienceYears": 11,
+"genderPreference": "Unisex",
+"availableSlots": ["11:00 AM", "02:30 PM", "05:30 PM", "08:00 PM"],
+"reviews": [
+"Excellent shaggy lines wolf cut delivered cleanly.",
+"Keratin smoothing therapy left hair highly silky.",
+"Stunning rich burgundy color global tint applied.",
+"High end luxury theme ambiance and polite welcome.",
+"Senior expert hair professionals are amazing."
+],
+"portfolioStyles": ["shaggy lines wolf cut", "silky keratin smoothing hair", "burgundy global tint hair"],
+"contact": "+91 86767 89012",
+"verified": true
+},
+{
+"salonId": "SAL-087",
+"name": "The Hair & Razor",
+"city": "Mumbai",
+"locality": "Thane West",
+"rating": 4.4,
+"reviewCount": 710,
+"priceRange": "$$",
+"specialties": ["Hair Smoothening", "Hair Straightening", "Beard Styling"],
+"services": [
+{"service": "Hair Smoothening", "price": 4700},
+{"service": "Hair Straightening", "price": 4200},
+{"service": "Beard Styling", "price": 400}
+],
+"experienceYears": 8,
+"genderPreference": "Unisex",
+"availableSlots": ["10:00 AM", "02:00 PM", "05:30 PM"],
+"reviews": [
+"Smoothening finish is extremely shiny and silky straight.",
+"Perfect poker straight job completed carefully.",
+"Clear neat sharp alignment for full beard configuration.",
+"Hygienic studio workspace with polite specialists.",
+"Offered clear hair protection maintenance tips."
+],
+"portfolioStyles": ["shiny silky smoothened hair", "poker straight long look", "sharp full beard configuration"],
+"contact": "+91 76767 89012",
+"verified": true
+},
+{
+"salonId": "SAL-088",
+"name": "Bella Donna Salon",
+"city": "Chennai",
+"locality": "Royapettah",
+"rating": 4.0,
+"reviewCount": 190,
+"priceRange": "$$",
+"specialties": ["Bridal Makeup", "Hair Spa", "Hair Coloring"],
+"services": [
+{"service": "Bridal Makeup", "price": 21000},
+{"service": "Hair Spa", "price": 1250},
+{"service": "Hair Coloring", "price": 4000}
+],
+"experienceYears": 5,
+"genderPreference": "Women",
+"availableSlots": ["10:30 AM", "01:30 PM", "05:00 PM"],
+"reviews": [
+"The wedding makeup finish was clean and natural.",
+"Very soothing intensive cream conditioning spa mask.",
+"Nice uniform coating of global copper brown tint.",
+"Polite staff handle clients very smoothly.",
+"Comfortable local neighborhood boutique atmosphere."
+],
+"portfolioStyles": ["clean natural bridal makeup", "conditioning spa mask hair", "global copper brown tint"],
+"contact": "+91 66767 89012",
+"verified": false
+},
+{
+"salonId": "SAL-089",
+"name": "Aura Hair Creation",
+"city": "Delhi",
+"locality": "Defense Colony",
+"rating": 4.8,
+"reviewCount": 1240,
+"priceRange": "$$$",
+"specialties": ["Korean Layer Cut", "Balayage", "Keratin Treatment"],
+"services": [
+{"service": "Korean Layer Cut", "price": 1750},
+{"service": "Balayage", "price": 7400},
+{"service": "Keratin Treatment", "price": 6300}
+],
+"experienceYears": 12,
+"genderPreference": "Unisex",
+"availableSlots": ["11:00 AM", "03:00 PM", "06:00 PM", "08:30 PM"],
+"reviews": [
+"Incredible airy Korean layered framework cut.",
+"Stunning sun-kissed blonde painted balayage highlights.",
+"Keratin straight therapy completely revived broken tips.",
+"High end sophisticated lounge layout with elite vibes.",
+"Highly recommended senior master hair artisans."
+],
+"portfolioStyles": ["airy korean layered framework", "sun-kissed blonde balayage", "keratin hair tip revival"],
+"contact": "+91 97878 90123",
+"verified": true
+},
+{
+"salonId": "SAL-090",
+"name": "Mirror Edge Studio",
+"city": "Pune",
+"locality": "Chinchwad",
+"rating": 4.2,
+"reviewCount": 360,
+"priceRange": "$$",
+"specialties": ["Wolf Cut", "Hair Coloring", "Hair Spa"],
+"services": [
+{"service": "Wolf Cut", "price": 1050},
+{"service": "Hair Coloring", "price": 4200},
+{"service": "Hair Spa", "price": 1200}
+],
+"experienceYears": 5,
+"genderPreference": "Unisex",
+"availableSlots": ["10:00 AM", "01:00 PM", "04:30 PM"],
+"reviews": [
+"Nice structural messy wolf haircut executed fine.",
+"Beautiful global coffee brown coloring completed cleanly.",
+"Very refreshing scalp conditioning spa rub.",
+"Prompt response on booked appointments tracking.",
+"Clean individual seating setup with nice crew."
+],
+"portfolioStyles": ["structural messy wolf cut", "global coffee brown coloring", "scalp conditioning spa hair"],
+"contact": "+91 87878 90123",
+"verified": true
+},
+{
+"salonId": "SAL-091",
+"name": "The Glamour Room",
+"city": "Kolkata",
+"locality": "Tollygunge",
+"rating": 4.4,
+"reviewCount": 540,
+"priceRange": "$$",
+"specialties": ["Bridal Makeup", "Hair Smoothening", "Beard Styling"],
+"services": [
+{"service": "Bridal Makeup", "price": 20000},
+{"service": "Hair Smoothening", "price": 4600},
+{"service": "Beard Styling", "price": 340}
+],
+"experienceYears": 8,
+"genderPreference": "Unisex",
+"availableSlots": ["11:30 AM", "03:30 PM", "07:00 PM"],
+"reviews": [
+"Stunning and smooth bridal cosmetic finish done.",
+"Smoothening made thick frizzy hair perfectly straight.",
+"Clear crisp mustache beard outline trimming done.",
+"Affordable regional family centric salon alternative option.",
+"Very gentle crew members."
+],
+"portfolioStyles": ["smooth bridal cosmetic finish", "straight hair smoothening look", "crisp mustache beard outline"],
+"contact": "+91 77878 90123",
+"verified": false
+},
+{
+"salonId": "SAL-092",
+"name": "Scissors Edge Unisex",
+"city": "Hyderabad",
+"locality": "Dilshuknagar",
+"rating": 4.1,
+"reviewCount": 260,
+"priceRange": "$","specialties": ["Hair Straightening", "Hair Spa", "Beard Styling"],"services": [{"service": "Hair Straightening", "price": 3500},{"service": "Hair Spa", "price": 1100},{"service": "Beard Styling", "price": 280}],"experienceYears": 4,"genderPreference": "Unisex","availableSlots": ["10:00 AM", "02:30 PM", "06:00 PM"],"reviews": ["Good flat hair straightening job done safely.","The refreshing aloe vera hair spa session was calming.","Nice fast sideburn beard alignment outline work.","Value for money packages for local family groups.","Respectful floor crew guys."],"portfolioStyles": ["flat hair straightening look", "aloe vera hair spa session", "sideburn beard alignment"],"contact": "+91 67878 90123","verified": true},{"salonId": "SAL-093","name": "Urban Locks Concept","city": "Bangalore","locality": "Electronic City","rating": 4.5,"reviewCount": 790,"priceRange": "$$",
+"specialties": ["Wolf Cut", "Korean Layer Cut", "Keratin Treatment"],
+"services": [
+{"service": "Wolf Cut", "price": 1250},
+{"service": "Korean Layer Cut", "price": 1400},
+{"service": "Keratin Treatment", "price": 5200}
+],
+"experienceYears": 8,
+"genderPreference": "Unisex",
+"availableSlots": ["11:00 AM", "02:00 PM", "05:30 PM"],
+"reviews": [
+"Love the bold shaggy frame of my wolf cut.",
+"Excellent airy Korean style layered cut structure.",
+"Keratin hair therapy coating made strands highly smooth.",
+"Modern clean setup environment with standard tools.",
+"Helpful team members with sound hair suggestions."
+],
+"portfolioStyles": ["bold shaggy wolf cut frame", "airy korean style layers", "smooth keratin coating strands"],
+"contact": "+91 98989 01234",
+"verified": true
+},
+{
+"salonId": "SAL-094",
+"name": "Mane Luxury Aesthetics",
+"city": "Mumbai",
+"locality": "Chembur",
+"rating": 4.6,
+"reviewCount": 1140,
+"priceRange": "$$$",
+"specialties": ["Balayage", "Bridal Makeup", "Hair Coloring"],
+"services": [
+{"service": "Balayage", "price": 6800},
+{"service": "Bridal Makeup", "price": 28000},
+{"service": "Hair Coloring", "price": 5200}
+],
+"experienceYears": 11,
+"genderPreference": "Unisex",
+"availableSlots": ["10:30 AM", "01:30 PM", "04:30 PM", "07:30 PM"],
+"reviews": [
+"Stunning gold streaks hand painted balayage details.",
+"Fabulous elegant royal bridal cosmetic makeover.",
+"Beautiful rich deep ash blonde global tone.",
+"High end premium lounge room setting.",
+"Senior expert hair professionals are amazing."
+],
+"portfolioStyles": ["gold streaks painted balayage", "royal bridal makeover look", "ash blonde global tone"],
+"contact": "+91 88989 01234",
+"verified": true
+},
+{
+"salonId": "SAL-095",
+"name": "Glow Lounge Studio",
+"city": "Chennai",
+"locality": "Madipakkam",
+"rating": 3.8,
+"reviewCount": 130,
+"priceRange": "$$","specialties": ["Hair Smoothening", "Hair Spa", "Beard Styling"],"services": [{"service": "Hair Smoothening", "price": 4100},{"service": "Hair Spa", "price": 1050},{"service": "Beard Styling", "price": 300}],"experienceYears": 4,"genderPreference": "Unisex","availableSlots": ["10:00 AM", "01:00 PM", "05:00 PM"],"reviews": ["Satisfactory frizz control via smoothening process.","Nice standard relaxing deep moisturizing spa mask.","Quick beard fade line completed neatly.","Decent budget friendly pricing options for daily folks.","Polite staff guys."],"portfolioStyles": ["frizz control hair smoothening", "moisturizing spa mask hair", "quick beard fade line"],"contact": "+91 78989 01234","verified": false},{"salonId": "SAL-096","name": "Style Formula Studio","city": "Delhi","locality": "Paschim Vihar","rating": 4.4,"reviewCount": 420,"priceRange": "$$",
+"specialties": ["Wolf Cut", "Hair Coloring", "Keratin Treatment"],
+"services": [
+{"service": "Wolf Cut", "price": 1150},
+{"service": "Hair Coloring", "price": 4400},
+{"service": "Keratin Treatment", "price": 5000}
+],
+"experienceYears": 7,
+"genderPreference": "Unisex",
+"availableSlots": ["11:30 AM", "03:00 PM", "06:30 PM"],
+"reviews": [
+"Edgy multi layered wolf cut delivered beautifully.",
+"Rich deep mahogany hair coloring global tone.",
+"Keratin smoothing made hair perfectly silky soft.",
+"Good quick response, minimal unwanted delay time.",
+"Clean individual workspace layout setup neatly."
+],
+"portfolioStyles": ["multi layered wolf cut", "mahogany global coloring tone", "silky soft keratin hair"],
+"contact": "+91 68989 01234",
+"verified": true
+},
+{
+"salonId": "SAL-097",
+"name": "Symphony Scissors Lounge",
+"city": "Pune",
+"locality": "Kharadi",
+"rating": 4.5,
+"reviewCount": 580,
+"priceRange": "$$","specialties": ["Korean Layer Cut", "Balayage", "Hair Spa"],"services": [{"service": "Korean Layer Cut", "price": 1350},{"service": "Balayage", "price": 6000},{"service": "Hair Spa", "price": 1300}],"experienceYears": 8,"genderPreference": "Unisex","availableSlots": ["10:30 AM", "02:00 PM", "05:30 PM"],"reviews": ["Beautiful voluminous bouncy layers from Korean cut.","The dark chocolate painted balayage highlights look superb.","Deep moisture scalp care therapy spa was wonderful.","Punctual staff members who track custom bookings cleanly.","Hygienic standard setup with tidy layout."],"portfolioStyles": ["bouncy korean layers look", "dark chocolate balayage highlights", "scalp care therapy spa hair"],"contact": "+91 99090 12345","verified": true},{"salonId": "SAL-098","name": "The Velvet Touch Lounge","city": "Kolkata","locality": "Kolkata Salt Lake Sec 2","rating": 4.6,"reviewCount": 750,"priceRange": "$$$","specialties": ["Bridal Makeup", "Keratin Treatment", "Hair Smoothening"],"services": [{"service": "Bridal Makeup", "price": 25000},{"service": "Keratin Treatment", "price": 5700},{"service": "Hair Smoothening", "price": 5000}],"experienceYears": 10,"genderPreference": "Women","availableSlots": ["09:30 AM", "01:00 PM", "04:30 PM", "07:00 PM"],"reviews": ["Stunning high definition flawless bridal cosmetic layout.","Keratin hair treatment left my strands fully smooth straight.","Hair smoothening process completed with absolute precision.","Premium aesthetic interior setup in Salt Lake area.","Courteous and highly cooperative staff team."],"portfolioStyles": ["hd bridal cosmetic layout", "smooth straight keratin strands", "precision hair smoothening process"],"contact": "+91 89090 12345","verified": true},{"salonId": "SAL-099","name": "Prism Hair Studio","city": "Hyderabad","locality": "Chandanagar","rating": 4.0,"reviewCount": 190,"priceRange": "$",
+"specialties": ["Beard Styling", "Hair Spa", "Hair Straightening"],
+"services": [
+{"service": "Beard Styling", "price": 260},
+{"service": "Hair Spa", "price": 999},
+{"service": "Hair Straightening", "price": 3300}
+],
+"experienceYears": 4,
+"genderPreference": "Unisex",
+"availableSlots": ["10:00 AM", "03:00 PM", "06:30 PM"],
+"reviews": [
+"Highly budget friendly long hair straightening package.",
+"Decent deep massage rub during normal spa session.",
+"Quick beard fade mustache line shaping work.",
+"Good residential family salon option for regular folks.",
+"Polite local floor crew guys."
+],
+"portfolioStyles": ["budget long hair straightening", "normal hair spa session", "beard fade mustache line"],
+"contact": "+91 79090 12345",
+"verified": true
+},
+{
+"salonId": "SAL-100",
+"name": "Vogue Concept Salon",
+"city": "Bangalore",
+"locality": "Kalyan Nagar",
+"rating": 4.7,
+"reviewCount": 1100,
+"priceRange": "$$$",
+"specialties": ["Wolf Cut", "Balayage", "Keratin Treatment"],
+"services": [
+{"service": "Wolf Cut", "price": 1400},
+{"service": "Balayage", "price": 6700},
+{"service": "Keratin Treatment", "price": 5900}
+],
+"experienceYears": 11,
+"genderPreference": "Unisex",
+"availableSlots": ["11:00 AM", "02:30 PM", "05:30 PM", "08:00 PM"],
+"reviews": [
+"Incredible modern edgy textured wolf cut.",
+"Fabulous ash brown painted balayage highlights blend.",
+"Premium keratin protection shield applied nicely.",
+"Luxury layout infrastructure with refreshing coffee.",
+"Senior expert hair professionals are outstanding."
+],
+"portfolioStyles": ["modern textured wolf cut", "ash brown balayage highlights", "keratin hair protection shield"],
+"contact": "+91 69090 12345",
+"verified": true
+},
+{
+"salonId": "SAL-101",
+"name": "The Hair Matrix",
+"city": "Mumbai",
+"locality": "Kandivali West",
+"rating": 4.4,
+"reviewCount": 520,
+"priceRange": "$$",
+"specialties": ["Korean Layer Cut", "Hair Coloring", "Hair Smoothening"],
+"services": [
+{"service": "Korean Layer Cut", "price": 1400},
+{"service": "Hair Coloring", "price": 4600},
+{"service": "Hair Smoothening", "price": 4900}
+],
+"experienceYears": 7,
+"genderPreference": "Unisex",
+"availableSlots": ["10:30 AM", "01:30 PM", "05:00 PM"],
+"reviews": [
+"Lovely face-framing bouncy Korean layers cut format.",
+"Deep copper brown global hair tint looks spectacular.",
+"Smoothening treatment cleared texture frizz completely.",
+"Friendly team members with prompt appointment timings.",
+"Clean room layout with sanitized equipment."
+],
+"portfolioStyles": ["bouncy korean layers format", "copper brown global tint", "frizz free smoothened locks"],
+"contact": "+91 91234 87654",
+"verified": true
+},
+{
+"salonId": "SAL-102",
+"name": "Bella Donna Concept",
+"city": "Chennai",
+"locality": "Velachery Main",
+"rating": 4.1,
+"reviewCount": 230,
+"priceRange": "$$",
+"specialties": ["Bridal Makeup", "Hair Smoothening", "Hair Spa"],
+"services": [
+{"service": "Bridal Makeup", "price": 21000},
+{"service": "Hair Smoothening", "price": 4600},
+{"service": "Hair Spa", "price": 1250}
+],
+"experienceYears": 6,
+"genderPreference": "Women",
+"availableSlots": ["10:00 AM", "02:00 PM", "05:30 PM"],
+"reviews": [
+"Traditional heavy South Indian wedding bridal cosmetic work.",
+"Hair smoothening texture feels flat and very shiny.",
+"Deeply moisturizing normal hair spa setup completed.",
+"Spacious clean rooms for marriage bookings.",
+"Polite customer handling by staff members."
+],
+"portfolioStyles": ["south indian bridal look", "flat shiny hair smoothening", "moisturizing normal hair spa"],
+"contact": "+91 81234 87654",
+"verified": true
+},
+{
+"salonId": "SAL-103",
+"name": "Elite Scissors Lounge",
+"city": "Delhi",
+"locality": "Shalimar Bagh",
+"rating": 4.5,
+"reviewCount": 560,
+"priceRange": "$$",
+"specialties": ["Wolf Cut", "Hair Coloring", "Keratin Treatment"],
+"services": [
+{"service": "Wolf Cut", "price": 1200},
+{"service": "Hair Coloring", "price": 4300},
+{"service": "Keratin Treatment", "price": 5100}
+],
+"experienceYears": 8,
+"genderPreference": "Unisex",
+"availableSlots": ["11:00 AM", "03:00 PM", "06:30 PM"],
+"reviews": [
+"Terrific messy variant wolf cut with fine edges.",
+"Vibrant dark brown coloring global tone done nicely.",
+"Keratin hair therapy left strands soft and gleaming.",
+"Prompt service management system, very clear tracking.",
+"Clean modern interior look with fresh chairs."
+],
+"portfolioStyles": ["fine edge messy wolf", "dark brown global tone hair", "gleaming keratin hair strands"],
+"contact": "+91 71234 87654",
+"verified": true
+},
+{
+"salonId": "SAL-104",
+"name": "The Hair Science Lounge",
+"city": "Pune",
+"locality": "Salunke Vihar",
+"rating": 4.3,
+"reviewCount": 340,
+"priceRange": "$$",
+"specialties": ["Korean Layer Cut", "Keratin Treatment", "Hair Spa"],
+"services": [
+{"service": "Korean Layer Cut", "price": 1300},
+{"service": "Keratin Treatment", "price": 5000},
+{"service": "Hair Spa", "price": 1200}
+],
+"experienceYears": 6,
+"genderPreference": "Unisex",
+"availableSlots": ["10:00 AM", "01:00 PM", "04:30 PM"],
+"reviews": [
+"Loved the soft layered flip from Korean styling.",
+"Keratin smoothing treatment has great lasting quality.",
+"Deep moisture conditioning hair spa was comforting.",
+"Neat cozy studio space, quite quiet environment.",
+"Skilled and warm conversational hair artisans."
+],
+"portfolioStyles": ["soft layered flip hair", "lasting keratin smoothing look", "conditioning hair spa routine"],
+"contact": "+91 61234 87654",
+"verified": false
+},
+{
+"salonId": "SAL-105",
+"name": "Radiant Hair Aesthetics",
+"city": "Kolkata",
+"locality": "Kolkata Jodhpur Park",
+"rating": 4.4,
+"reviewCount": 410,
+"priceRange": "$$",
+"specialties": ["Balayage", "Hair Straightening", "Hair Spa"],
+"services": [
+{"service": "Balayage", "price": 5600},
+{"service": "Hair Straightening", "price": 4100},
+{"service": "Hair Spa", "price": 1300}
+],
+"experienceYears": 7,
+"genderPreference": "Unisex",
+"availableSlots": ["11:00 AM", "02:30 PM", "06:00 PM"],
+"reviews": [
+"Beautiful bronze painted balayage highlights details.",
+"Straightening process completed with high standard iron tools.",
+"The warm steam scalp spa was very soothing.",
+"Helpful staff with multiple regular upkeep guidelines.",
+"Clean tidy layout workspace."
+],
+"portfolioStyles": ["bronze painted balayage highlights", "standard iron straightening", "warm steam scalp spa routine"],
+"contact": "+91 92345 67890",
+"verified": true
+},
+{
+"salonId": "SAL-106",
+"name": "The Razor Hub",
+"city": "Hyderabad",
+"locality": "Khairatabad",
+"rating": 3.8,
+"reviewCount": 160,
+"priceRange": "$$",
+"specialties": ["Beard Styling", "Wolf Cut", "Hair Coloring"],
+"services": [
+{"service": "Beard Styling", "price": 280},
+{"service": "Wolf Cut", "price": 999},
+{"service": "Hair Coloring", "price": 3600}
+],
+"experienceYears": 5,
+"genderPreference": "Men",
+"availableSlots": ["12:00 PM", "03:30 PM", "07:00 PM"],
+"reviews": [
+"Decent place for fast men's hair grooming needs.",
+"Wolf cut outline shape was satisfactory.",
+"The sharp razor beard framing line was neat.",
+"Fair pricing metrics for regular office crowd folks.",
+"Cooperative hair stylists."
+],
+"portfolioStyles": ["men grooming lines basic", "satisfactory wolf cut shape", "sharp razor beard line"],
+"contact": "+91 82345 67890",
+"verified": false
+},
+{
+"salonId": "SAL-107",
+"name": "Urban Clippers Concept",
+"city": "Bangalore",
+"locality": "Jayanagar 4th Block",
+"rating": 4.5,
+"reviewCount": 810,
+"priceRange": "$$",
+"specialties": ["Wolf Cut", "Korean Layer Cut", "Hair Coloring"],
+"services": [
+{"service": "Wolf Cut", "price": 1250},
+{"service": "Korean Layer Cut", "price": 1400},
+{"service": "Hair Coloring", "price": 4500}
+],
+"experienceYears": 8,
+"genderPreference": "Unisex",
+"availableSlots": ["10:30 AM", "02:00 PM", "05:30 PM"],
+"reviews": [
+"Love the fine shaggy outline framing of my wolf cut.",
+"Authentic airy Korean layers look with perfect volume.",
+"Global copper brown coloring tone looks gorgeous.",
+"Well-maintained lounge floor with deep hygiene protocol.",
+"Prompt handling from professional senior technicians."
+],
+"portfolioStyles": ["shaggy outline wolf framing", "airy korean layers volume", "global copper brown coloring"],
+"contact": "+91 72345 67890",
+"verified": true
+},
+{
+"salonId": "SAL-108",
+"name": "Mane Essence Studio",
+"city": "Mumbai",
+"locality": "Ghatkopar East",
+"rating": 4.4,
+"reviewCount": 490,
+"priceRange": "$$",
+"specialties": ["Keratin Treatment", "Bridal Makeup", "Hair Spa"],
+"services": [
+{"service": "Keratin Treatment", "price": 5400},
+{"service": "Bridal Makeup", "price": 22000},
+{"service": "Hair Spa", "price": 1350}
+],
+"experienceYears": 7,
+"genderPreference": "Women",
+"availableSlots": ["10:00 AM", "01:30 PM", "05:00 PM"],
+"reviews": [
+"The keratin treatment smoothed out coarse strands cleanly.",
+"Stunning soft high definition wedding bridal makeup work.",
+"Deeply therapeutic conditioning hair spa session.",
+"Clean private changing areas and great space arrangement.",
+"Courteous and very polite team members."
+],
+"portfolioStyles": ["coarse strand keratin smoothing", "soft hd bridal makeup look", "conditioning hair spa session"],
+"contact": "+91 62345 67890",
+"verified": true
+},
+{
+"salonId": "SAL-109",
+"name": "Cuts N Color Lounge",
+"city": "Chennai",
+"locality": "Anna Nagar West",
+"rating": 3.7,
+"reviewCount": 90,
+"priceRange": "$","specialties": ["Hair Straightening", "Hair Spa", "Beard Styling"],"services": [{"service": "Hair Straightening", "price": 3300},{"service": "Hair Spa", "price": 950},{"service": "Beard Styling", "price": 280}],"experienceYears": 3,"genderPreference": "Unisex","availableSlots": ["11:00 AM", "03:00 PM", "06:30 PM"],"reviews": ["Pocket friendly flat hair straightening treatment.","Decent conditioning cream massaged during regular spa.","Fast basic outline alignment on beard mustache.","Affordable regular monthly styling option.","Small helpful floor crew."],"portfolioStyles": ["pocket friendly hair straightening", "conditioning cream spa massage", "basic beard mustache outline"],"contact": "+91 93456 78901","verified": false},{"salonId": "SAL-110","name": "The Hair Horizon Studio","city": "Delhi","locality": "Safdarjung Enclave","rating": 4.6,"reviewCount": 1050,"priceRange": "$$$","specialties": ["Korean Layer Cut", "Balayage", "Hair Coloring"],"services": [{"service": "Korean Layer Cut", "price": 1700},{"service": "Balayage", "price": 7100},{"service": "Hair Coloring", "price": 5300}],"experienceYears": 12,"genderPreference": "Unisex","availableSlots": ["11:30 AM", "02:30 PM", "05:30 PM", "08:00 PM"],"reviews": ["Beautiful elegant Korean style layers cut perfectly.","Incredible soft caramel painted balayage transition.","Professional deep global brown coloring done cleanly.","Luxurious layout environment in Safdarjung area.","Highly creative senior hair director expert master."],"portfolioStyles": ["korean style layers look", "soft caramel painted balayage", "deep global brown coloring"],"contact": "+91 83456 78901","verified": true},{"salonId": "SAL-111","name": "Urban Styles Concept","city": "Pune","locality": "Magarpatta City","rating": 4.5,"reviewCount": 590,"priceRange": "$$",
+"specialties": ["Wolf Cut", "Keratin Treatment", "Hair Spa"],
+"services": [
+{"service": "Wolf Cut", "price": 1200},
+{"service": "Keratin Treatment", "price": 5200},
+{"service": "Hair Spa", "price": 1350}
+],
+"experienceYears": 8,
+"genderPreference": "Unisex",
+"availableSlots": ["10:00 AM", "01:00 PM", "04:30 PM"],
+"reviews": [
+"The modern messy wolf cut turned out perfectly bold.",
+"Keratin hair therapy coating has exceptional gloss shine.",
+"Relaxing intense head conditioning hair spa.",
+"Modern interior layout with clean comfortable seats.",
+"Highly professional core hair artists."
+],
+"portfolioStyles": ["modern messy wolf cut", "glossy keratin hair coating", "intense head conditioning spa"],
+"contact": "+91 73456 78901",
+"verified": true
+},
+{
+"salonId": "SAL-112",
+"name": "The Crown Master Lounge",
+"city": "Kolkata",
+"locality": "Kolkata Kasba",
+"rating": 4.1,
+"reviewCount": 290,
+"priceRange": "$$","specialties": ["Bridal Makeup", "Hair Smoothening", "Beard Styling"],"services": [{"service": "Bridal Makeup", "price": 19000},{"service": "Hair Smoothening", "price": 4500},{"service": "Beard Styling", "price": 350}],"experienceYears": 6,"genderPreference": "Unisex","availableSlots": ["11:00 AM", "03:00 PM", "06:30 PM"],"reviews": ["Satisfactory traditional regional wedding makeup work.","Smoothening treatment left wavy hair texture flat straight.","Good quick mustache beard alignment outline framing.","Affordable pricing scale for general families.","Cooperative crew members."],"portfolioStyles": ["traditional regional bridal makeup", "flat straight smoothened texture", "quick beard alignment outline"],"contact": "+91 63456 78901","verified": true},{"salonId": "SAL-113","name": "Symphony Scissors Concept","city": "Hyderabad","locality": "Malakpet","rating": 4.1,"reviewCount": 210,"priceRange": "$$",
+"specialties": ["Korean Layer Cut", "Balayage", "Hair Spa"],
+"services": [
+{"service": "Korean Layer Cut", "price": 1300},
+{"service": "Balayage", "price": 5800},
+{"service": "Hair Spa", "price": 1200}
+],
+"experienceYears": 6,
+"genderPreference": "Unisex",
+"availableSlots": ["10:30 AM", "01:30 PM", "05:00 PM"],
+"reviews": [
+"Nice face framing Korean style layers cut design.",
+"Beautiful ash brown painted balayage highlights.",
+"Extremely soothing deep nourishing hair spa session.",
+"Neat standard room tracking management setup.",
+"Respectful team who handle questions politely."
+],
+"portfolioStyles": ["korean layers design look", "ash brown painted balayage", "deep nourishing spa session"],
+"contact": "+91 94567 89012",
+"verified": true
+},
+{
+"salonId": "SAL-114",
+"name": "Vogue Studio Aesthetics",
+"city": "Bangalore",
+"locality": "Malleshwaram West",
+"rating": 4.6,
+"reviewCount": 890,
+"priceRange": "$$$",
+"specialties": ["Wolf Cut", "Keratin Treatment", "Hair Coloring"],
+"services": [
+{"service": "Wolf Cut", "price": 1400},
+{"service": "Keratin Treatment", "price": 5900},
+{"service": "Hair Coloring", "price": 5000}
+],
+"experienceYears": 11,
+"genderPreference": "Unisex",
+"availableSlots": ["11:00 AM", "02:30 PM", "05:30 PM", "08:00 PM"],
+"reviews": [
+"Excellent multi layered shaggy wolf cut executed.",
+"Keratin hair shield therapy left strands silky straight.",
+"Stunning mahogany color global tint applied smoothly.",
+"High end luxury setting ambiance and elegant entry.",
+"Senior expert hair master artisans are brilliant."
+],
+"portfolioStyles": ["multi layered shaggy wolf", "silky straight keratin shield", "mahogany global tint routine"],
+"contact": "+91 84567 89012",
+"verified": true
+},
+{
+"salonId": "SAL-115",
+"name": "The Hair & Blade",
+"city": "Mumbai",
+"locality": "Kalyan West",
+"rating": 4.4,
+"reviewCount": 680,
+"priceRange": "$$","specialties": ["Hair Smoothening", "Hair Straightening", "Beard Styling"],"services": [{"service": "Hair Smoothening", "price": 4600},{"service": "Hair Straightening", "price": 4100},{"service": "Beard Styling", "price": 380}],"experienceYears": 8,"genderPreference": "Unisex","availableSlots": ["10:00 AM", "02:00 PM", "05:30 PM"],"reviews": ["Smoothening treatment has long durability and shiny look.","Perfect flat poker straight styling done precisely.","Clear crisp alignment outline for full beard shape.","Hygienic studio workspace with polite professionals.","Suggested helpful post salon shampoo instructions."],"portfolioStyles": ["durable shiny smoothened locks", "flat poker straight styling", "crisp full beard alignment"],"contact": "+91 74567 89012","verified": true},{"salonId": "SAL-116","name": "Bella Donna Hub","city": "Chennai","locality": "Gopalapuram","rating": 4.0,"reviewCount": 170,"priceRange": "$$",
+"specialties": ["Bridal Makeup", "Hair Spa", "Hair Coloring"],
+"services": [
+{"service": "Bridal Makeup", "price": 21000},
+{"service": "Hair Spa", "price": 1250},
+{"service": "Hair Coloring", "price": 4000}
+],
+"experienceYears": 5,
+"genderPreference": "Women",
+"availableSlots": ["10:30 AM", "01:30 PM", "05:00 PM"],
+"reviews": [
+"The wedding makeup finish was very subtle and pretty.",
+"Very soothing deep cream conditioning spa layout.",
+"Nice even coating of dark global blonde tint.",
+"Polite staff handle family crowds patiently.",
+"Comfortable local neighborhood boutique environment feel."
+],
+"portfolioStyles": ["subtle pretty bridal makeup", "deep cream conditioning spa", "dark global blonde tint"],
+"contact": "+91 64567 89012",
+"verified": false
+},
+{
+"salonId": "SAL-117",
+"name": "Aura Hair Artistry",
+"city": "Delhi",
+"locality": "Punjabi Bagh",
+"rating": 4.8,
+"reviewCount": 1190,
+"priceRange": "$$$",
+"specialties": ["Korean Layer Cut", "Balayage", "Keratin Treatment"],
+"services": [
+{"service": "Korean Layer Cut", "price": 1750},
+{"service": "Balayage", "price": 7300},
+{"service": "Keratin Treatment", "price": 6200}
+],
+"experienceYears": 12,
+"genderPreference": "Unisex",
+"availableSlots": ["11:00 AM", "03:00 PM", "06:00 PM", "08:30 PM"],
+"reviews": [
+"Incredible authentic Korean style fringe layers.",
+"Stunning soft gold highlights painted balayage.",
+"Keratin smoothing treatment fully restored split endings.",
+"High end luxury lounge setup with premium vibes.",
+"Highly skilled professional senior master hair stylists."
+],
+"portfolioStyles": ["korean fringe layers look", "soft gold highlights balayage", "keratin split end restoration"],
+"contact": "+91 95678 90123",
+"verified": true
+},
+{
+"salonId": "SAL-118",
+"name": "Mirror Line Studio",
+"city": "Pune",
+"locality": "Nigdi",
+"rating": 4.2,
+"reviewCount": 330,
+"priceRange": "$$","specialties": ["Wolf Cut", "Hair Coloring", "Hair Spa"],"services": [{"service": "Wolf Cut", "price": 1050},{"service": "Hair Coloring", "price": 4100},{"service": "Hair Spa", "price": 1200}],"experienceYears": 5,"genderPreference": "Unisex","availableSlots": ["10:00 AM", "01:00 PM", "04:30 PM"],"reviews": ["Nice structural messy hair wolf cut variant.","Beautiful global brown hair coloring completed smoothly.","Very soothing scalp care conditioning hair spa.","Prompt handling on predefined booked slots.","Clean interior design with polite floor team."],"portfolioStyles": ["structural messy wolf variant", "global brown coloring routine", "scalp care conditioning spa"],"contact": "+91 85678 90123","verified": true},{"salonId": "SAL-119","name": "The Glamour Lounge","city": "Kolkata","locality": "Kolkata Garia","rating": 4.4,"reviewCount": 510,"priceRange": "$$",
+"specialties": ["Bridal Makeup", "Hair Smoothening", "Beard Styling"],
+"services": [
+{"service": "Bridal Makeup", "price": 19000},
+{"service": "Hair Smoothening", "price": 4500},
+{"service": "Beard Styling", "price": 330}
+],
+"experienceYears": 8,
+"genderPreference": "Unisex",
+"availableSlots": ["11:30 AM", "03:30 PM", "07:00 PM"],
+"reviews": [
+"Stunning classical bridal cosmetic work completed cleanly.",
+"Smoothening made thick wavy locks perfectly sleek straight.",
+"Clear neat mustache beard profile alignment work.",
+"Affordable regional neighborhood family salon alternative.",
+"Very polite floor crew members."
+],
+"portfolioStyles": ["classical bridal cosmetic work", "sleek straight smoothened locks", "neat mustache beard profile"],
+"contact": "+91 75678 90123",
+"verified": false
+},
+{
+"salonId": "SAL-120",
+"name": "Scissors Edge Concept",
+"city": "Hyderabad",
+"locality": "Nizampet",
+"rating": 4.1,
+"reviewCount": 240,
+"priceRange": "$",
+"specialties": ["Hair Straightening", "Hair Spa", "Beard Styling"],
+"services": [
+{"service": "Hair Straightening", "price": 3400},
+{"service": "Hair Spa", "price": 1050},
+{"service": "Beard Styling", "price": 280}
+],
+"experienceYears": 4,
+"genderPreference": "Unisex",
+"availableSlots": ["10:00 AM", "02:30 PM", "06:00 PM"],
+"reviews": [
+"Good flat iron hair straightening done cleanly.",
+"The refreshing nourishing organic hair spa was calming.",
+"Nice swift sideburn beard contour framing work.",
+"Value for money packages for regular resident families.",
+"Respectful salon floor guys."
+],
+"portfolioStyles": ["flat iron hair straightening", "nourishing organic hair spa", "sideburn beard contour framing"],
+"contact": "+91 65678 90123",
+"verified": true
+},
+{
+"salonId": "SAL-121",
+"name": "Urban Locks Co",
+"city": "Bangalore",
+"locality": "Mahadevapura",
+"rating": 4.5,
+"reviewCount": 740,
+"priceRange": "$$","specialties": ["Wolf Cut", "Korean Layer Cut", "Keratin Treatment"],"services": [{"service": "Wolf Cut", "price": 1250},{"service": "Korean Layer Cut", "price": 1350},{"service": "Keratin Treatment", "price": 5100}],"experienceYears": 8,"genderPreference": "Unisex","availableSlots": ["11:00 AM", "02:00 PM", "05:30 PM"],"reviews": ["Love the bold shaggy layer outline of my wolf cut.","Excellent airy Korean framing layered haircut style.","Keratin hair therapy coating made strands highly smooth.","Modern tidy space layout with standard accessories.","Helpful crew members with fine hair care tips."],"portfolioStyles": ["bold shaggy layer outline", "airy korean framing layers", "smooth keratin coating hair"],"contact": "+91 96789 01234","verified": true},{"salonId": "SAL-122","name": "Mane Luxury Styling","city": "Mumbai","locality": "Sion","rating": 4.6,"reviewCount": 1090,"priceRange": "$$$","specialties": ["Balayage", "Bridal Makeup", "Hair Coloring"],"services": [{"service": "Balayage", "price": 6700},{"service": "Bridal Makeup", "price": 27000},{"service": "Hair Coloring", "price": 5100}],"experienceYears": 11,"genderPreference": "Unisex","availableSlots": ["10:30 AM", "01:30 PM", "04:30 PM", "07:30 PM"],"reviews": ["Stunning copper gold hand painted balayage details.","Fabulous elegant high definition bridal look provided.","Beautiful choice of deep ash blonde global color.","High end premium lounge atmosphere layout.","Senior expert hair professionals are amazing."],"portfolioStyles": ["copper gold painted balayage", "hd bridal look layout", "deep ash blonde global color"],"contact": "+91 86789 01234","verified": true},{"salonId": "SAL-123","name": "Glow Lounge Aesthetics","city": "Chennai","locality": "Kotturpuram","rating": 3.8,"reviewCount": 110,"priceRange": "$$",
+"specialties": ["Hair Smoothening", "Hair Spa", "Beard Styling"],
+"services": [
+{"service": "Hair Smoothening", "price": 4200},
+{"service": "Hair Spa", "price": 1100},
+{"service": "Beard Styling", "price": 320}
+],
+"experienceYears": 4,
+"genderPreference": "Unisex",
+"availableSlots": ["10:00 AM", "01:00 PM", "05:00 PM"],
+"reviews": [
+"Satisfactory frizz management via smoothening routine.",
+"Nice standard relaxing scalp conditioning spa mask.",
+"Quick beard trim lines completed clearly.",
+"Decent budget friendly pricing options for daily people.",
+"Polite floor crew guys."
+],
+"portfolioStyles": ["frizz management smoothening", "scalp conditioning spa mask", "clear beard trim lines"],
+"contact": "+91 76789 01234",
+"verified": false
+},
+{
+"salonId": "SAL-124",
+"name": "Style Equation Studio",
+"city": "Delhi",
+"locality": "Vikaspuri",
+"rating": 4.4,
+"reviewCount": 390,
+"priceRange": "$$","specialties": ["Wolf Cut", "Hair Coloring", "Keratin Treatment"],"services": [{"service": "Wolf Cut", "price": 1150},{"service": "Hair Coloring", "price": 4300},{"service": "Keratin Treatment", "price": 4900}],"experienceYears": 7,"genderPreference": "Unisex","availableSlots": ["11:30 AM", "03:00 PM", "06:30 PM"],"reviews": ["Edgy multi layered wolf cut executed nicely.","Rich deep mahogany brown hair coloring global tone.","Keratin smoothing made hair perfectly silky smooth.","Good prompt attention, minimal unnecessary waiting.","Clean individual stations layout setup neatly."],"portfolioStyles": ["edgy multi layered wolf", "mahogany brown global tone", "silky smooth keratin locks"],"contact": "+91 66789 01234","verified": true},{"salonId": "SAL-125","name": "Symphony Hair Studio","city": "Pune","locality": "Kondhwa","rating": 4.5,"reviewCount": 540,"priceRange": "$$",
+"specialties": ["Korean Layer Cut", "Balayage", "Hair Spa"],
+"services": [
+{"service": "Korean Layer Cut", "price": 1350},
+{"service": "Balayage", "price": 5900},
+{"service": "Hair Spa", "price": 1250}
+],
+"experienceYears": 8,
+"genderPreference": "Unisex",
+"availableSlots": ["10:30 AM", "02:00 PM", "05:30 PM"],
+"reviews": [
+"Beautiful voluminous airy layers from Korean cut.",
+"The dark chocolate painted balayage highlights look elegant.",
+"Deep moisture scalp care therapy spa was lovely.",
+"Punctual staff members who handle bookings cleanly.",
+"Hygienic standard setup with tidy layout space."
+],
+"portfolioStyles": ["voluminous airy korean layers", "dark chocolate painted balayage", "scalp care therapy spa"],
+"contact": "+91 97890 12345",
+"verified": true
+},
+{
+"salonId": "SAL-126",
+"name": "The Velvet Touch Studio",
+"city": "Kolkata",
+"locality": "Kolkata Salt Lake Sec 1",
+"rating": 4.6,
+"reviewCount": 710,
+"priceRange": "$$$",
+"specialties": ["Bridal Makeup", "Keratin Treatment", "Hair Smoothening"],
+"services": [
+{"service": "Bridal Makeup", "price": 24000},
+{"service": "Keratin Treatment", "price": 5600},
+{"service": "Hair Smoothening", "price": 4900}
+],
+"experienceYears": 10,
+"genderPreference": "Women",
+"availableSlots": ["09:30 AM", "01:00 PM", "04:30 PM", "07:00 PM"],
+"reviews": [
+"Stunning flawless bridal cosmetic layout design.",
+"Keratin hair treatment left my long hair smooth straight.",
+"Hair smoothening completed with fine meticulous precision.",
+"Premium aesthetic interior setup in Salt Lake city area.",
+"Courteous and highly cooperative floor staff."
+],
+"portfolioStyles": ["flawless bridal cosmetic layout", "smooth straight keratin hair", "precision hair smoothening routine"],
+"contact": "+91 87890 12345",
+"verified": true
+},
+{
+"salonId": "SAL-127",
+"name": "Prism Hair Lounge",
+"city": "Hyderabad",
+"locality": "Mehdipatnam",
+"rating": 4.0,
+"reviewCount": 170,
+"priceRange": "$",
+"specialties": ["Beard Styling", "Hair Spa", "Hair Straightening"],
+"services": [
+{"service": "Beard Styling", "price": 250},
+{"service": "Hair Spa", "price": 999},
+{"service": "Hair Straightening", "price": 3200}
+],
+"experienceYears": 4,
+"genderPreference": "Unisex",
+"availableSlots": ["10:00 AM", "03:00 PM", "06:30 PM"],
+"reviews": [
+"Highly budget friendly hair straightening routine.",
+"Decent intensive massage rub during regular spa.",
+"Quick beard fade mustache outline alignment work.",
+"Good residential family salon option for local crowds.",
+"Polite local floor crew guys."
+],
+"portfolioStyles": ["budget hair straightening routine", "regular spa massage rub", "beard fade mustache alignment"],
+"contact": "+91 77890 12345",
+"verified": true
+},
+{
+"salonId": "SAL-128",
+"name": "Vogue Concept Studio",
+"city": "Bangalore",
+"locality": "Hennur",
+"rating": 4.7,
+"reviewCount": 1050,
+"priceRange": "$$$",
+"specialties": ["Wolf Cut", "Balayage", "Keratin Treatment"],
+"services": [
+{"service": "Wolf Cut", "price": 1400},
+{"service": "Balayage", "price": 6600},
+{"service": "Keratin Treatment", "price": 5800}
+],
+"experienceYears": 11,
+"genderPreference": "Unisex",
+"availableSlots": ["11:00 AM", "02:30 PM", "05:30 PM", "08:00 PM"],
+"reviews": [
+"Incredible modern edgy shaggy wolf cut variant.",
+"Fabulous ash brown painted balayage streaks blend.",
+"Premium keratin safety shield applied nicely.",
+"Luxury layout infrastructure with refreshing drinks.",
+"Senior expert hair professionals are spectacular."
+],
+"portfolioStyles": ["shaggy wolf cut variant", "ash brown balayage streaks", "keratin safety shield hair"],
+"contact": "+91 67890 12345",
+"verified": true
+},
+{
+"salonId": "SAL-129",
+"name": "The Scissors Master",
+"city": "Mumbai",
+"locality": "Dahisar West",
+"rating": 4.3,
+"reviewCount": 470,
+"priceRange": "$$","specialties": ["Korean Layer Cut", "Hair Coloring", "Hair Smoothening"],"services": [{"service": "Korean Layer Cut", "price": 1400},{"service": "Hair Coloring", "price": 4500},{"service": "Hair Smoothening", "price": 4800}],"experienceYears": 7,"genderPreference": "Unisex","availableSlots": ["10:30 AM", "01:30 PM", "05:00 PM"],"reviews": ["Lovely face-framing airy Korean layers haircut.","Deep copper brown global hair tint done cleanly.","Smoothening treatment cleared texture frizz completely.","Friendly team members with prompt slot execution.","Clean space with nicely sanitized tools."],"portfolioStyles": ["face framing korean layers", "copper brown global hair tint", "frizz free smoothened hair strands"],"contact": "+91 91234 54321","verified": true},{"salonId": "SAL-130","name": "Bella Donna Art","city": "Chennai","locality": "Perungudi","rating": 4.1,"reviewCount": 210,"priceRange": "$$",
+"specialties": ["Bridal Makeup", "Hair Smoothening", "Hair Spa"],
+"services": [
+{"service": "Bridal Makeup", "price": 21000},
+{"service": "Hair Smoothening", "price": 4500},
+{"service": "Hair Spa", "price": 1200}
+],
+"experienceYears": 6,
+"genderPreference": "Women",
+"availableSlots": ["10:00 AM", "02:00 PM", "05:30 PM"],
+"reviews": [
+"Traditional South Indian marriage bridal makeup done cleanly.",
+"Hair smoothening texture feels flat straight and shiny.",
+"Deeply moisturizing normal hair spa session completed.",
+"Spacious clean setups for wedding party bookings.",
+"Polite customer handling by floor staff."
+],
+"portfolioStyles": ["south indian wedding makeup", "flat straight shiny smoothened hair", "moisturizing normal hair spa session"],
+"contact": "+91 81234 54321",
+"verified": true
+},
+{
+"salonId": "SAL-131",
+"name": "Elite Scissors Concept",
+"city": "Delhi",
+"locality": "Ashok Vihar",
+"rating": 4.5,
+"reviewCount": 520,
+"priceRange": "$$","specialties": ["Wolf Cut", "Hair Coloring", "Keratin Treatment"],"services": [{"service": "Wolf Cut", "price": 1200},{"service": "Hair Coloring", "price": 4300},{"service": "Keratin Treatment", "price": 5000}],"experienceYears": 8,"genderPreference": "Unisex","availableSlots": ["11:00 AM", "03:00 PM", "06:30 PM"],"reviews": ["Terrific layered wolf cut variant with fine edges.","Vibrant dark brown global color done beautifully.","Keratin hair shield left strands soft and shimmering.","Prompt service management system, very clear tracking.","Clean modern interior look with fresh leather chairs."],"portfolioStyles": ["layered wolf cut variant", "dark brown global color hair", "shimmering keratin hair strands"],"contact": "+91 71234 54321","verified": true},{"salonId": "SAL-132","name": "The Hair Science Studio","city": "Pune","locality": "Wanowrie","rating": 4.3,"reviewCount": 310,"priceRange": "$$",
+"specialties": ["Korean Layer Cut", "Keratin Treatment", "Hair Spa"],
+"services": [
+{"service": "Korean Layer Cut", "price": 1300},
+{"service": "Keratin Treatment", "price": 4900},
+{"service": "Hair Spa", "price": 1200}
+],
+"experienceYears": 6,
+"genderPreference": "Unisex",
+"availableSlots": ["10:00 AM", "01:00 PM", "04:30 PM"],
+"reviews": [
+"Loved the soft layered flip from Korean hair styling.",
+"Keratin smoothing treatment has excellent lasting strength.",
+"Deep moisture conditioning hair spa routine was comforting.",
+"Neat cozy studio floor, quiet peaceful environment.",
+"Skilled and warm conversational hair stylists."
+],
+"portfolioStyles": ["soft layered flip styling", "lasting keratin smoothing strength", "conditioning hair spa routine look"],
+"contact": "+91 61234 54321",
+"verified": false
+},
+{
+"salonId": "SAL-133",
+"name": "Radiant Hair Co",
+"city": "Kolkata",
+"locality": "Kolkata Dhakuria",
+"rating": 4.4,
+"reviewCount": 380,
+"priceRange": "$$","specialties": ["Balayage", "Hair Straightening", "Hair Spa"],"services": [{"service": "Balayage", "price": 5500},{"service": "Hair Straightening", "price": 4000},{"service": "Hair Spa", "price": 1250}],"experienceYears": 7,"genderPreference": "Unisex","availableSlots": ["11:00 AM", "02:30 PM", "06:00 PM"],"reviews": ["Beautiful bronze highlights painted balayage details lines.","Straightening process completed with high standard tools perfectly.","The warm steam scalp spa mask was very soothing.","Helpful staff with multiple regular maintenance tips.","Clean tidy workspace layout."],"portfolioStyles": ["bronze highlights painted balayage look", "standard straightening tools execution", "warm steam scalp spa mask"],"contact": "+91 93456 12345","verified": true},{"salonId": "SAL-134","name": "The Razor Station","city": "Hyderabad","locality": "Koti","rating": 3.8,"reviewCount": 140,"priceRange": "$$",
+"specialties": ["Beard Styling", "Wolf Cut", "Hair Coloring"],
+"services": [
+{"service": "Beard Styling", "price": 260},
+{"service": "Wolf Cut", "price": 950},
+{"service": "Hair Coloring", "price": 3500}
+],
+"experienceYears": 5,
+"genderPreference": "Men",
+"availableSlots": ["12:00 PM", "03:30 PM", "07:00 PM"],
+"reviews": [
+"Decent option for fast men's hair grooming requirements.",
+"Wolf cut outline shape was quite satisfactory.",
+"The sharp razor beard shaping edge line was neat.",
+"Fair pricing metrics for regular office crowd people.",
+"Cooperative hair cutters team."
+],
+"portfolioStyles": ["fast men grooming lines", "satisfactory wolf cut outline", "sharp razor beard edge line"],
+"contact": "+91 83456 12345",
+"verified": false
+},
+{
+"salonId": "SAL-135",
+"name": "Urban Clippers Lounge",
+"city": "Bangalore",
+"locality": "Basavanagudi",
+"rating": 4.5,
+"reviewCount": 780,
+"priceRange": "$$","specialties": ["Wolf Cut", "Korean Layer Cut", "Hair Coloring"],"services": [{"service": "Wolf Cut", "price": 1250},{"service": "Korean Layer Cut", "price": 1400},{"service": "Hair Coloring", "price": 4500}],"experienceYears": 8,"genderPreference": "Unisex","availableSlots": ["10:30 AM", "02:00 PM", "05:30 PM"],"reviews": ["Love the fine shaggy layered outline of my wolf cut.","Authentic airy Korean layers with rich beautiful volume.","Global copper brown coloring tone came out gorgeous.","Well-maintained lounge floor with deep hygiene protocols.","Prompt attention from professional senior hair artists."],"portfolioStyles": ["fine shaggy layered outline wolf", "airy korean layers rich volume", "global copper brown coloring look"],"contact": "+91 73456 12345","verified": true},{"salonId": "SAL-136","name": "Mane Essence Concept","city": "Mumbai","locality": "Mulund East","rating": 4.4,"reviewCount": 460,"priceRange": "$$",
+"specialties": ["Keratin Treatment", "Bridal Makeup", "Hair Spa"],
+"services": [
+{"service": "Keratin Treatment", "price": 5300},
+{"service": "Bridal Makeup", "price": 22000},
+{"service": "Hair Spa", "price": 1350}
+],
+"experienceYears": 7,
+"genderPreference": "Women",
+"availableSlots": ["10:00 AM", "01:30 PM", "05:00 PM"],
+"reviews": [
+"The keratin treatment smoothed out coarse hair cleanly.",
+"Stunning soft high definition wedding bridal makeup design.",
+"Deeply therapeutic conditioning cream hair spa session.",
+"Clean personal changing spaces and nice room arrangement.",
+"Courteous and very polite floor crew members."
+],
+"portfolioStyles": ["coarse hair keratin smoothing look", "soft hd wedding bridal makeup", "conditioning cream hair spa session"],
+"contact": "+91 63456 12345",
+"verified": true
+},
+{
+"salonId": "SAL-137",
+"name": "Cuts N Color Studio",
+"city": "Chennai",
+"locality": "Madhavaram",
+"rating": 3.6,
+"reviewCount": 80,
+"priceRange": "$",
+"specialties": ["Hair Straightening", "Hair Spa", "Beard Styling"],
+"services": [
+{"service": "Hair Straightening", "price": 3200},
+{"service": "Hair Spa", "price": 950},
+{"service": "Beard Styling", "price": 260}
+],
+"experienceYears": 3,
+"genderPreference": "Unisex",
+"availableSlots": ["11:00 AM", "03:00 PM", "06:30 PM"],
+"reviews": [
+"Pocket friendly flat hair straightening treatment process.",
+"Decent conditioning cream massaged during regular hair spa.",
+"Fast basic outline edge alignment on beard mustache.",
+"Affordable monthly hair styling options package.",
+"Small helpful floor crew team."
+],
+"portfolioStyles": ["pocket friendly hair straightening process", "conditioning cream hair spa massage", "basic outline edge beard mustache"],
+"contact": "+91 94567 12345",
+"verified": false
+},
+{
+"salonId": "SAL-138",
+"name": "The Hair Horizon Lounge",
+"city": "Delhi",
+"locality": "Chanakyapuri",
+"rating": 4.6,
+"reviewCount": 990,
+"priceRange": "$$$",
+"specialties": ["Korean Layer Cut", "Balayage", "Hair Coloring"],
+"services": [
+{"service": "Korean Layer Cut", "price": 1700},
+{"service": "Balayage", "price": 7000},
+{"service": "Hair Coloring", "price": 5200}
+],
+"experienceYears": 12,
+"genderPreference": "Unisex",
+"availableSlots": ["11:30 AM", "02:30 PM", "05:30 PM", "08:00 PM"],
+"reviews": [
+"Beautiful elegant Korean style layers cut with accuracy.",
+"Incredible soft caramel painted balayage highlights blend.",
+"Professional deep global brown coloring done cleanly.",
+"Luxurious layout ambiance environment in Chanakyapuri.",
+"Highly creative senior hair director expert master craftsman."
+],
+"portfolioStyles": ["korean style layers accuracy", "soft caramel painted balayage highlights", "deep global brown coloring clean"],
+"contact": "+91 84567 12345",
+"verified": true
+},
+{
+"salonId": "SAL-139",
+"name": "Urban Styles Studio Lounge",
+"city": "Pune",
+"locality": "Kharadi Phase 1",
+"rating": 4.5,
+"reviewCount": 560,
+"priceRange": "$$","specialties": ["Wolf Cut", "Keratin Treatment", "Hair Spa"],"services": [{"service": "Wolf Cut", "price": 1200},{"service": "Keratin Treatment", "price": 5100},{"service": "Hair Spa", "price": 1350}],"experienceYears": 8,"genderPreference": "Unisex","availableSlots": ["10:00 AM", "01:00 PM", "04:30 PM"],"reviews": ["The modern messy wolf cut turned out perfectly bold structure.","Keratin hair therapy coating has exceptional sleek shine.","Relaxing intensive head cream conditioning hair spa.","Modern interior layout room with clean comfortable seats.","Highly professional core hair master artists."],"portfolioStyles": ["messy wolf cut bold structure", "keratin hair therapy sleek shine", "intensive head cream conditioning spa"],"contact": "+91 74567 12345","verified": true},{"salonId": "SAL-140","name": "The Crown Elite Lounge","city": "Kolkata","locality": "Kolkata Gariahat Road","rating": 4.1,"reviewCount": 270,"priceRange": "$$",
+"specialties": ["Bridal Makeup", "Hair Smoothening", "Beard Styling"],
+"services": [
+{"service": "Bridal Makeup", "price": 19000},
+{"service": "Hair Smoothening", "price": 4500},
+{"service": "Beard Styling", "price": 350}
+],
+"experienceYears": 6,
+"genderPreference": "Unisex",
+"availableSlots": ["11:00 AM", "03:00 PM", "06:30 PM"],
+"reviews": [
+"Satisfactory traditional wedding bridal cosmetics work layout.",
+"Smoothening treatment left thick wavy hair flat straight.",
+"Good quick mustache beard alignment outline framing cuts.",
+"Affordable pricing structure for general household families.",
+"Cooperative floor crew members."
+],
+"portfolioStyles": ["traditional wedding bridal cosmetics layout", "wavy hair flat straight smoothening", "quick mustache beard alignment outline"],
+"contact": "+91 64567 12345",
+"verified": true
+},
+{
+"salonId": "SAL-141",
+"name": "Symphony Scissors Art",
+"city": "Hyderabad",
+"locality": "Santoshnagar",
+"rating": 4.1,
+"reviewCount": 190,
+"priceRange": "$$","specialties": ["Korean Layer Cut", "Balayage", "Hair Spa"],"services": [{"service": "Korean Layer Cut", "price": 1300},{"service": "Balayage", "price": 5700},{"service": "Hair Spa", "price": 1200}],"experienceYears": 6,"genderPreference": "Unisex","availableSlots": ["10:30 AM", "01:30 PM", "05:00 PM"],"reviews": ["Nice face framing Korean style layers cut architecture.","Beautiful ash blonde painted balayage highlights profile.","Extremely soothing intensive nourishing scalp hair spa.","Neat standard salon floor tracking management setup.","Respectful team who answer custom queries politely."],"portfolioStyles": ["korean style layers cut architecture", "ash blonde painted balayage profile", "intensive nourishing scalp hair spa"],"contact": "+91 95678 12345","verified": true},{"salonId": "SAL-142","name": "Vogue Studio Creations","city": "Bangalore","locality": "Hebbal","rating": 4.6,"reviewCount": 850,"priceRange": "$$$","specialties": ["Wolf Cut", "Keratin Treatment", "Hair Coloring"],"services": [{"service": "Wolf Cut", "price": 1400},{"service": "Keratin Treatment", "price": 5800},{"service": "Hair Coloring", "price": 5000}],"experienceYears": 11,"genderPreference": "Unisex","availableSlots": ["11:00 AM", "02:30 PM", "05:30 PM", "08:00 PM"],"reviews": ["Excellent multi layered shaggy wolf haircut delivered.","Keratin safety shield therapy left strands silky smooth.","Stunning mahogany global coloring tint applied evenly.","High end luxury environment ambiance with soft entry.","Senior expert hair master professionals are wonderful."],"portfolioStyles": ["multi layered shaggy wolf haircut", "silky smooth keratin safety shield", "mahogany global coloring tint even"],"contact": "+91 85678 12345","verified": true},{"salonId": "SAL-143","name": "The Hair & Shear","city": "Mumbai","locality": "Dombivli West","rating": 4.4,"reviewCount": 640,"priceRange": "$$",
+"specialties": ["Hair Smoothening", "Hair Straightening", "Beard Styling"],
+"services": [
+{"service": "Hair Smoothening", "price": 4500},
+{"service": "Hair Straightening", "price": 4000},
+{"service": "Beard Styling", "price": 380}
+],
+"experienceYears": 8,
+"genderPreference": "Unisex",
+"availableSlots": ["10:00 AM", "02:00 PM", "05:30 PM"],
+"reviews": [
+"Smoothening process has great durability and flat shiny look.",
+"Perfect flat poker straight hair styling done precisely.",
+"Clear neat sharp outline alignment for full beard configurations.",
+"Hygienic studio workspace floor with polite professionals.",
+"Suggested helpful post salon safety wash instructions."
+],
+"portfolioStyles": ["durable flat shiny smoothened locks", "flat poker straight hair styling precise", "sharp full beard configurations outline"],
+"contact": "+91 75678 12345",
+"verified": true
+},
+{
+"salonId": "SAL-144",
+"name": "Bella Donna Concept Lounge",
+"city": "Chennai",
+"locality": "Kilpauk",
+"rating": 4.0,
+"reviewCount": 160,
+"priceRange": "$$","specialties": ["Bridal Makeup", "Hair Spa", "Hair Coloring"],"services": [{"service": "Bridal Makeup", "price": 21000},{"service": "Hair Spa", "price": 1250},{"service": "Hair Coloring", "price": 4000}],"experienceYears": 5,"genderPreference": "Women","availableSlots": ["10:30 AM", "01:30 PM", "05:00 PM"],"reviews": ["The wedding makeup finish layout was very subtle and nice.","Very soothing intensive deep conditioning spa mask rub.","Nice uniform application of global dark copper tint.","Polite staff handles family client groups smoothly.","Comfortable local neighborhood boutique environment feel design."],"portfolioStyles": ["subtle nice wedding makeup layout", "intensive deep conditioning spa mask", "global dark copper tint application"],"contact": "+91 65678 12345","verified": false},{"salonId": "SAL-145","name": "Aura Hair Masters","city": "Delhi","locality": "Rajouri Garden West","rating": 4.8,"reviewCount": 1150,"priceRange": "$$$","specialties": ["Korean Layer Cut", "Balayage", "Keratin Treatment"],"services": [{"service": "Korean Layer Cut", "price": 1750},{"service": "Balayage", "price": 7200},{"service": "Keratin Treatment", "price": 6100}],"experienceYears": 12,"genderPreference": "Unisex","availableSlots": ["11:00 AM", "03:00 PM", "06:00 PM", "08:30 PM"],"reviews": ["Incredible authentic Korean style framing layers cut.","Stunning soft gold lines painted balayage highlights profile.","Keratin smoothing treatment completely repaired rough hair ends.","High end luxury lounge framework with elite modern vibes.","Highly recommended professional senior master hair stylists team."],"portfolioStyles": ["authentic korean style framing layers", "soft gold lines painted balayage", "keratin rough hair end repair"],"contact": "+91 96789 12345","verified": true},{"salonId": "SAL-146","name": "Mirror Profile Studio","city": "Pune","locality": "Bhosari","rating": 4.2,"reviewCount": 310,"priceRange": "$$",
+"specialties": ["Wolf Cut", "Hair Coloring", "Hair Spa"],
+"services": [
+{"service": "Wolf Cut", "price": 1050},
+{"service": "Hair Coloring", "price": 4100},
+{"service": "Hair Spa", "price": 1200}
+],
+"experienceYears": 5,
+"genderPreference": "Unisex",
+"availableSlots": ["10:00 AM", "01:00 PM", "04:30 PM"],
+"reviews": [
+"Nice structural shaggy hair wolf cut variant design.",
+"Beautiful global brown color tint completed cleanly.",
+"Very relaxing scalp care conditioning hair spa mask.",
+"Prompt response tracking on predefined custom slots.",
+"Clean interior setup with extremely polite floor crew."
+],
+"portfolioStyles": ["structural shaggy wolf variant design", "global brown color tint clean", "scalp care conditioning spa mask"],
+"contact": "+91 86789 12345",
+"verified": true
+},
+{
+"salonId": "SAL-147",
+"name": "The Glamour Hub Lounge",
+"city": "Kolkata",
+"locality": "Kolkata Jadavpur Area",
+"rating": 4.4,
+"reviewCount": 490,
+"priceRange": "$$","specialties": ["Bridal Makeup", "Hair Smoothening", "Beard Styling"],"services": [{"service": "Bridal Makeup", "price": 19000},{"service": "Hair Smoothening", "price": 4500},{"service": "Beard Styling", "price": 330}],"experienceYears": 8,"genderPreference": "Unisex","availableSlots": ["11:30 AM", "03:30 PM", "07:00 PM"],"reviews": ["Stunning classical bridal cosmetic work architecture layout.","Smoothening made thick curly hair perfectly straight soft.","Clear neat mustache beard edge line alignment trimming.","Affordable regional family centric salon alternative venue.","Very professional floor crew members team."],"portfolioStyles": ["classical bridal cosmetic layout architecture", "curly hair straight soft smoothening", "mustache beard edge line alignment"],"contact": "+91 76789 12345","verified": false},{"salonId": "SAL-148","name": "Scissors Edge Creations","city": "Hyderabad","locality": "Kukatpally Housing Board","rating": 4.1,"reviewCount": 230,"priceRange": "$",
+"specialties": ["Hair Straightening", "Hair Spa", "Beard Styling"],
+"services": [
+{"service": "Hair Straightening", "price": 3400},
+{"service": "Hair Spa", "price": 1050},
+{"service": "Beard Styling", "price": 280}
+],
+"experienceYears": 4,
+"genderPreference": "Unisex",
+"availableSlots": ["10:00 AM", "02:30 PM", "06:00 PM"],
+"reviews": [
+"Good flat iron hair straightening process executed safely.",
+"The refreshing deep nourishment botanical hair spa was calming.",
+"Nice quick sideburn beard outline contour profiling.",
+"Value for money packages for general resident family groups.",
+"Respectful hair salon floor guys."
+],
+"portfolioStyles": ["flat iron hair straightening process", "botanical hair spa deep nourishment", "sideburn beard outline contour"],
+"contact": "+91 66789 12345",
+"verified": true
+},
+{
+"salonId": "SAL-149",
+"name": "Urban Locks Studio Co",
+"city": "Bangalore",
+"locality": "Bellandur",
+"rating": 4.5,
+"reviewCount": 710,
+"priceRange": "$$",
+"specialties": ["Wolf Cut", "Korean Layer Cut", "Keratin Treatment"],
+"services": [
+{"service": "Wolf Cut", "price": 1250},
+{"service": "Korean Layer Cut", "price": 1350},
+{"service": "Keratin Treatment", "price": 5000}
+],
+"experienceYears": 8,
+"genderPreference": "Unisex",
+"availableSlots": ["11:00 AM", "02:00 PM", "05:30 PM"],
+"reviews": [
+"Love the bold shaggy layer profile frame of my wolf cut.",
+"Excellent airy Korean framing layers hair structure cut.",
+"Keratin hair therapy coating made strands incredibly slick smooth.",
+"Modern clean room space layout with standard tools catalog.",
+"Helpful crew members with top professional hair suggestions."
+],
+"portfolioStyles": ["bold shaggy layer profile wolf", "airy korean framing layers structure", "slick smooth keratin hair coating"],
+"contact": "+91 97890 54321",
+"verified": true
+},
+{
+"salonId": "SAL-150",
+"name": "Mane Luxury Masters",
+"city": "Mumbai",
+"locality": "Parel",
+"rating": 4.6,
+"reviewCount": 1050,
+"priceRange": "$$$",
+"specialties": ["Balayage", "Bridal Makeup", "Hair Coloring"],
+"services": [
+{"service": "Balayage", "price": 6600},
+{"service": "Bridal Makeup", "price": 27000},
+{"service": "Hair Coloring", "price": 5100}
+],
+"experienceYears": 11,
+"genderPreference": "Unisex",
+"availableSlots": ["10:30 AM", "01:30 PM", "04:30 PM", "07:30 PM"],
+"reviews": [
+"Stunning gold brown copper hand painted balayage detailing.",
+"Fabulous elegant high definition traditional bridal look profile.",
+"Beautiful choice of deep caramel blonde global color spectrum.",
+"High end luxury lounge space atmosphere layout configuration.",
+"Senior expert hair professionals team are completely amazing."
+],
+"portfolioStyles": ["gold brown copper painted balayage", "hd traditional bridal look profile", "deep caramel blonde global color"],
+"contact": "+91 87890 54321",
+"verified": true
+},
+{
+"salonId": "SAL-151",
+"name": "The Hair Hub",
+"city": "Hyderabad",
+"locality": "Madhapur Main Road",
+"rating": 4.5,
+"reviewCount": 680,
+"priceRange": "$$",
+"specialties": ["Wolf Cut", "Balayage", "Keratin Treatment"],
+"services": [
+{"service": "Wolf Cut", "price": 1200},
+{"service": "Balayage", "price": 5800},
+{"service": "Keratin Treatment", "price": 5200}
+],
+"experienceYears": 8,
+"genderPreference": "Unisex",
+"availableSlots": ["10:00 AM", "02:00 PM", "05:30 PM"],
+"reviews": [
+"Loved the sharp texture of my wolf cut, nicely executed.",
+"Beautiful ash blonde balayage strokes blend flawlessly.",
+"Keratin hair therapy made hair texture fully sleek straight.",
+"Clean individual stations setup neatly with hygienic protocols.",
+"Highly creative crew members who guide you perfectly."
+],
+"portfolioStyles": ["sharp texture wolf cut", "ash blonde balayage strokes", "sleek straight keratin hair"],
+"contact": "+91 91234 12345",
+"verified": true
+},
+{
+"salonId": "SAL-152",
+"name": "Vogue Style House",
+"city": "Bangalore",
+"locality": "Indiranagar 100ft Road",
+"rating": 4.8,
+"reviewCount": 1340,
+"priceRange": "$$$",
+"specialties": ["Korean Layer Cut", "Hair Coloring", "Hair Smoothening"],
+"services": [
+{"service": "Korean Layer Cut", "price": 1500},
+{"service": "Hair Coloring", "price": 4800},
+{"service": "Hair Smoothening", "price": 5100}
+],
+"experienceYears": 12,
+"genderPreference": "Unisex",
+"availableSlots": ["11:00 AM", "02:30 PM", "05:30 PM", "08:00 PM"],
+"reviews": [
+"Incredible authentic East Asian style layer framework cut.",
+"Stunning rich mahogany global hair coloring tint applied.",
+"Smoothening treatment cleared texture frizz completely clean.",
+"Luxury layout infrastructure with refreshing tea and greetings.",
+"Senior expert hair professionals are completely brilliant."
+],
+"portfolioStyles": ["east asian layer framework", "mahogany global coloring tint", "frizz free smoothened locks"],
+"contact": "+91 81234 12345",
+"verified": true
+},
+{
+"salonId": "SAL-153",
+"name": "Elite Scissors House",
+"city": "Mumbai",
+"locality": "Andheri Link Road",
+"rating": 4.4,
+"reviewCount": 590,
+"priceRange": "$$",
+"specialties": ["Hair Smoothening", "Hair Straightening", "Beard Styling"],
+"services": [
+{"service": "Hair Smoothening", "price": 4600},
+{"service": "Hair Straightening", "price": 4100},
+{"service": "Beard Styling", "price": 380}
+],
+"experienceYears": 8,
+"genderPreference": "Unisex",
+"availableSlots": ["10:00 AM", "02:00 PM", "05:30 PM"],
+"reviews": [
+"Smoothening treatment has long durability and glossy look.",
+"Perfect flat poker straight hair styling done cleanly.",
+"Clear neat sharp outline alignment for full beard setup.",
+"Hygienic studio workspace floor with polite professionals.",
+"Suggested helpful post salon shampoo protective details."
+],
+"portfolioStyles": ["durable glossy smoothened hair", "flat poker straight styling look", "sharp full beard alignment setup"],
+"contact": "+91 71234 12345",
+"verified": true
+},
+{
+"salonId": "SAL-154",
+"name": "Bella Donna Creations",
+"city": "Chennai",
+"locality": "Nungambakkam High Road",
+"rating": 4.1,
+"reviewCount": 240,
+"priceRange": "$$",
+"specialties": ["Bridal Makeup", "Hair Spa", "Hair Coloring"],
+"services": [
+{"service": "Bridal Makeup", "price": 22000},
+{"service": "Hair Spa", "price": 1300},
+{"service": "Hair Coloring", "price": 4200}
+],
+"experienceYears": 6,
+"genderPreference": "Women",
+"availableSlots": ["10:30 AM", "01:30 PM", "05:00 PM"],
+"reviews": [
+"Traditional heavy regional wedding bridal cosmetics done nicely.",
+"Very soothing intensive deep cream conditioning spa layout.",
+"Nice uniform coating distribution of global copper tint.",
+"Polite staff handles family client crowds very patiently.",
+"Comfortable local neighborhood boutique environment feel look."
+],
+"portfolioStyles": ["heavy regional bridal cosmetics", "deep cream conditioning spa mask", "global copper tint distribution"],
+"contact": "+91 61234 12345",
+"verified": false
+},
+{
+"salonId": "SAL-155",
+"name": "Aura Hair Architects",
+"city": "Delhi",
+"locality": "Greater Kailash 2",
+"rating": 4.8,
+"reviewCount": 1290,
+"priceRange": "$$$",
+"specialties": ["Korean Layer Cut", "Balayage", "Keratin Treatment"],
+"services": [
+{"service": "Korean Layer Cut", "price": 1800},
+{"service": "Balayage", "price": 7500},
+{"service": "Keratin Treatment", "price": 6400}
+],
+"experienceYears": 13,
+"genderPreference": "Unisex",
+"availableSlots": ["11:00 AM", "03:00 PM", "06:00 PM", "08:30 PM"],
+"reviews": [
+"Incredible authentic East Asian style layered framework.",
+"Stunning sun-kissed blonde painted balayage highlights profile.",
+"Keratin straight shield therapy completely revived split tips.",
+"High end elegant lounge layout setup with elite vibes.",
+"Highly recommended professional senior master hair artisans."
+],
+"portfolioStyles": ["east asian layered framework look", "sun-kissed blonde balayage profile", "keratin straight shield tips"],
+"contact": "+91 92345 12345",
+"verified": true
+},
+{
+"salonId": "SAL-156",
+"name": "Mirror Profile Lounge",
+"city": "Pune",
+"locality": "Chinchwad Station",
+"rating": 4.2,
+"reviewCount": 380,
+"priceRange": "$$",
+"specialties": ["Wolf Cut", "Hair Coloring", "Hair Spa"],
+"services": [
+{"service": "Wolf Cut", "price": 1050},
+{"service": "Hair Coloring", "price": 4200},
+{"service": "Hair Spa", "price": 1200}
+],
+"experienceYears": 5,
+"genderPreference": "Unisex",
+"availableSlots": ["10:00 AM", "01:00 PM", "04:30 PM"],
+"reviews": [
+"Nice structural messy hair wolf cut variant blueprint.",
+"Beautiful global coffee brown coloring completed cleanly.",
+"Very refreshing scalp conditioning hair spa cream massage.",
+"Prompt response tracking on predefined custom appointments.",
+"Clean individual seating setup with nice crew floor."
+],
+"portfolioStyles": ["structural messy wolf blueprint", "global coffee brown coloring clean", "scalp conditioning spa massage"],
+"contact": "+91 82345 12345",
+"verified": true
+},
+{
+"salonId": "SAL-157",
+"name": "The Glamour Room Lounge Co",
+"city": "Kolkata",
+"locality": "Tollygunge Metro",
+"rating": 4.4,
+"reviewCount": 560,
+"priceRange": "$$",
+"specialties": ["Bridal Makeup", "Hair Smoothening", "Beard Styling"],
+"services": [
+{"service": "Bridal Makeup", "price": 20000},
+{"service": "Hair Smoothening", "price": 4600},
+{"service": "Beard Styling", "price": 340}
+],
+"experienceYears": 8,
+"genderPreference": "Unisex",
+"availableSlots": ["11:30 AM", "03:30 PM", "07:00 PM"],
+"reviews": [
+"Stunning and smooth bridal cosmetic makeup architecture.",
+"Smoothening made thick curly wavy hair perfectly straight.",
+"Clear crisp mustache beard outline profiling alignment.",
+"Affordable regional family centric salon alternative spot.",
+"Very gentle floor crew members team group."
+],
+"portfolioStyles": ["bridal cosmetic makeup architecture", "curly wavy hair straight smoothening", "mustache beard outline profiling"],
+"contact": "+91 72345 12345",
+"verified": false
+},
+{
+"salonId": "SAL-158",
+"name": "Scissors Edge Unisex Co",
+"city": "Hyderabad",
+"locality": "Dilsukhnagar Bus Station",
+"rating": 4.1,
+"reviewCount": 290,
+"priceRange": "$","specialties": ["Hair Straightening", "Hair Spa", "Beard Styling"],"services": [{"service": "Hair Straightening", "price": 3500},{"service": "Hair Spa", "price": 1100},{"service": "Beard Styling", "price": 280}],"experienceYears": 4,"genderPreference": "Unisex","availableSlots": ["10:00 AM", "02:30 PM", "06:00 PM"],"reviews": ["Good flat hair straightening profile done cleanly.","The refreshing aloe vera hair spa session rub was calming.","Nice swift sideburn beard contour edge alignment work.","Value for money packages for general resident families.","Respectful salon floor crew guys."],"portfolioStyles": ["flat hair straightening profile", "aloe vera hair spa rub", "sideburn beard contour edge"],"contact": "+91 62345 12345","verified": true},{"salonId": "SAL-159","name": "Urban Locks Concept Lounge","city": "Bangalore","locality": "Electronic City Phase 1","rating": 4.5,"reviewCount": 820,"priceRange": "$$",
+"specialties": ["Wolf Cut", "Korean Layer Cut", "Keratin Treatment"],
+"services": [
+{"service": "Wolf Cut", "price": 1250},
+{"service": "Korean Layer Cut", "price": 1400},
+{"service": "Keratin Treatment", "price": 5200}
+],
+"experienceYears": 8,
+"genderPreference": "Unisex",
+"availableSlots": ["11:00 AM", "02:00 PM", "05:30 PM"],
+"reviews": [
+"Love the bold shaggy frame layout of my wolf cut.",
+"Excellent airy Korean style layered cut structure design.",
+"Keratin hair therapy coating made strands highly silk smooth.",
+"Modern clean setup floor with standard accessories set.",
+"Helpful team members with sound hair protection suggestions."
+],
+"portfolioStyles": ["bold shaggy wolf frame layout", "korean layered cut structure design", "silk smooth keratin coating strands"],
+"contact": "+91 93456 54321",
+"verified": true
+},
+{
+"salonId": "SAL-160",
+"name": "Mane Luxury Aesthetics Studio",
+"city": "Mumbai",
+"locality": "Chembur East",
+"rating": 4.6,
+"reviewCount": 1190,
+"priceRange": "$$$",
+"specialties": ["Balayage", "Bridal Makeup", "Hair Coloring"],
+"services": [
+{"service": "Balayage", "price": 6800},
+{"service": "Bridal Makeup", "price": 28000},
+{"service": "Hair Coloring", "price": 5200}
+],
+"experienceYears": 11,
+"genderPreference": "Unisex",
+"availableSlots": ["10:30 AM", "01:30 PM", "04:30 PM", "07:30 PM"],
+"reviews": [
+"Stunning gold streaks painted balayage details nicely.",
+"Fabulous elegant royal bridal makeup cosmetic makeover.",
+"Beautiful choice of deep ash blonde global color tint.",
+"High end premium lounge framework room setting.",
+"Senior expert hair professionals are completely amazing."
+],
+"portfolioStyles": ["gold streaks painted balayage details", "royal bridal cosmetic makeover", "ash blonde global color tint"],
+"contact": "+91 83456 54321",
+"verified": true
+},
+{
+"salonId": "SAL-161",
+"name": "Glow Lounge Studio House",
+"city": "Chennai",
+"locality": "Madipakkam Junction",
+"rating": 3.8,
+"reviewCount": 150,
+"priceRange": "$$","specialties": ["Hair Smoothening", "Hair Spa", "Beard Styling"],"services": [{"service": "Hair Smoothening", "price": 4100},{"service": "Hair Spa", "price": 1050},{"service": "Beard Styling", "price": 300}],"experienceYears": 4,"genderPreference": "Unisex","availableSlots": ["10:00 AM", "01:00 PM", "05:00 PM"],"reviews": ["Satisfactory frizz management via smoothening process line.","Nice standard relaxing deep moisturizing cream spa mask.","Quick beard fade line outline completed neatly.","Decent budget friendly pricing alternatives for daily folks.","Polite floor crew staff guys."],"portfolioStyles": ["frizz management smoothening process", "deep moisturizing cream spa mask", "quick beard fade line outline"],"contact": "+91 73456 54321","verified": false},{"salonId": "SAL-162","name": "Style Formula Studio House","city": "Delhi","locality": PASCHIM_VIHAR_WEST,"rating": 4.4,"reviewCount": 450,"priceRange": "$$",
+"specialties": ["Wolf Cut", "Hair Coloring", "Keratin Treatment"],
+"services": [
+{"service": "Wolf Cut", "price": 1150},
+{"service": "Hair Coloring", "price": 4400},
+{"service": "Keratin Treatment", "price": 5000}
+],
+"experienceYears": 7,
+"genderPreference": "Unisex",
+"availableSlots": ["11:30 AM", "03:00 PM", "06:30 PM"],
+"reviews": [
+"Edgy multi layered wolf cut executed beautifully.",
+"Rich deep mahogany hair coloring global spectrum tone.",
+"Keratin smoothing made hair perfectly silky soft coat.",
+"Good quick response feedback, minimal unwanted delay time.",
+"Clean individual workspace stations layout setup neatly."
+],
+"portfolioStyles": ["multi layered wolf execution", "mahogany coloring global spectrum", "silky soft keratin coat hair"],
+"contact": "+91 63456 54321",
+"verified": true
+}
+]
