@@ -163,8 +163,17 @@ function App() {
   const [city, setCity] = useState(() => localStorage.getItem('city') || 'Mumbai')
   const [search, setSearch] = useState('')
   const [mobileMenu, setMobileMenu] = useState(false)
-  const [salons, setSalons] = useState(INITIAL_SALONS)
+  const [salons, setSalons] = useState<Salon[]>([])
   const [selectedSalonId, setSelectedSalonId] = useState(1)
+
+  useEffect(() => {
+    fetch('http://localhost:5000/api/salons')
+      .then((res) => res.json())
+      .then((data) => {
+        if (Array.isArray(data)) setSalons(data)
+      })
+      .catch((err) => console.error(err))
+  }, [])
   const [filters, setFilters] = useState<Filters>(DEFAULT_FILTERS)
   const [sortBy, setSortBy] = useState<SortOption>('popularity')
   const [showMap, setShowMap] = useState(false)
@@ -270,7 +279,7 @@ function App() {
     { id: 'BK-80177', salon: 'Gloss House', date: '2026-05-29', status: 'cancelled' },
   ]
 
-  const nearbyCity = CITIES.find((item) => item !== city && INITIAL_SALONS.some((salon) => salon.city === item))
+  const nearbyCity = CITIES.find((item) => item !== city && salons.some((salon) => salon.city === item))
 
   function goToSalonDetails(id: number) {
     setSelectedSalonId(id)
@@ -435,7 +444,7 @@ function App() {
 
             <section className="section-block how-it-works"><h2>How it works</h2><div className="steps-grid"><article><strong>1. Search</strong><p>Find nearby salons by service, rating, and availability.</p></article><article><strong>2. Book</strong><p>Pick your services, date, and preferred stylist.</p></article><article><strong>3. Relax</strong><p>Show up and enjoy your appointment, stress free.</p></article></div></section>
 
-            <section className="section-block testimonials"><h2>What customers say</h2><div className="testimonial-grid">{INITIAL_SALONS.slice(0, 3).map((salon) => <blockquote key={salon.id}><p>{salon.reviews[0].comment}</p><cite>{salon.reviews[0].author} at {salon.name}</cite></blockquote>)}</div></section>
+            <section className="section-block testimonials"><h2>What customers say</h2><div className="testimonial-grid">{salons.length > 0 && salons.slice(0, 3).map((salon) => salon.reviews && salon.reviews.length > 0 ? <blockquote key={salon.id}><p>{salon.reviews[0].comment}</p><cite>{salon.reviews[0].author} at {salon.name}</cite></blockquote> : null)}</div></section>
 
             <section className="owner-cta"><div><h2>Own a salon?</h2><p>Grow bookings and manage your calendar from one dashboard.</p></div><button type="button" onClick={() => setScreen('owner')}>List your salon</button></section>
           </>

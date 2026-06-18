@@ -8,10 +8,13 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "seed": "node seed.js"
+    "seed": "node backend/seed.js",
+    "start:backend": "node backend/server.js"
   },
   "dependencies": {
+    "cors": "^2.8.6",
     "dotenv": "^17.4.2",
+    "express": "^5.2.1",
     "mongodb": "^7.3.0",
     "react": "^19.2.6",
     "react-dom": "^19.2.6"
