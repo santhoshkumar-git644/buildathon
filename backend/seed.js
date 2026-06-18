@@ -1,41 +1,57 @@
-import { MongoClient } from 'mongodb';
+import mongoose from 'mongoose';
 import fs from 'fs/promises';
+import { connectDB } from './config/db.js';
+import Salon from './models/Salon.js';
 
-// Connection URL
-const url = 'mongodb://127.0.0.1:27017';
-const client = new MongoClient(url);
-
-// Database Name
-const dbName = 'buildathon';
-
-async function main() {
+async function importData() {
   try {
-    console.log('Connecting to MongoDB...');
-    await client.connect();
-    console.log('Connected successfully to MongoDB server');
-
-    const db = client.db(dbName);
-    const collection = db.collection('dataset');
-
-    // Read dataset.json
-    console.log('Reading dataset.json...');
-    const data = await fs.readFile('./dataset.json', 'utf-8');
+    await connectDB();
+    console.log('Reading data/salons.json...');
+    const data = await fs.readFile('./data/salons.json', 'utf-8');
     const documents = JSON.parse(data);
 
-    // Clear existing data (optional, but good for repeatable seeds)
-    await collection.deleteMany({});
-    console.log('Cleared existing data from collection');
+    // Transform raw JSON data into schema format
+    const formattedSalons = documents.map((salon, index) => ({
+      salonId: salon.salonId || String(salon._id) || `SAL-${index + 1}`,
+      name: salon.name,
+      city: salon.city,
+      area: salon.locality || '',
+      rating: salon.rating || 4.0,
+      reviewCount: salon.reviewCount || 0,
+      distance: 2.5,
+      tags: salon.specialties || ['Open Now'],
+      address: `${salon.locality || 'Locality'}, ${salon.city}`,
+      hours: '09:00 AM - 09:00 PM',
+      images: ['Front Lounge', 'Color Bar', 'Bridal Room'],
+      services: (salon.services || []).map(s => ({
+        name: s.service,
+        duration: 60,
+        price: s.price,
+        category: salon.specialties && salon.specialties.length > 0 ? salon.specialties[0] : 'Hair'
+      })),
+      staff: [
+        { name: 'Stylist 1', specialty: 'General' },
+        { name: 'Stylist 2', specialty: 'Coloring' }
+      ],
+      reviews: (salon.reviews || []).map((r, i) => ({
+        author: `Customer ${i + 1}`,
+        rating: 5,
+        comment: typeof r === 'string' ? r : r.comment || 'Great service!',
+        date: new Date()
+      }))
+    }));
 
-    // Insert new data
-    const insertResult = await collection.insertMany(documents);
-    console.log(`Successfully inserted ${insertResult.insertedCount} documents`);
+    await Salon.deleteMany();
+    console.log('Cleared existing salons from collection');
 
+    const insertResult = await Salon.insertMany(formattedSalons);
+    console.log(`Successfully inserted ${insertResult.length} salons`);
+
+    process.exit();
   } catch (err) {
     console.error('Error seeding database:', err);
-  } finally {
-    await client.close();
-    console.log('Database connection closed');
+    process.exit(1);
   }
 }
 
-main();
+importData();
