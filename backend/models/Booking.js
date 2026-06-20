@@ -9,7 +9,9 @@ const bookingSchema = new mongoose.Schema({
   slot: { type: String, required: true },
   stylist: { type: String, default: 'No Preference' },
   status: { type: String, enum: ['upcoming', 'past', 'cancelled'], default: 'upcoming' },
-  totalCost: { type: Number, required: true }
+  totalCost: { type: Number, required: true },
+  advanceAmount: { type: Number, default: 0 },
+  advancePaid: { type: Boolean, default: false }
 }, { timestamps: true });
 
 export default mongoose.model('Booking', bookingSchema);

@@ -5,12 +5,16 @@ export default function SalonCard({ salon, isSaved, onToggleSave }) {
   const salonId = salon.id || salon._id || salon.salonId;
   const minPrice = salon.services?.length ? Math.min(...salon.services.map((s) => s.price)) : 0;
   
-  // Choose gradient based on rating or name for premium aesthetics
+  // Choose sophisticated dark gradient based on name
   const getGradient = (name) => {
     const hash = name.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0);
-    const hues = [15, 30, 45, 160, 180, 200, 320];
-    const hue = hues[hash % hues.length];
-    return `linear-gradient(135deg, hsl(${hue}, 80%, 75%) 0%, hsl(${(hue + 40) % 360}, 70%, 55%) 100%)`;
+    const gradients = [
+      'linear-gradient(135deg, #161a20 0%, #0d0f12 100%)',
+      'linear-gradient(135deg, #1c1c1e 0%, #000000 100%)',
+      'linear-gradient(135deg, #1a1e24 0%, #101216 100%)'
+    ];
+    const baseGradient = gradients[hash % gradients.length];
+    return `radial-gradient(circle at 50% 50%, rgba(232, 176, 89, 0.08) 0%, transparent 60%), ${baseGradient}`;
   };
 
   return (

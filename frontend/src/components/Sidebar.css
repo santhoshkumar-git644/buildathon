@@ -1,5 +1,5 @@
 :root {
-  --sidebar-width: 260px;
+  --sidebar-width: 240px;
 }
 
 .sidebar-overlay {
@@ -8,8 +8,8 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
   z-index: 90;
   animation: fadeIn 0.2s ease-out;
 }
@@ -20,18 +20,18 @@
   left: 0;
   width: var(--sidebar-width);
   height: 100vh;
-  background: rgba(254, 248, 236, 0.96);
-  backdrop-filter: blur(12px);
+  background: rgba(18, 21, 26, 0.95);
+  backdrop-filter: var(--glass-blur);
   border-right: 1px solid var(--line);
   display: flex;
   flex-direction: column;
   z-index: 100;
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 4px 0 24px rgba(42, 29, 22, 0.08);
+  box-shadow: 4px 0 24px rgba(0, 0, 0, 0.5);
 }
 
 .sidebar-header {
-  padding: 24px 20px;
+  padding: 16px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -39,7 +39,7 @@
 }
 
 .sidebar-logo {
-  font-size: 1.4rem;
+  font-size: 1.1rem;
   font-weight: 800;
   color: var(--brand);
   text-decoration: none;
@@ -48,6 +48,8 @@
   gap: 8px;
   background: transparent;
   transition: transform 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .sidebar-logo:hover {
@@ -55,7 +57,7 @@
 }
 
 .logo-icon {
-  font-size: 1.6rem;
+  font-size: 1.2rem;
 }
 
 .sidebar-close-btn {
@@ -72,53 +74,55 @@
 
 .sidebar-nav {
   flex: 1;
-  padding: 24px 12px;
+  padding: 16px 12px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 4px;
 }
 
 .nav-item {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 12px;
   width: 100%;
-  padding: 12px 16px;
+  padding: 8px 12px;
   background: transparent;
-  border: none;
-  border-radius: 12px;
-  color: var(--ink);
+  border: 1px solid transparent;
+  border-radius: 8px;
+  color: var(--muted);
   cursor: pointer;
   text-align: left;
   transition: all 0.2s ease;
-  min-height: 48px;
+  min-height: 36px;
+  font-weight: 500;
 }
 
 .nav-item:hover {
-  background: var(--brand-soft);
+  background: rgba(255,255,255,0.05);
   color: var(--brand);
   transform: translateX(4px);
 }
 
 .nav-item.active {
-  background: var(--brand);
-  color: #fff;
+  background: var(--brand-soft);
+  color: var(--brand);
   font-weight: 600;
-  box-shadow: 0 4px 14px rgba(212, 81, 19, 0.25);
+  border-color: var(--brand);
+  box-shadow: 0 4px 14px rgba(232, 176, 89, 0.15);
 }
 
 .nav-icon {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
 }
 
 .nav-label {
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 .sidebar-footer {
   padding: 20px;
   border-top: 1px solid var(--line);
-  background: rgba(254, 248, 236, 0.5);
+  background: rgba(0, 0, 0, 0.2);
 }
 
 .user-profile-summary {
@@ -131,14 +135,14 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: var(--brand);
-  color: #fff;
+  background: linear-gradient(135deg, var(--brand), #b58237);
+  color: #000;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 700;
   font-size: 1.1rem;
-  box-shadow: 0 2px 8px rgba(212, 81, 19, 0.2);
+  box-shadow: 0 2px 8px rgba(232, 176, 89, 0.3);
 }
 
 .user-info {
@@ -187,16 +191,16 @@
   text-align: center;
   padding: 12px;
   background: var(--brand);
-  color: #fff;
+  color: #000;
   border-radius: 12px;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 700;
   transition: all 0.2s ease;
-  box-shadow: 0 4px 12px rgba(212, 81, 19, 0.2);
+  box-shadow: 0 4px 12px rgba(232, 176, 89, 0.2);
 }
 
 .login-prompt-btn:hover {
-  background: #b2410e;
+  background: #f1c47a;
   transform: translateY(-1px);
 }
 

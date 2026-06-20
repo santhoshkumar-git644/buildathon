@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar.jsx';
 import Sidebar from './components/Sidebar.jsx';
 import Home from './pages/Home.jsx';
@@ -8,57 +8,59 @@ import Booking from './pages/Booking.jsx';
 import Profile from './pages/Profile.jsx';
 import SavedSalons from './pages/SavedSalons.jsx';
 import ChatbotPage from './pages/ChatbotPage.jsx';
+import MyBookings from './pages/MyBookings.jsx';
+import ChatWidget from './components/ChatWidget.jsx';
+import { toggleSaveSalonDB, fetchSavedSalonsDB } from './services/api.js';
+
+function ConditionalChatWidget({ user }) {
+  const location = useLocation();
+  if (location.pathname === '/chatbot') return null;
+  return <ChatWidget user={user} />;
+}
 
 function App() {
   const [city, setCity] = useState('Mumbai');
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [user, setUser] = useState<any>(null);
-  
-  // Track saved salons (heart bookmarking system)
-  const [savedIds, setSavedIds] = useState<any[]>([]);
+  const [user, setUser] = useState(null);
+  const [savedIds, setSavedIds] = useState([]);
 
   const CITIES = ['Mumbai', 'Delhi', 'Bengaluru', 'Kolkata', 'Chennai', 'Hyderabad', 'Pune'];
 
-  // Load user session and saved salons on startup
   useEffect(() => {
     const savedUser = localStorage.getItem('user');
     if (savedUser) {
       const parsedUser = JSON.parse(savedUser);
       setUser(parsedUser);
-      
-      const localSaved = JSON.parse(localStorage.getItem(`saved_${parsedUser.id}`)) || [];
-      setSavedIds(localSaved);
+      setCity(parsedUser.city || 'Mumbai');
+      // Fetch saved salons from DB
+      fetchSavedSalonsDB(parsedUser.id).then(res => {
+        // Handle array of objects or strings
+        setSavedIds(res.data.map(s => s._id || s));
+      }).catch(err => console.error("Error fetching saved", err));
     } else {
       const guestSaved = JSON.parse(localStorage.getItem('saved_guest') || '[]');
       setSavedIds(guestSaved);
     }
   }, []);
 
-  // Sync saved list when user changes
-  useEffect(() => {
-    if (user) {
-      const localSaved = JSON.parse(localStorage.getItem(`saved_${user.id}`) || '[]');
-      setSavedIds(localSaved);
-    } else {
-      const guestSaved = JSON.parse(localStorage.getItem('saved_guest') || '[]');
-      setSavedIds(guestSaved);
+  const handleToggleSave = async (salonId) => {
+    if (!user) {
+      alert("Please login to save salons!");
+      return;
     }
-  }, [user]);
-
-  const handleToggleSave = (salonId: any) => {
-    let updated: any[];
+    
+    let updated;
     if (savedIds.includes(salonId)) {
       updated = savedIds.filter(id => id !== salonId);
     } else {
       updated = [...savedIds, salonId];
     }
     setSavedIds(updated);
-    
-    // Save to local storage
-    if (user) {
-      localStorage.setItem(`saved_${user.id}`, JSON.stringify(updated));
-    } else {
-      localStorage.setItem('saved_guest', JSON.stringify(updated));
+
+    try {
+      await toggleSaveSalonDB(user.id, salonId);
+    } catch (error) {
+      console.error("Failed to sync saved salon", error);
     }
   };
 
@@ -73,7 +75,6 @@ function App() {
   return (
     <BrowserRouter>
       <div className="app-shell-flex">
-        {/* Navigation & Sidebar */}
         <Navbar 
           city={city} 
           setCity={setCity} 
@@ -89,46 +90,19 @@ function App() {
           onLogout={handleLogout} 
         />
         
-        {/* Layout with main content offset for fixed sidebar on desktop */}
         <div className="app-main-content">
           <Routes>
-            <Route 
-              path="/" 
-              element={
-                <Home 
-                  city={city} 
-                  savedIds={savedIds} 
-                  onToggleSave={handleToggleSave} 
-                />
-              } 
-            />
-            <Route path="/salon/:id" element={<SalonDetails />} />
-            <Route 
-              path="/booking/:id" 
-              element={<Booking user={user} />} 
-            />
-            <Route 
-              path="/profile" 
-              element={<Profile user={user} setUser={setUser} />} 
-            />
-            <Route 
-              path="/saved-salons" 
-              element={
-                <SavedSalons 
-                  savedIds={savedIds} 
-                  onToggleSave={handleToggleSave} 
-                  city={city} 
-                />
-              } 
-            />
+            <Route path="/" element={<Home city={city} savedIds={savedIds} onToggleSave={handleToggleSave} user={user} />} />
+            <Route path="/salon/:id" element={<SalonDetails savedIds={savedIds} onToggleSave={handleToggleSave} user={user} />} />
+            <Route path="/booking/:id" element={<Booking user={user} />} />
+            <Route path="/profile" element={<Profile user={user} setUser={setUser} />} />
+            <Route path="/my-bookings" element={<MyBookings user={user} />} />
+            <Route path="/saved-salons" element={<SavedSalons savedIds={savedIds} onToggleSave={handleToggleSave} city={city} />} />
             <Route path="/chatbot" element={<ChatbotPage />} />
           </Routes>
         </div>
 
-        {/* Floating AI Chatbot Button on Bottom Right */}
-        <Link to="/chatbot" className="floating-chat-widget-btn" title="AI Chatbot Assistant">
-          💬 Ask AI
-        </Link>
+        <ConditionalChatWidget user={user} />
       </div>
     </BrowserRouter>
   );

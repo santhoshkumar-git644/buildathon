@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { getSalonById, getSalonReviews } from '../services/api.js';
+import { getSalonById, getSalonReviews, summarizeReviews } from '../services/api.js';
 import ReviewCard from '../components/ReviewCard.jsx';
 
 export default function SalonDetails() {
@@ -8,19 +8,18 @@ export default function SalonDetails() {
   const [salon, setSalon] = useState(null);
   const [reviews, setReviews] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [summary, setSummary] = useState('');
+  const [summarizing, setSummarizing] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        // Find salon in the full list since our backend doesn't properly search by custom string ID yet (it uses ObjectId for real findById)
-        // For simplicity in this refactor, we just fetch all and find
         const { data } = await getSalonById(id).catch(async () => {
           const { data: all } = await import('../services/api.js').then(m => m.getSalons());
           return { data: all.find(s => String(s.id) === String(id)) };
         });
         setSalon(data);
         
-        // Mock reviews fetching if actual API fails due to schema mismatches
         try {
            const revs = await getSalonReviews(id);
            setReviews(revs.data);
@@ -36,6 +35,18 @@ export default function SalonDetails() {
     };
     fetchData();
   }, [id]);
+
+  const handleSummarize = async () => {
+    setSummarizing(true);
+    try {
+      // In a fully working system, pass the DB ObjectId, fallback to passing first review text roughly
+      const res = await summarizeReviews(salon._id || id);
+      setSummary(res.data.summary);
+    } catch (e) {
+      setSummary("AI Summarization failed. Make sure your Gemini API key is valid.");
+    }
+    setSummarizing(false);
+  };
 
   if (loading) return <div>Loading...</div>;
   if (!salon) return <div>Salon not found.</div>;
@@ -61,12 +72,24 @@ export default function SalonDetails() {
         </table>
       </section>
       <section className="section-block">
-        <h3>Reviews</h3>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+          <h3>Reviews</h3>
+          <button onClick={handleSummarize} disabled={summarizing} style={{ background: 'var(--brand-soft)', color: 'var(--brand)', padding: '10px 16px', borderRadius: '12px', border: '1px solid var(--brand)', fontWeight: 'bold' }}>
+            {summarizing ? 'Summarizing...' : '✨ Summarize Reviews with AI'}
+          </button>
+        </div>
+        
+        {summary && (
+          <div style={{ background: 'rgba(232, 176, 89, 0.1)', padding: '15px', borderRadius: '12px', margin: '15px 0', border: '1px solid var(--brand)', color: 'var(--ink)' }}>
+            <strong style={{ color: 'var(--brand)' }}>✨ AI Summary: </strong> {summary}
+          </div>
+        )}
+
         <div className="review-list">
           {reviews.map((r, i) => <ReviewCard key={i} review={r} />)}
         </div>
       </section>
-      <Link to={`/booking/${salon.id}`}><button className="sticky-cta">Book Appointment</button></Link>
+      <Link to={`/booking/${salon._id || id}`}><button className="sticky-cta">Book Appointment</button></Link>
     </section>
   );
 }

@@ -1,105 +1,72 @@
-import crypto from 'crypto';
 import User from '../models/User.js';
+import cache from '../utils/cache.js';
 
-const hashPassword = (password) => {
-  return crypto.createHash('sha256').update(password).digest('hex');
-};
-
-export const signup = async (req, res) => {
+export const toggleSaveSalon = async (req, res) => {
   try {
-    const { name, email, phone, city, password } = req.body;
+    const { userId, salonId } = req.body;
+    const user = await User.findById(userId);
+    if (!user) return res.status(404).json({ message: 'User not found' });
 
-    // Validation
-    if (!name || !city || !password) {
-      return res.status(400).json({ message: 'Name, City, and Password are required.' });
+    const index = user.savedSalons.indexOf(salonId);
+    if (index > -1) {
+      user.savedSalons.splice(index, 1); // remove
+    } else {
+      user.savedSalons.push(salonId); // add
     }
-
-    if (!email && !phone) {
-      return res.status(400).json({ message: 'Provide either Email or Phone Number.' });
-    }
-
-    if (email && phone) {
-      return res.status(400).json({ message: 'Provide either Email or Phone Number, not both.' });
-    }
-
-    // Check if user already exists
-    if (email) {
-      const existingUser = await User.findOne({ email });
-      if (existingUser) {
-        return res.status(400).json({ message: 'User with this email already exists.' });
-      }
-    }
-
-    if (phone) {
-      const existingUser = await User.findOne({ phone });
-      if (existingUser) {
-        return res.status(400).json({ message: 'User with this phone number already exists.' });
-      }
-    }
-
-    const passwordHash = hashPassword(password);
-    const user = new User({
-      name,
-      email: email || '',
-      phone: phone || '',
-      city,
-      passwordHash
-    });
-
-    const savedUser = await user.save();
+    await user.save();
     
-    // Return user details with a simulated token
-    res.status(201).json({
-      token: `simulated-jwt-${savedUser._id}`,
-      user: {
-        id: savedUser._id,
-        name: savedUser.name,
-        email: savedUser.email,
-        phone: savedUser.phone,
-        city: savedUser.city
-      }
-    });
+    // Invalidate the cache for this user's saved salons so it updates immediately
+    cache.del(`saved_salons_${userId}`);
+    
+    res.json({ savedSalons: user.savedSalons });
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
 };
 
-export const login = async (req, res) => {
+export const getSavedSalons = async (req, res) => {
   try {
-    const { loginInput, password } = req.body;
-
-    if (!loginInput || !password) {
-      return res.status(400).json({ message: 'Login input (email/phone) and password are required.' });
+    const { userId } = req.params;
+    
+    // Check if we have this user's saved salons cached
+    const cacheKey = `saved_salons_${userId}`;
+    const cachedSalons = cache.get(cacheKey);
+    if (cachedSalons) {
+      return res.json(cachedSalons);
     }
 
-    // Find user by either email or phone
-    const user = await User.findOne({
-      $or: [
-        { email: loginInput },
-        { phone: loginInput }
-      ]
-    });
-
-    if (!user) {
-      return res.status(400).json({ message: 'Invalid credentials.' });
-    }
-
-    const passwordHash = hashPassword(password);
-    if (user.passwordHash !== passwordHash) {
-      return res.status(400).json({ message: 'Invalid credentials.' });
-    }
-
-    res.json({
-      token: `simulated-jwt-${user._id}`,
-      user: {
-        id: user._id,
-        name: user.name,
-        email: user.email,
-        phone: user.phone,
-        city: user.city
-      }
-    });
+    const user = await User.findById(userId).populate('savedSalons').lean();
+    if (!user) return res.status(404).json({ message: 'User not found' });
+    
+    // Save to cache for 5 minutes
+    cache.set(cacheKey, user.savedSalons);
+    res.json(user.savedSalons);
   } catch (error) {
     res.status(500).json({ message: error.message });
+  }
+};
+
+// Mock Auth Controllers
+export const signup = async (req, res) => {
+  try {
+    const { name, email, phone, city, password } = req.body;
+    const newUser = new User({ name, email, phone, city, passwordHash: password }); // Skipping bcrypt for mock
+    await newUser.save();
+    res.status(201).json({ user: { id: newUser._id, name, email, city } });
+  } catch (err) {
+    res.status(400).json({ message: err.message });
+  }
+};
+
+export const login = async (req, res) => {
+  try {
+    const { email, password } = req.body;
+    const user = await User.findOne({ email });
+    if (!user || user.passwordHash !== password) {
+      return res.status(401).json({ message: 'Invalid credentials' });
+    }
+    res.json({ user: { id: user._id, name: user.name, email: user.email, city: user.city }, token: 'mock-token' });
+  } catch (err) {
+    res.status(500).json({ message: err.message });
   }
 };

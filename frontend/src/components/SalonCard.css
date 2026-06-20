@@ -26,8 +26,8 @@
 }
 
 .category-emoji {
-  font-size: 3.5rem;
-  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
+  font-size: 2.5rem;
+  filter: drop-shadow(0 4px 10px rgba(232, 176, 89, 0.3));
   transition: transform 0.3s ease;
 }
 
@@ -195,13 +195,13 @@
 
 .book-btn-compact {
   background: var(--brand);
-  color: #fff;
+  color: #000;
   border: 1px solid transparent;
 }
 
 .book-btn-compact:hover {
-  background: #b2410e;
-  box-shadow: 0 4px 12px rgba(212, 81, 19, 0.2);
+  background: var(--brand-hover);
+  box-shadow: 0 4px 15px rgba(232, 176, 89, 0.3);
 }
 
 @keyframes pulseHeart {

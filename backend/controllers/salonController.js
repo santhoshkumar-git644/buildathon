@@ -1,8 +1,14 @@
 import Salon from '../models/Salon.js';
+import cache from '../utils/cache.js';
 
 export const getAllSalons = async (req, res) => {
   try {
+    const cachedSalons = cache.get('all_salons');
+    if (cachedSalons) {
+      return res.json(cachedSalons);
+    }
     const salons = await Salon.find({});
+    cache.set('all_salons', salons);
     res.json(salons);
   } catch (error) {
     res.status(500).json({ message: error.message });

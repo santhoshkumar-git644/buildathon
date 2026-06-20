@@ -49,11 +49,11 @@ export default function Sidebar({ isOpen, onClose, user, onLogout }) {
           </button>
 
           <button 
-            className="nav-item"
-            onClick={() => handleNav('/', 'booking-section')}
+            className={`nav-item ${isActive('/my-bookings') ? 'active' : ''}`}
+            onClick={() => handleNav('/my-bookings', null)}
           >
             <span className="nav-icon">📅</span>
-            <span className="nav-label">Booking</span>
+            <span className="nav-label">My Bookings</span>
           </button>
 
           <button 

@@ -1,243 +1,137 @@
 import { useState, useEffect } from 'react';
-import { getSalons } from '../services/api.js';
+import { getPersonalizedFeed } from '../services/api.js';
 import SalonCard from '../components/SalonCard.jsx';
-import './Home.css';
 
-export default function Home({ city, savedIds, onToggleSave }) {
+export default function Home({ city, savedIds, onToggleSave, user }) {
   const [salons, setSalons] = useState([]);
   const [loading, setLoading] = useState(true);
-  
-  // Filtering & Search states
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  
-  // Combined Filter states
-  const [maxPrice, setMaxPrice] = useState(2500);
-  const [maxDistance, setMaxDistance] = useState(10);
-  const [minRating, setMinRating] = useState(3.5);
-
-  const categories = [
-    { name: 'All', emoji: '🏢' },
-    { name: "Men's Salon", emoji: '🧔' },
-    { name: "Women's Salon", emoji: '💇' },
-    { name: 'Beauty Parlour', emoji: '💄' },
-    { name: 'Bridal Spots', emoji: '👰' },
-    { name: 'Spa & Wellness', emoji: '🌸' }
-  ];
-
-  const offers = [
-    { code: 'BEAUTY20', desc: 'Flat 20% off on Bridal Spots', color: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)' },
-    { code: 'CUT50', desc: 'Get 50% discount on first Haircut', color: 'linear-gradient(135deg, #5ee7df 0%, #b490ca 100%)' },
-    { code: 'SPA150', desc: 'Flat Rs 150 off on Spa treatments', color: 'linear-gradient(135deg, #f6d365 0%, #fda085 100%)' },
-    { code: 'GLOW30', desc: '30% discount on Facial & Glow packs', color: 'linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%)' }
-  ];
 
   useEffect(() => {
-    const fetchSalons = async () => {
+    const fetchFeed = async () => {
       try {
-        const { data } = await getSalons();
-        setSalons(data);
+        let allSalons = [];
+        if (user) {
+           const { data } = await getPersonalizedFeed(user.id);
+           allSalons = data.feed || [];
+        } else {
+           // fallback to all salons if not logged in
+           const { data } = await import('../services/api.js').then(m => m.getSalons());
+           allSalons = data || [];
+        }
+        
+        // Filter by selected city
+        const citySalons = allSalons.filter(s => s.city.toLowerCase() === city.toLowerCase());
+        setSalons(citySalons);
         setLoading(false);
       } catch (err) {
         console.error(err);
         setLoading(false);
       }
     };
-    fetchSalons();
-  }, []);
-
-  const citySalons = salons.filter(s => s.city === city);
-
-  // Recommendations: top rated in this city
-  const recommendedSalons = citySalons
-    .filter(s => s.rating >= 4.2)
-    .slice(0, 3);
-
-  // Search by Salon Name, Locality or Stylist name
-  const filteredSalons = citySalons.filter(salon => {
-    // Category match
-    const categoryMatch = selectedCategory === 'All' || salon.tags?.includes(selectedCategory) ||
-      (selectedCategory === "Men's Salon" && salon.name.toLowerCase().includes('men')) ||
-      (selectedCategory === "Women's Salon" && salon.name.toLowerCase().includes('women')) ||
-      (selectedCategory === "Bridal Spots" && salon.name.toLowerCase().includes('bridal'));
-
-    // Search query match (name, area or staff specialty/name)
-    const matchesSearch = 
-      salon.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      salon.area?.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      salon.staff?.some(st => st.name.toLowerCase().includes(searchQuery.toLowerCase()) || st.specialty.toLowerCase().includes(searchQuery.toLowerCase()));
-
-    // Get min price of salon services to check price filter
-    const minPrice = salon.services?.length ? Math.min(...salon.services.map((s) => s.price)) : 0;
-
-    // Filter by BOTH Price and Rating
-    const matchesPriceRating = minPrice <= maxPrice && salon.rating >= minRating;
-
-    // Filter by BOTH Distance and Rating
-    const matchesDistanceRating = (salon.distance || 2.5) <= maxDistance && salon.rating >= minRating;
-
-    return categoryMatch && matchesSearch && matchesPriceRating && matchesDistanceRating;
-  });
-
-  if (loading) return <div className="loading-container">Loading Shears & Styles...</div>;
+    fetchFeed();
+  }, [city, user]);
 
   return (
-    <main className="home-layout">
-      {/* Top Section - Welcome & Categories */}
-      <section className="hero-compact-section">
-        <h1>Find Beauty & Styling Spots in {city}</h1>
-        <p>Book instant appointments at top-rated salons near you</p>
-      </section>
-
-      {/* Category selector */}
-      <section className="home-categories-block">
-        <h3 className="section-title">Select Category</h3>
-        <div className="category-scroll-container">
-          {categories.map((cat) => (
-            <button
-              key={cat.name}
-              className={`category-item-btn ${selectedCategory === cat.name ? 'active' : ''}`}
-              onClick={() => setSelectedCategory(cat.name)}
-            >
-              <span className="category-btn-emoji">{cat.emoji}</span>
-              <span className="category-btn-label">{cat.name}</span>
-            </button>
-          ))}
+    <main style={{ padding: 0, maxWidth: '100%' }}>
+      {/* 1. Valoura Style Hero Section */}
+      <section style={{ 
+        position: 'relative', 
+        height: '85vh', 
+        display: 'flex', 
+        alignItems: 'center', 
+        padding: '0 8%', 
+        backgroundImage: 'url("https://images.unsplash.com/photo-1521590832167-7bfcbaa6362d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80")', 
+        backgroundSize: 'cover', 
+        backgroundPosition: 'center',
+        borderBottom: '1px solid var(--line)'
+      }}>
+        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(90deg, rgba(13,15,18,1) 0%, rgba(13,15,18,0.8) 40%, rgba(0,0,0,0.1) 100%)' }}></div>
+        <div style={{ position: 'relative', zIndex: 1, maxWidth: '650px' }}>
+          <h1 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.5rem)', fontWeight: 800, lineHeight: 1.1, marginBottom: '24px' }}>
+            Book the Best Salons in {city} <br/><span style={{ color: 'var(--brand)' }}>Instantly</span>
+          </h1>
+          <p style={{ fontSize: '1.2rem', color: '#b0b6c2', marginBottom: '40px', lineHeight: 1.6, maxWidth: '500px' }}>
+            Discover top-rated salons, book premium services, and experience the ultimate grooming journey tailored just for you.
+          </p>
+          <button 
+            onClick={() => {
+              const el = document.getElementById('booking-section');
+              if (el) el.scrollIntoView({ behavior: 'smooth' });
+            }}
+            className="animate-pulse-glow"
+            style={{ padding: '16px 36px', fontSize: '1.1rem', borderRadius: '30px', background: '#fff', color: '#000', outline: 'none', border: 'none' }}
+          >
+            Book Now
+          </button>
         </div>
       </section>
 
-      {/* Offers block */}
-      <section className="offers-block">
-        <h3 className="section-title">Special Offers For You</h3>
-        <div className="offers-scroll-container">
-          {offers.map((offer) => (
-            <div key={offer.code} className="offer-card" style={{ background: offer.color }}>
-              <div className="offer-badge">OFFER</div>
-              <h4 className="offer-code">{offer.code}</h4>
-              <p className="offer-desc">{offer.desc}</p>
-            </div>
-          ))}
+      {/* 2. Stats Section */}
+      <section className="animate-slide-up stagger-1" style={{ padding: '60px 8%', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '40px', borderBottom: '1px solid var(--line)' }}>
+        <div style={{ maxWidth: '350px' }}>
+          <h2 style={{ fontSize: '1.5rem', marginBottom: '16px', lineHeight: 1.2 }}>More Than a Salon,<br/>An Experience</h2>
+          <p style={{ color: 'var(--muted)' }}>We bring you the most premium beauty destinations in your city. Redefining your routine.</p>
+        </div>
+        <div style={{ display: 'flex', gap: '60px', flexWrap: 'wrap' }}>
+          <div><h3 style={{ fontSize: '2rem', color: 'var(--brand)', marginBottom: '5px' }}>200+</h3><p style={{ color: 'var(--muted)', fontWeight: 500 }}>Top Rated Salons</p></div>
+          <div><h3 style={{ fontSize: '2rem', color: 'var(--brand)', marginBottom: '5px' }}>16</h3><p style={{ color: 'var(--muted)', fontWeight: 500 }}>Cities Covered</p></div>
+          <div><h3 style={{ fontSize: '2rem', color: 'var(--brand)', marginBottom: '5px' }}>15k+</h3><p style={{ color: 'var(--muted)', fontWeight: 500 }}>Happy Customers</p></div>
         </div>
       </section>
 
-      {/* Recommended Salons */}
-      <section className="recommendations-section">
-        <div className="section-head">
-          <h3 className="section-title">⭐ Recommended Salons</h3>
-          <span className="section-subtitle">Top ratings in {city}</span>
-        </div>
-        <div className="featured-grid">
-          {recommendedSalons.map(salon => (
-            <SalonCard 
-              key={salon.id || salon._id} 
-              salon={salon} 
-              isSaved={savedIds.includes(salon.id || salon._id)} 
-              onToggleSave={onToggleSave} 
-            />
-          ))}
-        </div>
-      </section>
-
-      {/* Transition to Booking section */}
-      <hr className="section-divider" />
-
-      <section id="booking-section" className="booking-section-wrapper">
-        <div className="booking-section-header">
-          <h2>📅 Book an Appointment</h2>
-          <p>Search, filter, and lock your slot instantly</p>
-        </div>
-
-        {/* Search Bar for Salons and Stylists */}
-        <div className="search-bar-row">
-          <input 
-            type="text" 
-            placeholder="🔍 Search salons by name, area, stylist name or specialty..."
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            className="home-search-input"
-          />
-        </div>
-
-        {/* Filter panel applying Price & Rating, Distance & Rating together */}
-        <div className="filters-container-box">
-          <div className="filter-group-combined">
-            <span className="filter-title-badge">💰 Price & Rating Combined Filter</span>
-            <div className="filter-controls">
-              <label>
-                Max Price: <strong>Rs {maxPrice}</strong>
-                <input 
-                  type="range" 
-                  min="100" 
-                  max="5000" 
-                  step="50" 
-                  value={maxPrice} 
-                  onChange={(e) => setMaxPrice(Number(e.target.value))} 
-                />
-              </label>
-              <label>
-                Min Rating: <strong>{minRating} ⭐</strong>
-                <input 
-                  type="range" 
-                  min="1" 
-                  max="5" 
-                  step="0.1" 
-                  value={minRating} 
-                  onChange={(e) => setMinRating(Number(e.target.value))} 
-                />
-              </label>
-            </div>
+      {/* 3. Value Proposition / Because You Deserve the Best */}
+      <section className="animate-slide-up stagger-2" style={{ padding: '100px 8%', textAlign: 'center' }}>
+        <h2 style={{ fontSize: '1.8rem', marginBottom: '60px' }}>Because You Deserve the Best</h2>
+        <div style={{ 
+          display: 'grid', 
+          gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', 
+          gap: '40px', 
+          border: '1px solid var(--line)', 
+          padding: '60px 40px', 
+          borderRadius: '24px', 
+          background: 'rgba(255,255,255,0.02)',
+          boxShadow: 'var(--shadow)'
+        }}>
+          <div>
+            <div style={{ width: '70px', height: '70px', borderRadius: '50%', background: 'var(--brand-soft)', color: 'var(--brand)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 24px', fontSize: '1.8rem' }}>★</div>
+            <h3 style={{ fontSize: '1.4rem' }}>Expert Stylists</h3>
+            <p style={{ color: 'var(--muted)', marginTop: '12px', lineHeight: 1.6 }}>Only the finest professionals curated from across the country.</p>
           </div>
-
-          <div className="filter-group-combined">
-            <span className="filter-title-badge">📍 Distance & Rating Combined Filter</span>
-            <div className="filter-controls">
-              <label>
-                Max Distance: <strong>{maxDistance} km</strong>
-                <input 
-                  type="range" 
-                  min="1" 
-                  max="20" 
-                  step="0.5" 
-                  value={maxDistance} 
-                  onChange={(e) => setMaxDistance(Number(e.target.value))} 
-                />
-              </label>
-              <label>
-                Min Rating: <strong>{minRating} ⭐</strong>
-                <input 
-                  type="range" 
-                  min="1" 
-                  max="5" 
-                  step="0.1" 
-                  value={minRating} 
-                  onChange={(e) => setMinRating(Number(e.target.value))} 
-                  disabled // sharing rating with price
-                />
-              </label>
-            </div>
+          <div style={{ borderLeft: '1px solid var(--line)', borderRight: '1px solid var(--line)', padding: '0 20px' }}>
+            <div style={{ width: '70px', height: '70px', borderRadius: '50%', background: 'var(--brand-soft)', color: 'var(--brand)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 24px', fontSize: '1.8rem' }}>🧴</div>
+            <h3 style={{ fontSize: '1.4rem' }}>Best Products</h3>
+            <p style={{ color: 'var(--muted)', marginTop: '12px', lineHeight: 1.6 }}>Premium quality products guaranteed for your skin and hair.</p>
+          </div>
+          <div>
+            <div style={{ width: '70px', height: '70px', borderRadius: '50%', background: 'var(--brand-soft)', color: 'var(--brand)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 24px', fontSize: '1.8rem' }}>✨</div>
+            <h3 style={{ fontSize: '1.4rem' }}>Best Service</h3>
+            <p style={{ color: 'var(--muted)', marginTop: '12px', lineHeight: 1.6 }}>Unmatched customer care and luxury ambiance every time.</p>
           </div>
         </div>
+      </section>
 
-        {/* Results List */}
-        <div className="booking-results-header">
-          <h3>Available Spots ({filteredSalons.length})</h3>
-          {selectedCategory !== 'All' && <span className="active-tag-badge">{selectedCategory}</span>}
-        </div>
-
-        {filteredSalons.length === 0 ? (
-          <div className="no-results-state">
-            <p>No salons match your search and combined filters. Try adjusting sliders or search terms.</p>
-          </div>
-        ) : (
+      {/* 4. Luxury Made Affordable (Dynamic DB Feed) */}
+      <section id="booking-section" className="animate-slide-up stagger-3" style={{ padding: '60px 8% 120px' }}>
+        <h2 style={{ fontSize: '1.8rem', marginBottom: '15px', textAlign: 'center' }}>Luxury Made Affordable in {city}</h2>
+        <p style={{ textAlign: 'center', color: 'var(--brand)', marginBottom: '60px', fontSize: '1.2rem', fontWeight: 500 }}>
+          {user ? '✨ Curated specifically for your style profile.' : 'Sign in to get personalized AI recommendations!'}
+        </p>
+        
+        {loading ? <p style={{ textAlign: 'center', color: 'var(--muted)', fontSize: '1.2rem' }}>Loading premium salons...</p> : (
           <div className="featured-grid">
-            {filteredSalons.map(salon => (
+            {salons.length > 0 ? salons.map(salon => (
               <SalonCard 
-                key={salon.id || salon._id} 
+                key={salon._id || salon.id} 
                 salon={salon} 
-                isSaved={savedIds.includes(salon.id || salon._id)} 
-                onToggleSave={onToggleSave} 
+                isSaved={savedIds.includes(salon._id || salon.id)} 
+                onToggleSave={() => onToggleSave(salon._id || salon.id)} 
               />
-            ))}
+            )) : (
+              <div style={{ textAlign: 'center', gridColumn: '1 / -1', padding: '60px', border: '1px dashed var(--line)', borderRadius: '20px' }}>
+                <h3 style={{ fontSize: '1.5rem', marginBottom: '10px' }}>No premium salons found in {city} right now.</h3>
+                <p style={{ color: 'var(--muted)' }}>Try selecting another city from the top navigation.</p>
+              </div>
+            )}
           </div>
         )}
       </section>

@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
-import { getRecommendations } from '../services/api.js';
+import { chatWithAI } from '../services/api.js';
 import { Link } from 'react-router-dom';
 import './ChatbotPage.css';
 
@@ -49,15 +49,28 @@ export default function ChatbotPage() {
 
     try {
       // Fetch recommendation from API
-      const res = await getRecommendations(queryText);
-      const aiResponseText = res.data.aiInsights || "I found some options for you!";
-      const recommendedSalonsList = res.data.recommendations || [];
+      const res = await chatWithAI(queryText);
+      const rawReply = res.data.reply || '';
+      
+      // Extract [BOOK_SALON:id] tags
+      const salonIds = [];
+      const cleanReply = rawReply.replace(/\[BOOK_SALON:\s*([^\]]+)\]/g, (match, id) => {
+        salonIds.push(id.trim());
+        return '';
+      });
+
+      // Fetch salon details for the recommended IDs
+      let recommendedSalonsList = [];
+      if (salonIds.length > 0) {
+        const { data: allSalons } = await import('../services/api.js').then(m => m.getSalons());
+        recommendedSalonsList = allSalons.filter(s => salonIds.includes(String(s.id || s._id)));
+      }
 
       // Add AI reply
       const aiMsg = {
         id: Date.now() + 1,
         sender: 'ai',
-        text: aiResponseText,
+        text: cleanReply.trim() || "I found some options for you!",
         salons: recommendedSalonsList.slice(0, 3), // Show top 3 recommended
         timestamp: new Date()
       };
