@@ -33,3 +33,12 @@ export const cancelBooking = async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 };
+
+export const getSalonBookings = async (req, res) => {
+  try {
+    const bookings = await Booking.find({ salonId: req.params.salonId, status: 'upcoming' });
+    res.json(bookings);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};

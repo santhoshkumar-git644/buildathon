@@ -5,6 +5,7 @@ import salonRoutes from './routes/salonRoutes.js';
 import bookingRoutes from './routes/bookingRoutes.js';
 import reviewRoutes from './routes/reviewRoutes.js';
 import aiRoutes from './routes/aiRoutes.js';
+import userRoutes from './routes/userRoutes.js';
 
 const app = express();
 const port = process.env.PORT || 5000;
@@ -20,6 +21,7 @@ app.use('/api/salons', salonRoutes);
 app.use('/api/bookings', bookingRoutes);
 app.use('/api/reviews', reviewRoutes);
 app.use('/api/ai', aiRoutes);
+app.use('/api/users', userRoutes);
 
 app.listen(port, () => {
   console.log(`Backend server listening at http://localhost:${port}`);
