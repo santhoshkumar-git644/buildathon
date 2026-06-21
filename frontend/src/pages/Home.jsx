@@ -5,6 +5,7 @@ import SalonCard from '../components/SalonCard.jsx';
 export default function Home({ city, savedIds, onToggleSave, user }) {
   const [salons, setSalons] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [searchQuery, setSearchQuery] = useState('');
 
   useEffect(() => {
     const fetchFeed = async () => {
@@ -113,27 +114,58 @@ export default function Home({ city, savedIds, onToggleSave, user }) {
       {/* 4. Luxury Made Affordable (Dynamic DB Feed) */}
       <section id="booking-section" className="animate-slide-up stagger-3" style={{ padding: '60px 8% 120px' }}>
         <h2 style={{ fontSize: '1.8rem', marginBottom: '15px', textAlign: 'center' }}>Luxury Made Affordable in {city}</h2>
-        <p style={{ textAlign: 'center', color: 'var(--brand)', marginBottom: '60px', fontSize: '1.2rem', fontWeight: 500 }}>
+        <p style={{ textAlign: 'center', color: 'var(--brand)', marginBottom: '30px', fontSize: '1.2rem', fontWeight: 500 }}>
           {user ? '✨ Curated specifically for your style profile.' : 'Sign in to get personalized AI recommendations!'}
         </p>
         
-        {loading ? <p style={{ textAlign: 'center', color: 'var(--muted)', fontSize: '1.2rem' }}>Loading premium salons...</p> : (
-          <div className="featured-grid">
-            {salons.length > 0 ? salons.map(salon => (
-              <SalonCard 
-                key={salon._id || salon.id} 
-                salon={salon} 
-                isSaved={savedIds.includes(salon._id || salon.id)} 
-                onToggleSave={() => onToggleSave(salon._id || salon.id)} 
-              />
-            )) : (
-              <div style={{ textAlign: 'center', gridColumn: '1 / -1', padding: '60px', border: '1px dashed var(--line)', borderRadius: '20px' }}>
-                <h3 style={{ fontSize: '1.5rem', marginBottom: '10px' }}>No premium salons found in {city} right now.</h3>
-                <p style={{ color: 'var(--muted)' }}>Try selecting another city from the top navigation.</p>
-              </div>
-            )}
-          </div>
-        )}
+        <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '40px' }}>
+          <input 
+            type="text" 
+            placeholder="Search by salon name, area, or service..." 
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            style={{ 
+              width: '100%', 
+              maxWidth: '500px', 
+              padding: '16px 24px', 
+              borderRadius: '30px', 
+              border: '1px solid var(--line)', 
+              background: 'var(--bg-secondary)', 
+              color: 'var(--text-primary)', 
+              fontSize: '1.1rem',
+              outline: 'none'
+            }}
+          />
+        </div>
+
+        {loading ? <p style={{ textAlign: 'center', color: 'var(--muted)', fontSize: '1.2rem' }}>Loading premium salons...</p> : (() => {
+          const displayedSalons = salons.filter(salon => {
+            const query = searchQuery.toLowerCase();
+            const inName = salon.name.toLowerCase().includes(query);
+            const inArea = salon.area.toLowerCase().includes(query);
+            const inTags = salon.tags?.some(tag => tag.toLowerCase().includes(query));
+            const inServices = salon.services?.some(service => service.name.toLowerCase().includes(query));
+            return inName || inArea || inTags || inServices;
+          });
+
+          return (
+            <div className="featured-grid">
+              {displayedSalons.length > 0 ? displayedSalons.map(salon => (
+                <SalonCard 
+                  key={salon._id || salon.id} 
+                  salon={salon} 
+                  isSaved={savedIds.includes(salon._id || salon.id)} 
+                  onToggleSave={() => onToggleSave(salon._id || salon.id)} 
+                />
+              )) : (
+                <div style={{ textAlign: 'center', gridColumn: '1 / -1', padding: '60px', border: '1px dashed var(--line)', borderRadius: '20px' }}>
+                  <h3 style={{ fontSize: '1.5rem', marginBottom: '10px' }}>No salons matched your search.</h3>
+                  <p style={{ color: 'var(--muted)' }}>Try searching for a different name, area, or service.</p>
+                </div>
+              )}
+            </div>
+          );
+        })()}
       </section>
     </main>
   );
