@@ -44,35 +44,35 @@ export default function Home({ city, savedIds, onToggleSave, user }) {
       {/* 1. Valoura Style Hero Section */}
       <section style={{ 
         position: 'relative', 
-        height: '85vh', 
+        height: searchQuery ? '35vh' : '85vh', 
         display: 'flex', 
-        alignItems: 'center', 
-        padding: '0 8%', 
+        alignItems: searchQuery ? 'flex-end' : 'center', 
+        padding: searchQuery ? '0 8% 40px' : '0 8%', 
+        transition: 'all 0.4s ease-in-out',
         backgroundImage: 'url("https://images.unsplash.com/photo-1521590832167-7bfcbaa6362d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80")', 
         backgroundSize: 'cover', 
         backgroundPosition: 'center',
         borderBottom: '1px solid var(--line)'
       }}>
         <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(90deg, rgba(13,15,18,1) 0%, rgba(13,15,18,0.8) 40%, rgba(0,0,0,0.1) 100%)' }}></div>
-        <div style={{ position: 'relative', zIndex: 1, maxWidth: '650px' }}>
-          <h1 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.5rem)', fontWeight: 800, lineHeight: 1.1, marginBottom: '24px' }}>
-            Book the Best Salons in {city} <br/><span style={{ color: 'var(--brand)' }}>Instantly</span>
-          </h1>
-          <p style={{ fontSize: '1.2rem', color: '#b0b6c2', marginBottom: '40px', lineHeight: 1.6, maxWidth: '500px' }}>
-            Discover top-rated salons, book premium services, and experience the ultimate grooming journey tailored just for you.
-          </p>
-          <div style={{ display: 'flex', gap: '15px', flexWrap: 'wrap', marginBottom: '40px' }}>
+        <div style={{ position: 'relative', zIndex: 1, width: '100%', maxWidth: searchQuery ? '800px' : '650px', margin: searchQuery ? '0 auto' : '0', transition: 'all 0.4s ease' }}>
+          
+          {!searchQuery && (
+            <div className="animate-slide-up">
+              <h1 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.5rem)', fontWeight: 800, lineHeight: 1.1, marginBottom: '24px' }}>
+                Book the Best Salons in {city} <br/><span style={{ color: 'var(--brand)' }}>Instantly</span>
+              </h1>
+              <p style={{ fontSize: '1.2rem', color: '#b0b6c2', marginBottom: '40px', lineHeight: 1.6, maxWidth: '500px' }}>
+                Discover top-rated salons, book premium services, and experience the ultimate grooming journey tailored just for you.
+              </p>
+            </div>
+          )}
+          <div style={{ display: 'flex', gap: '15px', flexWrap: 'wrap', marginBottom: searchQuery ? '0' : '40px', transition: 'all 0.3s ease' }}>
             <input 
               type="text" 
               placeholder="Search complete database (e.g., Haircut, New York...)" 
               value={searchQuery}
-              onChange={(e) => {
-                setSearchQuery(e.target.value);
-                if (e.target.value) {
-                  const el = document.getElementById('booking-section');
-                  if (el) el.scrollIntoView({ behavior: 'smooth' });
-                }
-              }}
+              onChange={(e) => setSearchQuery(e.target.value)}
               style={{ 
                 flex: 1,
                 minWidth: '250px',
@@ -82,69 +82,63 @@ export default function Home({ city, savedIds, onToggleSave, user }) {
                 background: 'rgba(255,255,255,0.9)', 
                 color: '#000', 
                 fontSize: '1.1rem',
-                outline: 'none'
+                outline: 'none',
+                boxShadow: '0 8px 32px rgba(0,0,0,0.2)'
               }}
             />
-            <button 
-              onClick={() => {
-                const el = document.getElementById('booking-section');
-                if (el) el.scrollIntoView({ behavior: 'smooth' });
-              }}
-              className="animate-pulse-glow"
-              style={{ padding: '16px 36px', fontSize: '1.1rem', borderRadius: '30px', background: 'var(--brand)', color: '#fff', outline: 'none', border: 'none', fontWeight: 'bold' }}
-            >
-              Search
-            </button>
           </div>
         </div>
       </section>
 
-      {/* 2. Stats Section */}
-      <section className="animate-slide-up stagger-1" style={{ padding: '60px 8%', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '40px', borderBottom: '1px solid var(--line)' }}>
-        <div style={{ maxWidth: '350px' }}>
-          <h2 style={{ fontSize: '1.5rem', marginBottom: '16px', lineHeight: 1.2 }}>More Than a Salon,<br/>An Experience</h2>
-          <p style={{ color: 'var(--muted)' }}>We bring you the most premium beauty destinations in your city. Redefining your routine.</p>
-        </div>
-        <div style={{ display: 'flex', gap: '60px', flexWrap: 'wrap' }}>
-          <div><h3 style={{ fontSize: '2rem', color: 'var(--brand)', marginBottom: '5px' }}>200+</h3><p style={{ color: 'var(--muted)', fontWeight: 500 }}>Top Rated Salons</p></div>
-          <div><h3 style={{ fontSize: '2rem', color: 'var(--brand)', marginBottom: '5px' }}>16</h3><p style={{ color: 'var(--muted)', fontWeight: 500 }}>Cities Covered</p></div>
-          <div><h3 style={{ fontSize: '2rem', color: 'var(--brand)', marginBottom: '5px' }}>15k+</h3><p style={{ color: 'var(--muted)', fontWeight: 500 }}>Happy Customers</p></div>
-        </div>
-      </section>
+      {/* 2 & 3. Promotional Sections (Hidden when searching) */}
+      {!searchQuery && (
+        <div className="animate-fade-in">
+          <section className="animate-slide-up stagger-1" style={{ padding: '60px 8%', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '40px', borderBottom: '1px solid var(--line)' }}>
+            <div style={{ maxWidth: '350px' }}>
+              <h2 style={{ fontSize: '1.5rem', marginBottom: '16px', lineHeight: 1.2 }}>More Than a Salon,<br/>An Experience</h2>
+              <p style={{ color: 'var(--muted)' }}>We bring you the most premium beauty destinations in your city. Redefining your routine.</p>
+            </div>
+            <div style={{ display: 'flex', gap: '60px', flexWrap: 'wrap' }}>
+              <div><h3 style={{ fontSize: '2rem', color: 'var(--brand)', marginBottom: '5px' }}>200+</h3><p style={{ color: 'var(--muted)', fontWeight: 500 }}>Top Rated Salons</p></div>
+              <div><h3 style={{ fontSize: '2rem', color: 'var(--brand)', marginBottom: '5px' }}>16</h3><p style={{ color: 'var(--muted)', fontWeight: 500 }}>Cities Covered</p></div>
+              <div><h3 style={{ fontSize: '2rem', color: 'var(--brand)', marginBottom: '5px' }}>15k+</h3><p style={{ color: 'var(--muted)', fontWeight: 500 }}>Happy Customers</p></div>
+            </div>
+          </section>
 
-      {/* 3. Value Proposition / Because You Deserve the Best */}
-      <section className="animate-slide-up stagger-2" style={{ padding: '100px 8%', textAlign: 'center' }}>
-        <h2 style={{ fontSize: '1.8rem', marginBottom: '60px' }}>Because You Deserve the Best</h2>
-        <div style={{ 
-          display: 'grid', 
-          gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', 
-          gap: '40px', 
-          border: '1px solid var(--line)', 
-          padding: '60px 40px', 
-          borderRadius: '24px', 
-          background: 'rgba(255,255,255,0.02)',
-          boxShadow: 'var(--shadow)'
-        }}>
-          <div>
-            <div style={{ width: '70px', height: '70px', borderRadius: '50%', background: 'var(--brand-soft)', color: 'var(--brand)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 24px', fontSize: '1.8rem' }}>★</div>
-            <h3 style={{ fontSize: '1.4rem' }}>Expert Stylists</h3>
-            <p style={{ color: 'var(--muted)', marginTop: '12px', lineHeight: 1.6 }}>Only the finest professionals curated from across the country.</p>
-          </div>
-          <div style={{ borderLeft: '1px solid var(--line)', borderRight: '1px solid var(--line)', padding: '0 20px' }}>
-            <div style={{ width: '70px', height: '70px', borderRadius: '50%', background: 'var(--brand-soft)', color: 'var(--brand)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 24px', fontSize: '1.8rem' }}>🧴</div>
-            <h3 style={{ fontSize: '1.4rem' }}>Best Products</h3>
-            <p style={{ color: 'var(--muted)', marginTop: '12px', lineHeight: 1.6 }}>Premium quality products guaranteed for your skin and hair.</p>
-          </div>
-          <div>
-            <div style={{ width: '70px', height: '70px', borderRadius: '50%', background: 'var(--brand-soft)', color: 'var(--brand)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 24px', fontSize: '1.8rem' }}>✨</div>
-            <h3 style={{ fontSize: '1.4rem' }}>Best Service</h3>
-            <p style={{ color: 'var(--muted)', marginTop: '12px', lineHeight: 1.6 }}>Unmatched customer care and luxury ambiance every time.</p>
-          </div>
+          <section className="animate-slide-up stagger-2" style={{ padding: '100px 8%', textAlign: 'center' }}>
+            <h2 style={{ fontSize: '1.8rem', marginBottom: '60px' }}>Because You Deserve the Best</h2>
+            <div style={{ 
+              display: 'grid', 
+              gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', 
+              gap: '40px', 
+              border: '1px solid var(--line)', 
+              padding: '60px 40px', 
+              borderRadius: '24px', 
+              background: 'rgba(255,255,255,0.02)',
+              boxShadow: 'var(--shadow)'
+            }}>
+              <div>
+                <div style={{ width: '70px', height: '70px', borderRadius: '50%', background: 'var(--brand-soft)', color: 'var(--brand)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 24px', fontSize: '1.8rem' }}>★</div>
+                <h3 style={{ fontSize: '1.4rem' }}>Expert Stylists</h3>
+                <p style={{ color: 'var(--muted)', marginTop: '12px', lineHeight: 1.6 }}>Only the finest professionals curated from across the country.</p>
+              </div>
+              <div style={{ borderLeft: '1px solid var(--line)', borderRight: '1px solid var(--line)', padding: '0 20px' }}>
+                <div style={{ width: '70px', height: '70px', borderRadius: '50%', background: 'var(--brand-soft)', color: 'var(--brand)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 24px', fontSize: '1.8rem' }}>🧴</div>
+                <h3 style={{ fontSize: '1.4rem' }}>Best Products</h3>
+                <p style={{ color: 'var(--muted)', marginTop: '12px', lineHeight: 1.6 }}>Premium quality products guaranteed for your skin and hair.</p>
+              </div>
+              <div>
+                <div style={{ width: '70px', height: '70px', borderRadius: '50%', background: 'var(--brand-soft)', color: 'var(--brand)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 24px', fontSize: '1.8rem' }}>✨</div>
+                <h3 style={{ fontSize: '1.4rem' }}>Best Service</h3>
+                <p style={{ color: 'var(--muted)', marginTop: '12px', lineHeight: 1.6 }}>Unmatched customer care and luxury ambiance every time.</p>
+              </div>
+            </div>
+          </section>
         </div>
-      </section>
+      )}
 
       {/* 4. Luxury Made Affordable (Dynamic DB Feed) or Search Results */}
-      <section id="booking-section" className="animate-slide-up stagger-3" style={{ padding: '60px 8% 120px' }}>
+      <section id="booking-section" className="animate-slide-up stagger-3" style={{ padding: searchQuery ? '40px 8% 120px' : '60px 8% 120px' }}>
         <h2 style={{ fontSize: '1.8rem', marginBottom: '15px', textAlign: 'center' }}>
           {searchQuery ? 'Search Results' : `Luxury Made Affordable in ${city}`}
         </h2>
