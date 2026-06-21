@@ -20,7 +20,7 @@ export default function Home({ city, savedIds, onToggleSave, user }) {
         setGlobalSalons(fetchedGlobalSalons);
 
         if (user) {
-           const { data } = await getPersonalizedFeed(user.id);
+           const { data } = await getPersonalizedFeed(user.id, city);
            allSalons = data.feed || [];
         } else {
            // fallback to all salons if not logged in

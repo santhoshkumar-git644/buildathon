@@ -61,6 +61,7 @@ export const getSalonSummary = async (req, res) => {
 export const getPersonalizedFeed = async (req, res) => {
   try {
     const { userId } = req.params;
+    const { city } = req.query;
     const user = await User.findById(userId).lean();
     
     // Fetch all salons for manual sorting logic
@@ -108,6 +109,10 @@ export const getPersonalizedFeed = async (req, res) => {
       });
       
       allSalons.sort((a, b) => b.matchScore - a.matchScore);
+    }
+    
+    if (city) {
+      allSalons = allSalons.filter(s => s.city.toLowerCase() === city.toLowerCase());
     }
     
     res.json({

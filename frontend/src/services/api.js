@@ -24,7 +24,7 @@ export const getSalonReviews = (salonId) => api.get(`/reviews/${salonId}`);
 
 export const chatWithAI = (query) => api.post('/ai/chat', { query });
 export const summarizeReviews = (salonId) => api.get(`/ai/summarize/${salonId}`);
-export const getPersonalizedFeed = (userId) => api.get(`/ai/feed/${userId}`);
+export const getPersonalizedFeed = (userId, city) => api.get(`/ai/feed/${userId}`, { params: { city } });
 
 export const toggleSaveSalonDB = (userId, salonId) => api.post('/users/save-salon', { userId, salonId });
 export const fetchSavedSalonsDB = (userId) => api.get(`/users/${userId}/saved-salons`);
