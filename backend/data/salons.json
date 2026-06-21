@@ -20,6 +20,506 @@
 "contact": "+91 98765 43210",
 "verified": true
 },
+  {
+    "salonId": "SAL-001",
+    "name": "The Tress Lounge",
+    "city": "Delhi",
+    "locality": "Greater Kailash 2",
+    "rating": 4.7,
+    "reviewCount": 342,
+    "priceRange": "$$$",
+    "specialties": ["Balayage & Highlights", "Keratin Treatment"],
+    "services": [
+      {"service": "Premium Haircut", "price": 1200},
+      {"service": "Global Hair Coloring", "price": 4500},
+      {"service": "HydraFacial", "price": 3500}
+    ],
+    "experienceYears": 12,
+    "genderPreference": "Unisex",
+    "availableSlots": ["10:00 AM", "11:30 AM", "02:30 PM", "04:00 PM"],
+    "reviews": [
+      "Amazing balayage experience! The stylists really know what they are doing.",
+      "A bit pricey but absolutely worth every rupee for the hygiene and service quality."
+    ],
+    "portfolioStyles": ["Caramel Balayage", "Textured Bob", "Bridal Glow Makeup"],
+    "contact": "+91-9811122334",
+    "verified": true
+  },
+  {
+    "salonId": "SAL-002",
+    "name": "Urban Shear & Shave",
+    "city": "Bengaluru",
+    "locality": "Indiranagar",
+    "rating": 4.5,
+    "reviewCount": 189,
+    "priceRange": "$$",
+    "specialties": ["Beard Styling", "Fade Cuts"],
+    "services": [
+      {"service": "Classic Men's Haircut", "price": 450},
+      {"service": "Beard Trim & Charcoal Mask", "price": 600},
+      {"service": "Hair Spa", "price": 1200}
+    ],
+    "experienceYears": 8,
+    "genderPreference": "Men",
+    "availableSlots": ["09:00 AM", "01:00 PM", "05:30 PM"],
+    "reviews": [
+      "Best place in Indiranagar for a clean skin fade. Very professional barbers.",
+      "Clean, prompt, and highly efficient. Will visit again."
+    ],
+    "portfolioStyles": ["High Skin Fade", "Classic Pompadour", "Beard Sculpting"],
+    "contact": "+91-8041234567",
+    "verified": true
+  },
+  {
+    "salonId": "SAL-003",
+    "name": "Blush & Bloom Boutique",
+    "city": "Kolkata",
+    "locality": "Salt Lake Sector 5",
+    "rating": 4.8,
+    "reviewCount": 275,
+    "priceRange": "$$",
+    "specialties": ["Bridal Makeover", "Nail Art"],
+    "services": [
+      {"service": "HD Bridal Makeup", "price": 15000},
+      {"service": "Gel Nail Extensions", "price": 1800},
+      {"service": "O3+ Facial", "price": 2500}
+    ],
+    "experienceYears": 10,
+    "genderPreference": "Women",
+    "availableSlots": ["11:00 AM", "03:00 PM", "06:00 PM"],
+    "reviews": [
+      "Got my wedding makeup done here. They made me look absolutely stunning!",
+      "Superb nail extension options. The extensions lasted more than a month."
+    ],
+    "portfolioStyles": ["Traditional Bengali Bridal Look", "Ombre Gel Nails", "Soft Smokey Eye Look"],
+    "contact": "+91-3324657890",
+    "verified": true
+  },
+  {
+    "salonId": "SAL-004",
+    "name": "Mane & Silk Studio",
+    "city": "Chennai",
+    "locality": "Nungambakkam",
+    "rating": 4.6,
+    "reviewCount": 412,
+    "priceRange": "$$$",
+    "specialties": ["Hair Botox", "Scalp Therapy"],
+    "services": [
+      {"service": "Hair Botox Treatment", "price": 7500},
+      {"service": "Advanced Anti-Dandruff Treatment", "price": 2200},
+      {"service": "Stylist Haircut", "price": 950}
+    ],
+    "experienceYears": 15,
+    "genderPreference": "Unisex",
+    "availableSlots": ["10:30 AM", "02:00 PM", "04:30 PM"],
+    "reviews": [
+      "The hair botox did wonders to my frizzy curls. Highly recommend this salon.",
+      "Courteous staff and extremely meticulous consultation before the treatment."
+    ],
+    "portfolioStyles": ["Sleek Straight Botox Finish", "De-frizzed Natural Waves"],
+    "contact": "+91-4428234567",
+    "verified": true
+  },
+  {
+    "salonId": "SAL-005",
+    "name": "Krome Scissors",
+    "city": "Pune",
+    "locality": "Koregaon Park",
+    "rating": 4.4,
+    "reviewCount": 156,
+    "priceRange": "$$",
+    "specialties": ["Fashion Coloring", "Pixie Cuts"],
+    "services": [
+      {"service": "Unisex Haircut & Styling", "price": 700},
+      {"service": "Global Ombre Color", "price": 5000},
+      {"service": "Deep Conditioning Mask", "price": 1000}
+    ],
+    "experienceYears": 6,
+    "genderPreference": "Unisex",
+    "availableSlots": ["12:00 PM", "02:30 PM", "07:00 PM"],
+    "reviews": [
+      "Loved the vibrant blue global color they did. The colorist is an artist!",
+      "Great music, great vibe, and fantastic haircuts."
+    ],
+    "portfolioStyles": ["Electric Blue Highlights", "Asymmetrical Pixie", "Messy Shag Cut"],
+    "contact": "+91-2066049876",
+    "verified": true
+  },
+  {
+    "salonId": "SAL-006",
+    "name": "Velvet & Vines",
+    "city": "Delhi",
+    "locality": "Vasant Vihar",
+    "rating": 4.9,
+    "reviewCount": 510,
+    "priceRange": "$$$",
+    "specialties": ["Luxury Spa Pedicure", "Organic Facials"],
+    "services": [
+      {"service": "Luxury Caviar Pedicure", "price": 2500},
+      {"service": "Organic Brightening Facial", "price": 4000},
+      {"service": "Blow Dry & Curling", "price": 1200}
+    ],
+    "experienceYears": 14,
+    "genderPreference": "Women",
+    "availableSlots": ["10:00 AM", "01:30 PM", "05:00 PM"],
+    "reviews": [
+      "The most relaxing pedicure in South Delhi. Premium products used.",
+      "Perfect place to unwind. Extremely professional and clean."
+    ],
+    "portfolioStyles": ["Flawless Blowout", "French Spa Pedicure", "Radiant Skin Finish"],
+    "contact": "+91-9999887766",
+    "verified": true
+  },
+  {
+    "salonId": "SAL-007",
+    "name": "The Grooming Co.",
+    "city": "Bengaluru",
+    "locality": "HSR Layout",
+    "rating": 4.3,
+    "reviewCount": 215,
+    "priceRange": "$$",
+    "specialties": ["Hot Towel Shave", "Hair Cleansing"],
+    "services": [
+      {"service": "Signature Hot Towel Shave", "price": 350},
+      {"service": "Men's Haircut & Wash", "price": 500},
+      {"service": "De-tan Pack", "price": 400}
+    ],
+    "experienceYears": 7,
+    "genderPreference": "Men",
+    "availableSlots": ["08:30 AM", "11:00 AM", "03:30 PM", "06:30 PM"],
+    "reviews": [
+      "Affordable luxury grooming. The hot towel shave is an absolute bliss.",
+      "Polite staff and minimal waiting time if you book via slot."
+    ],
+    "portfolioStyles": ["Sharp Contour Beard", "Classic Buzz Cut"],
+    "contact": "+91-9123456789",
+    "verified": true
+  },
+  {
+    "salonId": "SAL-008",
+    "name": "Aura Hair & Aesthetics",
+    "city": "Kolkata",
+    "locality": "Ballygunge",
+    "rating": 4.6,
+    "reviewCount": 302,
+    "priceRange": "$$",
+    "specialties": ["Smoothening Treatments", "Anti-Aging Facials"],
+    "services": [
+      {"service": "L'Oreal Hair Smoothening", "price": 5500},
+      {"service": "Microdermabrasion Facial", "price": 3800},
+      {"service": "Root Touch-up", "price": 1100}
+    ],
+    "experienceYears": 11,
+    "genderPreference": "Unisex",
+    "availableSlots": ["10:00 AM", "02:30 PM", "05:30 PM"],
+    "reviews": [
+      "Very satisfied with my hair smoothening. Sleek, shiny, and dynamic.",
+      "The facial treatment drastically improved my skin texture."
+    ],
+    "portfolioStyles": ["Sleek Straight Hair", "Youthful Glow Skin Transformation"],
+    "contact": "+91-3340059876",
+    "verified": true
+  },
+  {
+    "salonId": "SAL-009",
+    "name": "Edge & Scissors Lounge",
+    "city": "Chennai",
+    "locality": "Adyar",
+    "rating": 4.5,
+    "reviewCount": 178,
+    "priceRange": "$$",
+    "specialties": ["Kids Haircuts", "Creative Hair Tattooing"],
+    "services": [
+      {"service": "Adult Haircut & Style", "price": 600},
+      {"service": "Kids Hair Styling", "price": 400},
+      {"service": "Hair Detoxing Spa", "price": 1500}
+    ],
+    "experienceYears": 9,
+    "genderPreference": "Unisex",
+    "availableSlots": ["11:30 AM", "04:00 PM", "07:30 PM"],
+    "reviews": [
+      "They were so patient with my toddler during his haircut. Fantastic job!",
+      "Good ambiance and skilled staff. Strongly recommended in Adyar."
+    ],
+    "portfolioStyles": ["Undercut with Hair Line Tattoo", "Cute Toddler Crop"],
+    "contact": "+91-4443210987",
+    "verified": true
+  },
+  {
+    "salonId": "SAL-010",
+    "name": "Gloss Lounge & Spa",
+    "city": "Pune",
+    "locality": "Kalyani Nagar",
+    "rating": 4.7,
+    "reviewCount": 290,
+    "priceRange": "$$$",
+    "specialties": ["Acrylic Extensions", "Eyelash Perming"],
+    "services": [
+      {"service": "Full Set Acrylic Extensions", "price": 2200},
+      {"service": "Volume Eyelash Extensions", "price": 3500},
+      {"service": "Moroccan Hair Spa", "price": 2500}
+    ],
+    "experienceYears": 10,
+    "genderPreference": "Women",
+    "availableSlots": ["10:00 AM", "01:00 PM", "03:30 PM", "06:00 PM"],
+    "reviews": [
+      "The eyelash perming completely changed my look! Obsessed.",
+      "Clean rooms, premium customer handling, and very artistic nail designs."
+    ],
+    "portfolioStyles": ["Chrome Acrylic Coffin Nails", "Wispy Volume Eyelashes"],
+    "contact": "+91-2025648731",
+    "verified": true
+  },
+  {
+    "salonId": "SAL-011",
+    "name": "The Dapper Den",
+    "city": "Delhi",
+    "locality": "Connaught Place",
+    "rating": 4.8,
+    "reviewCount": 425,
+    "priceRange": "$$$",
+    "specialties": ["Beard Grooming", "Scalp Pigmentation"],
+    "services": [
+      {"service": "Luxury Beard Trim & Styling", "price": 800},
+      {"service": "Executive Haircut", "price": 1100},
+      {"service": "Anti-Hairfall Scalp Meso Spa", "price": 3000}
+    ],
+    "experienceYears": 13,
+    "genderPreference": "Men",
+    "availableSlots": ["09:30 AM", "02:30 PM", "05:30 PM", "08:00 PM"],
+    "reviews": [
+      "Top notch executive service. The ambiance is like an elite gentlemen's club.",
+      "The stylists understand modern trends perfectly. Splendid beard styling."
+    ],
+    "portfolioStyles": ["Slicked Back Undercut", "Sharp Ducktail Beard Style"],
+    "contact": "+91-1145678901",
+    "verified": true
+  },
+  {
+    "salonId": "SAL-012",
+    "name": "Ziva Luxury Salon",
+    "city": "Bengaluru",
+    "locality": "Whitefield",
+    "rating": 4.6,
+    "reviewCount": 560,
+    "priceRange": "$$$",
+    "specialties": ["Balayage", "Olala Plex Strengthening"],
+    "services": [
+      {"service": "Olaplex Treatment", "price": 4000},
+      {"service": "Balayage Transformation", "price": 6500},
+      {"service": "Advanced Bridal Airbrush Makeup", "price": 18000}
+    ],
+    "experienceYears": 16,
+    "genderPreference": "Unisex",
+    "availableSlots": ["10:00 AM", "12:30 PM", "04:00 PM"],
+    "reviews": [
+      "Had a marvelous balayage here. My hair feels so healthy even after bleaching.",
+      "Wonderful experience, prompt appointment scheduling and highly sanitary environment."
+    ],
+    "portfolioStyles": ["Ash Blonde Balayage", "Airbrush Bridal Glow"],
+    "contact": "+91-8067895432",
+    "verified": true
+  },
+  {
+    "salonId": "SAL-013",
+    "name": "Mirror Mirror",
+    "city": "Kolkata",
+    "locality": "Park Street",
+    "rating": 4.4,
+    "reviewCount": 192,
+    "priceRange": "$$",
+    "specialties": ["Party Makeup", "Waxing Rituals"],
+    "services": [
+      {"service": "Celebrity Party Makeup", "price": 4500},
+      {"service": "Full Body Rika Waxing", "price": 2000},
+      {"service": "Layered Haircut", "price": 800}
+    ],
+    "experienceYears": 7,
+    "genderPreference": "Women",
+    "availableSlots": ["11:00 AM", "02:30 PM", "06:30 PM"],
+    "reviews": [
+      "Loved the party look they created for my office party. Got lots of compliments.",
+      "Extremely hygienic waxing rooms. Painless and quick process."
+    ],
+    "portfolioStyles": ["Dewy Makeup Look", "Long Layers Blow-dry"],
+    "contact": "+91-3322876543",
+    "verified": true
+  },
+  {
+    "salonId": "SAL-014",
+    "name": "Cuts & Curls Studio",
+    "city": "Chennai",
+    "locality": "Velachery",
+    "rating": 4.5,
+    "reviewCount": 240,
+    "priceRange": "$$",
+    "specialties": ["Curly Hair Cut", "Perming"],
+    "services": [
+      {"service": "CGM Custom Curly Cut", "price": 1200},
+      {"service": "Digital Perming Treatment", "price": 6000},
+      {"service": "Deep Hydration Curl Mask", "price": 1500}
+    ],
+    "experienceYears": 9,
+    "genderPreference": "Unisex",
+    "availableSlots": ["10:00 AM", "01:30 PM", "04:30 PM"],
+    "reviews": [
+      "Finally a salon in Chennai that understands curly hair! Best CGM cut ever.",
+      "Very friendly staff who patiently teach you how to style curls post-wash."
+    ],
+    "portfolioStyles": ["Voluminous Defined Curls", "Beach Wave Perm"],
+    "contact": "+91-4422459876",
+    "verified": true
+  },
+  {
+    "salonId": "SAL-015",
+    "name": "The Scissors Story",
+    "city": "Pune",
+    "locality": "Baner",
+    "rating": 4.3,
+    "reviewCount": 134,
+    "priceRange": "$$",
+    "specialties": ["Global Hair Color", "Keratin Therapy"],
+    "services": [
+      {"service": "Global Hair Coloring", "price": 3500},
+      {"service": "Amazon Keratin Treatment", "price": 5000},
+      {"service": "Classic Pedicure", "price": 600}
+    ],
+    "experienceYears": 5,
+    "genderPreference": "Unisex",
+    "availableSlots": ["11:00 AM", "02:30 PM", "05:00 PM", "07:30 PM"],
+    "reviews": [
+      "Keratin treatment was done perfectly. Reduced my styling time significantly.",
+      "Courteous staff and highly reasonable rates for premium brands."
+    ],
+    "portfolioStyles": ["Rich Chocolate Global Brown", "Sleek Keratin Tresses"],
+    "contact": "+91-2027294321",
+    "verified": true
+  },
+  {
+    "salonId": "SAL-016",
+    "name": "Elegance Wellness & Hair",
+    "city": "Delhi",
+    "locality": "Punjabi Bagh",
+    "rating": 4.7,
+    "reviewCount": 380,
+    "priceRange": "$$$",
+    "specialties": ["Pre-Bridal Packages", "Skin Peels"],
+    "services": [
+      {"service": "7-Step Pre-Bridal Glow Ritual", "price": 12000},
+      {"service": "Dermal Radiance Chemical Peel", "price": 3000},
+      {"service": "French Manicure", "price": 900}
+    ],
+    "experienceYears": 14,
+    "genderPreference": "Women",
+    "availableSlots": ["10:00 AM", "02:30 PM", "06:00 PM"],
+    "reviews": [
+      "The pre-bridal package cleared up my pigmentation beautifully. Exceptional!",
+      "A clean, premium and comfortable setup. Every bride's dream sanctuary."
+    ],
+    "portfolioStyles": ["Glass Skin Texture Finish", "Classic French Manicure Nails"],
+    "contact": "+91-1125226789",
+    "verified": true
+  },
+  {
+    "salonId": "SAL-017",
+    "name": "Razor Sharp Barbershop",
+    "city": "Bengaluru",
+    "locality": "Jayanagar",
+    "rating": 4.6,
+    "reviewCount": 208,
+    "priceRange": "$$",
+    "specialties": ["Hair Styling", "Head Massage"],
+    "services": [
+      {"service": "Trendy Under-cut & Wash", "price": 450},
+      {"service": "Therapeutic Scalp Massage (20 mins)", "price": 400},
+      {"service": "Beard Lining & Trim", "price": 250}
+    ],
+    "experienceYears": 8,
+    "genderPreference": "Men",
+    "availableSlots": ["09:00 AM", "12:30 PM", "02:30 PM", "07:00 PM"],
+    "reviews": [
+      "The head massage here is pure bliss after a long working week.",
+      "Skillful barbers who listen to what you want instead of rushing."
+    ],
+    "portfolioStyles": ["Sharp Hard-Part Quiff", "Clean Shaved Beard Outline"],
+    "contact": "+91-8026539874",
+    "verified": true
+  },
+  {
+    "salonId": "SAL-018",
+    "name": "Monochrome Hair Concept",
+    "city": "Kolkata",
+    "locality": "Gariahat",
+    "rating": 4.5,
+    "reviewCount": 167,
+    "priceRange": "$$",
+    "specialties": ["Highlights", "Smoothening"],
+    "services": [
+      {"service": "Streak Highlights (Per Foil)", "price": 250},
+      {"service": "Matrix Hair Smoothening", "price": 4800},
+      {"service": "Stylist Haircut", "price": 750}
+    ],
+    "experienceYears": 7,
+    "genderPreference": "Unisex",
+    "availableSlots": ["10:30 AM", "02:30 PM", "05:00 PM"],
+    "reviews": [
+      "Got silver highlights done. Renders beautifully against my dark hair.",
+      "Extremely polite behavior from all staff members. Rates are very fair."
+    ],
+    "portfolioStyles": ["Ash Silver Highlights", "Straight Silk Hair Transformation"],
+    "contact": "+91-3324198765",
+    "verified": true
+  },
+  {
+    "salonId": "SAL-019",
+    "name": "Nirvana Spa & Salon",
+    "city": "Chennai",
+    "locality": "OMR Sholinganallur",
+    "rating": 4.4,
+    "reviewCount": 222,
+    "priceRange": "$$",
+    "specialties": ["Anti-Tan Rituals", "Body Polishing"],
+    "services": [
+      {"service": "De-tan Body Scrub & Polish", "price": 3500},
+      {"service": "Insta-Glow Pearl Facial", "price": 2200},
+      {"service": "Advanced Haircut & Blowdry", "price": 850}
+    ],
+    "experienceYears": 6,
+    "genderPreference": "Unisex",
+    "availableSlots": ["11:00 AM", "02:30 PM", "06:00 PM"],
+    "reviews": [
+      "Very comforting body polishing therapy. Ideal for relaxing techies on OMR.",
+      "Great salon setup, hygienic equipment, and professional service execution."
+    ],
+    "portfolioStyles": ["Brightened Glowing Facial Result", "Sleek Side-Swept Long Hair"],
+    "contact": "+91-4465432109",
+    "verified": true
+  },
+  {
+    "salonId": "SAL-020",
+    "name": "Vogue Edge",
+    "city": "Pune",
+    "locality": "Viman Nagar",
+    "rating": 4.8,
+    "reviewCount": 315,
+    "priceRange": "$$$",
+    "specialties": ["Nanoplastia Hair Treatment", "Custom Nail Art"],
+    "services": [
+      {"service": "Nanoplastia Premium Treatment", "price": 9000},
+      {"service": "Custom Hand-Painted Nail Art", "price": 2500},
+      {"service": "Hydrating Moisture Facial", "price": 3000}
+    ],
+    "experienceYears": 11,
+    "genderPreference": "Unisex",
+    "availableSlots": ["10:00 AM", "01:00 PM", "02:30 PM", "06:30 PM"],
+    "reviews": [
+      "Nanoplastia treatment leaves the hair unbelievably sleek and smooth.",
+      "The nail artists here can paint literally anything you ask them to! Exceptional artwork."
+    ],
+    "portfolioStyles": ["Mirror Shine Nanoplastia Hair", "Abstract Hand-Painted Nails"],
+    "contact": "+91-2066842190",
+    "verified": true
+  },
 {
 "salonId": "SAL-002",
 "name": "Vogue Touch Lounge",

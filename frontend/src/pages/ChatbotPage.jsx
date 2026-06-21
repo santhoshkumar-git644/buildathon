@@ -1,14 +1,14 @@
 import { useState, useRef, useEffect } from 'react';
-import { chatWithAI } from '../services/api.js';
+import { chatWithAI, getSalons } from '../services/api.js';
 import { Link } from 'react-router-dom';
 import './ChatbotPage.css';
 
-export default function ChatbotPage() {
+export default function ChatbotPage({ city }) {
   const [messages, setMessages] = useState([
     {
       id: 1,
       sender: 'ai',
-      text: 'Hi there! I am your ShearCity AI beauty assistant. 💇✨ Ask me anything! For example: "Recommend a Bridal spot" or "Find high-rated Mens salons".',
+      text: `Hi there! I am your ShearCity AI beauty assistant in ${city}. 💇✨ Ask me anything! For example: "Recommend a Bridal spot" or "Find high-rated Mens salons".`,
       timestamp: new Date()
     }
   ]);
@@ -49,7 +49,7 @@ export default function ChatbotPage() {
 
     try {
       // Fetch recommendation from API
-      const res = await chatWithAI(queryText);
+      const res = await chatWithAI(queryText, city);
       const rawReply = res.data.reply || '';
       
       // Extract [BOOK_SALON:id] tags

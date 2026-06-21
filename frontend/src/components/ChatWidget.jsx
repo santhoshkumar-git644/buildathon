@@ -2,12 +2,12 @@ import { useState, useRef } from 'react';
 import { chatWithAI } from '../services/api.js';
 import { Link, useNavigate } from 'react-router-dom';
 
-export default function ChatWidget({ user }) {
+export default function ChatWidget({ user, city }) {
   const [isOpen, setIsOpen] = useState(false);
   const [query, setQuery] = useState('');
   const [imagePreview, setImagePreview] = useState(null);
   const [imageBase64, setImageBase64] = useState(null);
-  const [conversation, setConversation] = useState([{ sender: 'ai', text: 'Hi! Upload a photo of a hairstyle or ask for a recommendation!' }]);
+  const [conversation, setConversation] = useState([{ sender: 'ai', text: `Hi ${user?.name?.split(' ')[0] || 'there'}! Need help finding the perfect salon in ${city}?` }]);
   const [loading, setLoading] = useState(false);
   
   const fileInputRef = useRef(null);
@@ -43,7 +43,7 @@ export default function ChatWidget({ user }) {
     setLoading(true);
 
     try {
-      const res = await chatWithAI(query, imageBase64, user?.city);
+      const res = await chatWithAI(query, imageBase64, city);
       setConversation([...newChat, { sender: 'ai', text: res.data.reply }]);
     } catch (err) {
       setConversation([...newChat, { sender: 'ai', text: 'Failed to connect to AI server.' }]);

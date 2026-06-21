@@ -12,10 +12,10 @@ import MyBookings from './pages/MyBookings.jsx';
 import ChatWidget from './components/ChatWidget.jsx';
 import { toggleSaveSalonDB, fetchSavedSalonsDB } from './services/api.js';
 
-function ConditionalChatWidget({ user }) {
+function ConditionalChatWidget({ user, city }) {
   const location = useLocation();
   if (location.pathname === '/chatbot') return null;
-  return <ChatWidget user={user} />;
+  return <ChatWidget user={user} city={city} />;
 }
 
 function App() {
@@ -98,11 +98,11 @@ function App() {
             <Route path="/profile" element={<Profile user={user} setUser={setUser} />} />
             <Route path="/my-bookings" element={<MyBookings user={user} />} />
             <Route path="/saved-salons" element={<SavedSalons savedIds={savedIds} onToggleSave={handleToggleSave} city={city} />} />
-            <Route path="/chatbot" element={<ChatbotPage />} />
+            <Route path="/chatbot" element={<ChatbotPage city={city} />} />
           </Routes>
         </div>
 
-        <ConditionalChatWidget user={user} />
+        <ConditionalChatWidget user={user} city={city} />
       </div>
     </BrowserRouter>
   );

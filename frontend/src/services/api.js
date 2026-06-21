@@ -22,7 +22,7 @@ export const cancelBooking = (id) => api.patch(`/bookings/${id}/cancel`);
 export const createReview = (reviewData) => api.post('/reviews', reviewData);
 export const getSalonReviews = (salonId) => api.get(`/reviews/${salonId}`);
 
-export const chatWithAI = (query) => api.post('/ai/chat', { query });
+export const chatWithAI = (query, imageBase64, city) => api.post('/ai/chat', { query, imageBase64, userCity: city });
 export const summarizeReviews = (salonId) => api.get(`/ai/summarize/${salonId}`);
 export const getPersonalizedFeed = (userId, city) => api.get(`/ai/feed/${userId}`, { params: { city } });
 
