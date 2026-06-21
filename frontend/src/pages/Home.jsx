@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
-import { getPersonalizedFeed } from '../services/api.js';
+import { getPersonalizedFeed, getSalons } from '../services/api.js';
 import SalonCard from '../components/SalonCard.jsx';
 
 export default function Home({ city, savedIds, onToggleSave, user }) {
   const [salons, setSalons] = useState([]);
+  const [globalSalons, setGlobalSalons] = useState([]);
   const [loading, setLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState('');
 
@@ -11,16 +12,22 @@ export default function Home({ city, savedIds, onToggleSave, user }) {
     const fetchFeed = async () => {
       try {
         let allSalons = [];
+        let fetchedGlobalSalons = [];
+        
+        // Always fetch all salons for the global search
+        const globalRes = await getSalons();
+        fetchedGlobalSalons = globalRes.data || [];
+        setGlobalSalons(fetchedGlobalSalons);
+
         if (user) {
            const { data } = await getPersonalizedFeed(user.id);
            allSalons = data.feed || [];
         } else {
            // fallback to all salons if not logged in
-           const { data } = await import('../services/api.js').then(m => m.getSalons());
-           allSalons = data || [];
+           allSalons = fetchedGlobalSalons;
         }
         
-        // Filter by selected city
+        // Filter by selected city for the personalized feed
         const citySalons = allSalons.filter(s => s.city.toLowerCase() === city.toLowerCase());
         setSalons(citySalons);
         setLoading(false);
@@ -54,16 +61,41 @@ export default function Home({ city, savedIds, onToggleSave, user }) {
           <p style={{ fontSize: '1.2rem', color: '#b0b6c2', marginBottom: '40px', lineHeight: 1.6, maxWidth: '500px' }}>
             Discover top-rated salons, book premium services, and experience the ultimate grooming journey tailored just for you.
           </p>
-          <button 
-            onClick={() => {
-              const el = document.getElementById('booking-section');
-              if (el) el.scrollIntoView({ behavior: 'smooth' });
-            }}
-            className="animate-pulse-glow"
-            style={{ padding: '16px 36px', fontSize: '1.1rem', borderRadius: '30px', background: '#fff', color: '#000', outline: 'none', border: 'none' }}
-          >
-            Book Now
-          </button>
+          <div style={{ display: 'flex', gap: '15px', flexWrap: 'wrap', marginBottom: '40px' }}>
+            <input 
+              type="text" 
+              placeholder="Search complete database (e.g., Haircut, New York...)" 
+              value={searchQuery}
+              onChange={(e) => {
+                setSearchQuery(e.target.value);
+                if (e.target.value) {
+                  const el = document.getElementById('booking-section');
+                  if (el) el.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+              style={{ 
+                flex: 1,
+                minWidth: '250px',
+                padding: '16px 24px', 
+                borderRadius: '30px', 
+                border: 'none', 
+                background: 'rgba(255,255,255,0.9)', 
+                color: '#000', 
+                fontSize: '1.1rem',
+                outline: 'none'
+              }}
+            />
+            <button 
+              onClick={() => {
+                const el = document.getElementById('booking-section');
+                if (el) el.scrollIntoView({ behavior: 'smooth' });
+              }}
+              className="animate-pulse-glow"
+              style={{ padding: '16px 36px', fontSize: '1.1rem', borderRadius: '30px', background: 'var(--brand)', color: '#fff', outline: 'none', border: 'none', fontWeight: 'bold' }}
+            >
+              Search
+            </button>
+          </div>
         </div>
       </section>
 
@@ -111,41 +143,28 @@ export default function Home({ city, savedIds, onToggleSave, user }) {
         </div>
       </section>
 
-      {/* 4. Luxury Made Affordable (Dynamic DB Feed) */}
+      {/* 4. Luxury Made Affordable (Dynamic DB Feed) or Search Results */}
       <section id="booking-section" className="animate-slide-up stagger-3" style={{ padding: '60px 8% 120px' }}>
-        <h2 style={{ fontSize: '1.8rem', marginBottom: '15px', textAlign: 'center' }}>Luxury Made Affordable in {city}</h2>
-        <p style={{ textAlign: 'center', color: 'var(--brand)', marginBottom: '30px', fontSize: '1.2rem', fontWeight: 500 }}>
-          {user ? '✨ Curated specifically for your style profile.' : 'Sign in to get personalized AI recommendations!'}
+        <h2 style={{ fontSize: '1.8rem', marginBottom: '15px', textAlign: 'center' }}>
+          {searchQuery ? 'Search Results' : `Luxury Made Affordable in ${city}`}
+        </h2>
+        <p style={{ textAlign: 'center', color: 'var(--brand)', marginBottom: '40px', fontSize: '1.2rem', fontWeight: 500 }}>
+          {searchQuery ? `Searching complete database for "${searchQuery}"` : (user ? '✨ Curated specifically for your style profile.' : 'Sign in to get personalized AI recommendations!')}
         </p>
-        
-        <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '40px' }}>
-          <input 
-            type="text" 
-            placeholder="Search by salon name, area, or service..." 
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            style={{ 
-              width: '100%', 
-              maxWidth: '500px', 
-              padding: '16px 24px', 
-              borderRadius: '30px', 
-              border: '1px solid var(--line)', 
-              background: 'var(--bg-secondary)', 
-              color: 'var(--text-primary)', 
-              fontSize: '1.1rem',
-              outline: 'none'
-            }}
-          />
-        </div>
 
         {loading ? <p style={{ textAlign: 'center', color: 'var(--muted)', fontSize: '1.2rem' }}>Loading premium salons...</p> : (() => {
-          const displayedSalons = salons.filter(salon => {
+          // If searching, use globalSalons. If not searching, use city-specific filtered salons.
+          const baseSalons = searchQuery ? globalSalons : salons;
+          
+          const displayedSalons = baseSalons.filter(salon => {
+            if (!searchQuery) return true; // If no search query, return all in baseSalons
             const query = searchQuery.toLowerCase();
             const inName = salon.name.toLowerCase().includes(query);
+            const inCity = salon.city.toLowerCase().includes(query);
             const inArea = salon.area.toLowerCase().includes(query);
             const inTags = salon.tags?.some(tag => tag.toLowerCase().includes(query));
             const inServices = salon.services?.some(service => service.name.toLowerCase().includes(query));
-            return inName || inArea || inTags || inServices;
+            return inName || inCity || inArea || inTags || inServices;
           });
 
           return (
