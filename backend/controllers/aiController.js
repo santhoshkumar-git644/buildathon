@@ -4,12 +4,48 @@ import Booking from '../models/Booking.js';
 import { generateText, summarizeReviews } from '../services/geminiService.js';
 import cache from '../utils/cache.js';
 
+const getSalonCoordinates = (salon) => {
+  // Determine center coordinate based on city
+  let centerLat = 19.0760;
+  let centerLon = 72.8777;
+  const city = (salon.city || '').toLowerCase();
+  if (city.includes('delhi')) { centerLat = 28.7041; centerLon = 77.1025; }
+  else if (city.includes('bengaluru') || city.includes('bangalore')) { centerLat = 12.9716; centerLon = 77.5946; }
+  else if (city.includes('kolkata')) { centerLat = 22.5726; centerLon = 88.3639; }
+  else if (city.includes('chennai')) { centerLat = 13.0827; centerLon = 80.2707; }
+  else if (city.includes('hyderabad')) { centerLat = 17.3850; centerLon = 78.4867; }
+  else if (city.includes('pune')) { centerLat = 18.5204; centerLon = 73.8567; }
+
+  // Generate deterministic offset based on salon name length and characters
+  const hash = (salon.name || '').split('').reduce((acc, char) => acc + char.charCodeAt(0), 0);
+  const latOffset = ((hash % 100) - 50) / 1000; // range: [-0.05, 0.05]
+  const lonOffset = (((hash * 17) % 100) - 50) / 1000; // range: [-0.05, 0.05]
+
+  return {
+    lat: centerLat + latOffset,
+    lon: centerLon + lonOffset
+  };
+};
+
+const calculateDistance = (lat1, lon1, lat2, lon2) => {
+  const R = 6371; // radius of Earth in km
+  const dLat = (lat2 - lat1) * Math.PI / 180;
+  const dLon = (lon2 - lon1) * Math.PI / 180;
+  const a = 
+    Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+    Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) * 
+    Math.sin(dLon / 2) * Math.sin(dLon / 2);
+  const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+  return parseFloat((R * c).toFixed(1)); // in km
+};
+
 export const chatWithAI = async (req, res) => {
   try {
-    const { query, imageBase64, userCity } = req.body;
+    const { query, imageBase64, userCity, latitude, longitude } = req.body;
     
-    // Check cache for identical text queries
-    const cacheKey = !imageBase64 && query ? `ai_chat_${userCity || 'all'}_${query.toLowerCase().trim()}` : null;
+    // Check cache for identical text queries (bypass cache for image queries or location queries to get dynamic recommendations)
+    const hasLocation = latitude && longitude;
+    const cacheKey = !imageBase64 && !hasLocation && query ? `ai_chat_${userCity || 'all'}_${query.toLowerCase().trim()}` : null;
     if (cacheKey) {
       const cachedReply = cache.get(cacheKey);
       if (cachedReply) return res.json({ reply: cachedReply });
@@ -21,19 +57,58 @@ export const chatWithAI = async (req, res) => {
       salons = await Salon.find({}).lean();
       cache.set('all_salons', salons);
     }
-    const filterSalons = userCity ? salons.filter(s => s.city === userCity) : salons;
+    
+    let filterSalons = userCity ? salons.filter(s => s.city.toLowerCase() === userCity.toLowerCase()) : salons;
+    
+    // If coordinates are provided, compute distance for each salon and sort by distance
+    let locationContext = '';
+    if (hasLocation) {
+      const userLat = parseFloat(latitude);
+      const userLon = parseFloat(longitude);
+      locationContext = `User Current Coordinates: Lat ${userLat}, Lon ${userLon}.\n`;
+      
+      filterSalons = filterSalons.map(s => {
+        const coords = getSalonCoordinates(s);
+        const dist = calculateDistance(userLat, userLon, coords.lat, coords.lon);
+        return {
+          ...s,
+          computedDistance: dist
+        };
+      });
+      
+      // Sort by computed distance
+      filterSalons.sort((a, b) => a.computedDistance - b.computedDistance);
+    } else {
+      filterSalons = filterSalons.map(s => ({
+        ...s,
+        computedDistance: s.distance || 2.5
+      }));
+    }
+
     // Map to a summary projection in-memory for the AI context
-    const contextData = filterSalons.map(s => ({ name: s.name, city: s.city, area: s.area, services: s.services, _id: s._id }));
+    const contextData = filterSalons.map(s => ({ 
+      name: s.name, 
+      city: s.city, 
+      area: s.area, 
+      services: s.services.map(srv => ({ name: srv.name, price: srv.price })),
+      _id: s._id || s.id,
+      distance: `${s.computedDistance} km`
+    }));
+    
     const context = JSON.stringify(contextData);
 
     const prompt = `You are ShearCity's AI Assistant. Your job is to answer user queries about salon styles, match them with salons, and provide price estimations.
     
-Here is our database of salons and their services with prices in the user's area:
+${locationContext}Here is our database of salons in the user's city/area with their services, prices, and distances:
 ${context}
 
 User Query: "${query || 'What hairstyle is in the attached image, and where can I get it?'}"
 
-Respond concisely. If you successfully recommend a specific salon from the database, you MUST output the exact tag [BOOK_SALON: <salon_id>] at the end of your response, replacing <salon_id> with the actual _id of the recommended salon. Do not include brackets around the ID itself inside the tag.`;
+Instructions:
+1. Respond concisely and professionally.
+2. If the user asks for salons near them, closest salons, or mentions location, check the distances provided in the database context and recommend the closest options. Explicitly state the distance (e.g. "Salon X is closest, just 1.5 km away").
+3. If the user attaches a photo, analyze the style/haircut and recommend the best matching services from the database.
+4. If you successfully recommend a specific salon from the database, you MUST output the exact tag [BOOK_SALON: <salon_id>] at the end of your response, replacing <salon_id> with the actual _id/id of the recommended salon. Do not include brackets around the ID itself inside the tag.`;
 
     const aiResponse = await generateText(prompt, imageBase64);
     

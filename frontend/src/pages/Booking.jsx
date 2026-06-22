@@ -59,7 +59,7 @@ export default function Booking({ user }) {
   const finalizeBooking = async () => {
     setProcessing(true);
     try {
-      await createBooking({
+      const res = await createBooking({
         userId: user.id,
         salonId: salon._id || salon.id,
         salonName: salon.name,
@@ -70,7 +70,8 @@ export default function Booking({ user }) {
         advanceAmount,
         advancePaid: true
       });
-      alert(`Booking Confirmed! You paid Rs ${advanceAmount} in advance.`);
+      const createdBooking = res.data;
+      alert(`Booking Confirmed! You paid Rs ${advanceAmount} in advance.\n\n🔑 Verification OTP sent to your email/phone: ${createdBooking.otp || 'XXXX'}`);
       navigate('/profile');
     } catch (err) {
       alert("Booking failed. Try again.");

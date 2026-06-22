@@ -46,13 +46,13 @@ export const getSavedSalons = async (req, res) => {
   }
 };
 
-// Mock Auth Controllers
+// Auth Controllers
 export const signup = async (req, res) => {
   try {
     const { name, email, phone, city, password } = req.body;
     const newUser = new User({ name, email, phone, city, passwordHash: password }); // Skipping bcrypt for mock
     await newUser.save();
-    res.status(201).json({ user: { id: newUser._id, name, email, city } });
+    res.status(201).json({ user: { id: newUser._id, name, email, phone, city } });
   } catch (err) {
     res.status(400).json({ message: err.message });
   }
@@ -60,12 +60,34 @@ export const signup = async (req, res) => {
 
 export const login = async (req, res) => {
   try {
-    const { email, password } = req.body;
-    const user = await User.findOne({ email });
+    const { loginInput, email, password } = req.body;
+    const identifier = loginInput || email;
+    
+    if (!identifier) {
+      return res.status(400).json({ message: 'Email or phone number is required' });
+    }
+
+    const user = await User.findOne({
+      $or: [
+        { email: identifier },
+        { phone: identifier }
+      ]
+    });
+
     if (!user || user.passwordHash !== password) {
       return res.status(401).json({ message: 'Invalid credentials' });
     }
-    res.json({ user: { id: user._id, name: user.name, email: user.email, city: user.city }, token: 'mock-token' });
+
+    res.json({ 
+      user: { 
+        id: user._id, 
+        name: user.name, 
+        email: user.email, 
+        phone: user.phone, 
+        city: user.city
+      }, 
+      token: 'mock-token' 
+    });
   } catch (err) {
     res.status(500).json({ message: err.message });
   }

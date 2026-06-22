@@ -70,7 +70,7 @@ export default function Home({ city, savedIds, onToggleSave, user }) {
           <div style={{ display: 'flex', gap: '15px', flexWrap: 'wrap', marginBottom: searchQuery ? '0' : '40px', transition: 'all 0.3s ease' }}>
             <input 
               type="text" 
-              placeholder="Search complete database (e.g., Haircut, New York...)" 
+              placeholder={`Search salons in ${city} (e.g., Haircut, Styling...)`} 
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               style={{ 
@@ -143,12 +143,12 @@ export default function Home({ city, savedIds, onToggleSave, user }) {
           {searchQuery ? 'Search Results' : `Luxury Made Affordable in ${city}`}
         </h2>
         <p style={{ textAlign: 'center', color: 'var(--brand)', marginBottom: '40px', fontSize: '1.2rem', fontWeight: 500 }}>
-          {searchQuery ? `Searching complete database for "${searchQuery}"` : (user ? '✨ Curated specifically for your style profile.' : 'Sign in to get personalized AI recommendations!')}
+          {searchQuery ? `Searching salons in ${city} for "${searchQuery}"` : (user ? '✨ Curated specifically for your style profile.' : 'Sign in to get personalized AI recommendations!')}
         </p>
 
         {loading ? <p style={{ textAlign: 'center', color: 'var(--muted)', fontSize: '1.2rem' }}>Loading premium salons...</p> : (() => {
-          // If searching, use globalSalons. If not searching, use city-specific filtered salons.
-          const baseSalons = searchQuery ? globalSalons : salons;
+          // If searching, use city-specific filtered salons only
+          const baseSalons = salons;
           
           const displayedSalons = baseSalons.filter(salon => {
             if (!searchQuery) return true; // If no search query, return all in baseSalons

@@ -11,7 +11,8 @@ const bookingSchema = new mongoose.Schema({
   status: { type: String, enum: ['upcoming', 'past', 'cancelled'], default: 'upcoming' },
   totalCost: { type: Number, required: true },
   advanceAmount: { type: Number, default: 0 },
-  advancePaid: { type: Boolean, default: false }
+  advancePaid: { type: Boolean, default: false },
+  otp: { type: String }
 }, { timestamps: true });
 
 export default mongoose.model('Booking', bookingSchema);

@@ -24,7 +24,7 @@ function App() {
   const [user, setUser] = useState(null);
   const [savedIds, setSavedIds] = useState([]);
 
-  const CITIES = ['Mumbai', 'Delhi', 'Bengaluru', 'Kolkata', 'Chennai', 'Hyderabad', 'Pune'];
+  const [cities, setCities] = useState(['Mumbai', 'Delhi', 'Bengaluru', 'Kolkata', 'Chennai', 'Hyderabad', 'Pune']);
 
   useEffect(() => {
     const savedUser = localStorage.getItem('user');
@@ -78,7 +78,8 @@ function App() {
         <Navbar 
           city={city} 
           setCity={setCity} 
-          CITIES={CITIES} 
+          CITIES={cities} 
+          setCities={setCities}
           onToggleSidebar={() => setSidebarOpen(prev => !prev)} 
           user={user}
         />

@@ -2,8 +2,14 @@ import Booking from '../models/Booking.js';
 
 export const createBooking = async (req, res) => {
   try {
-    const newBooking = new Booking(req.body);
+    // Generate a random 4-digit verification OTP
+    const bookingOtp = Math.floor(1000 + Math.random() * 9000).toString();
+    const newBooking = new Booking({
+      ...req.body,
+      otp: bookingOtp
+    });
     const savedBooking = await newBooking.save();
+    console.log(`[Booking OTP] Booking created with OTP: ${bookingOtp}`);
     res.status(201).json(savedBooking);
   } catch (error) {
     res.status(400).json({ message: error.message });

@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-export default function Navbar({ city, setCity, CITIES, onToggleSidebar, user }) {
+export default function Navbar({ city, setCity, CITIES, setCities, onToggleSidebar, user }) {
   const detectLocation = () => {
     if (!navigator.geolocation) {
       alert("Geolocation is not supported by your browser.");
@@ -13,13 +13,34 @@ export default function Navbar({ city, setCity, CITIES, onToggleSidebar, user })
         const res = await fetch(`https://nominatim.openstreetmap.org/reverse?lat=${latitude}&lon=${longitude}&format=json`);
         const data = await res.json();
         
-        const detectedCity = data.address.city || data.address.town || data.address.state_district;
+        const addr = data.address || {};
+        const detectedCity = addr.city || addr.town || addr.village || addr.municipality || addr.suburb || addr.city_district || addr.state_district || addr.state;
+        
         if (detectedCity) {
-          const normalizedCity = detectedCity.split(' ')[0];
-          setCity(normalizedCity);
+          // Format it to title case (e.g. "Bandra West" or "Bengaluru East")
+          const formattedCity = detectedCity.trim().split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+          
+          // Match case-insensitively with current city list
+          const match = CITIES.find(c => c.toLowerCase() === formattedCity.toLowerCase());
+          if (match) {
+            setCity(match);
+            console.log(`[Location Detection] Matched existing city: ${match}`);
+          } else {
+            // Add dynamically to cities dropdown list
+            if (typeof setCities === 'function') {
+              setCities(prev => {
+                if (prev.includes(formattedCity)) return prev;
+                return [...prev, formattedCity];
+              });
+            }
+            setCity(formattedCity);
+            console.log(`[Location Detection] Dynamically added new city: ${formattedCity}`);
+          }
+        } else {
+          alert("Location detected, but city name could not be resolved.");
         }
       } catch (err) {
-        console.error(err);
+        console.error("Error reverse geocoding location:", err);
       }
     }, () => {
       alert("Location permission denied.");
