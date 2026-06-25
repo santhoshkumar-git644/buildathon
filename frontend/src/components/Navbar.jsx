@@ -1,9 +1,13 @@
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 export default function Navbar({ city, setCity, CITIES, setCities, onToggleSidebar, user, setUserLocation }) {
-  const detectLocation = () => {
+  const detectLocation = (isSilent = false) => {
+    // If called from onClick, isSilent is an Event object, so check if it's explicitly boolean true
+    const silent = isSilent === true;
+
     if (!navigator.geolocation) {
-      alert("Geolocation is not supported by your browser.");
+      if (!silent) alert("Geolocation is not supported by your browser.");
       return;
     }
     
@@ -39,15 +43,21 @@ export default function Navbar({ city, setCity, CITIES, setCities, onToggleSideb
             console.log(`[Location Detection] Dynamically added new city: ${formattedCity}`);
           }
         } else {
-          alert("Location detected, but city name could not be resolved.");
+          if (!silent) alert("Location detected, but city name could not be resolved.");
         }
       } catch (err) {
         console.error("Error reverse geocoding location:", err);
       }
     }, () => {
-      alert("Location permission denied.");
+      if (!silent) alert("Location permission denied.");
     });
   };
+
+  useEffect(() => {
+    // Automatically trigger location detection silently on load
+    detectLocation(true);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <header className="topbar">
