@@ -12,7 +12,8 @@ const userSchema = new mongoose.Schema({
     preferredStyles: [String],
     favoriteCategories: [String]
   },
-  savedSalons: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Salon' }]
+  savedSalons: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Salon' }],
+  ownedSalonId: { type: String } // Explicitly links an owner to their salon's string ID
 }, { timestamps: true });
 
 export default mongoose.model('User', userSchema);

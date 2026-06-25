@@ -41,11 +41,8 @@ export default function SavedSalons({ savedIds, onToggleSave, city }) {
           <div style={{ fontSize: '2rem', marginBottom: '12px', filter: 'drop-shadow(0 0 10px rgba(232, 176, 89, 0.3))' }}>❤️</div>
           <h3 style={{ fontSize: '1.2rem', fontWeight: '600', marginBottom: '8px', color: 'var(--ink)' }}>No saved salons yet</h3>
           <p style={{ color: 'var(--muted)', fontSize: '0.9rem', marginBottom: '24px', maxWidth: '400px', lineHeight: '1.5' }}>
-            You haven't saved any salons yet. Browse salons on the home page and click the heart icon to save them here for quick access later.
+            You haven't saved any salons yet. Browse the salons below and click the heart icon to save them here for quick access later.
           </p>
-          <Link to="/" style={{ display: 'inline-block', background: 'var(--brand)', color: '#000', padding: '12px 28px', borderRadius: '12px', textDecoration: 'none', fontWeight: '600', transition: 'all 0.3s', boxShadow: '0 4px 15px rgba(232, 176, 89, 0.3)' }}>
-            Browse Salons
-          </Link>
         </div>
       ) : (
         <div className="featured-grid animate-slide-up stagger-1">
@@ -59,6 +56,26 @@ export default function SavedSalons({ savedIds, onToggleSave, city }) {
           ))}
         </div>
       )}
+
+      <div className="glass-panel animate-slide-up stagger-2" style={{ padding: '24px', borderRadius: '16px', margin: '40px 0 24px', background: 'linear-gradient(135deg, rgba(22, 26, 32, 0.8), rgba(13, 15, 18, 0.9))' }}>
+        <h2 style={{ fontSize: '1.2rem', fontWeight: '700', marginBottom: '6px', background: 'linear-gradient(to right, #fff, var(--brand))', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+          All Salons in {city}
+        </h2>
+        <p style={{ color: 'var(--muted)', fontSize: '0.9rem' }}>
+          Discover more top-rated salons available in your city.
+        </p>
+      </div>
+
+      <div className="featured-grid animate-slide-up stagger-3">
+        {salons.filter(s => (s.city || '').toLowerCase() === (city || '').toLowerCase()).map(salon => (
+          <SalonCard 
+            key={salon.id || salon._id} 
+            salon={salon} 
+            isSaved={savedIds.includes(salon.id || salon._id)} 
+            onToggleSave={() => onToggleSave(salon.id || salon._id)} 
+          />
+        ))}
+      </div>
     </div>
   );
 }

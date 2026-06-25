@@ -28,7 +28,7 @@ export default function Home({ city, savedIds, onToggleSave, user }) {
         }
         
         // Filter by selected city for the personalized feed
-        const citySalons = allSalons.filter(s => s.city.toLowerCase() === city.toLowerCase());
+        const citySalons = allSalons.filter(s => (s.city || '').toLowerCase() === (city || '').toLowerCase());
         setSalons(citySalons);
         setLoading(false);
       } catch (err) {
@@ -143,22 +143,29 @@ export default function Home({ city, savedIds, onToggleSave, user }) {
           {searchQuery ? 'Search Results' : `Luxury Made Affordable in ${city}`}
         </h2>
         <p style={{ textAlign: 'center', color: 'var(--brand)', marginBottom: '40px', fontSize: '1.2rem', fontWeight: 500 }}>
-          {searchQuery ? `Searching salons in ${city} for "${searchQuery}"` : (user ? '✨ Curated specifically for your style profile.' : 'Sign in to get personalized AI recommendations!')}
+          {searchQuery ? `Searching all salons for "${searchQuery}"` : (user ? '✨ Curated specifically for your style profile.' : 'Sign in to get personalized AI recommendations!')}
         </p>
 
         {loading ? <p style={{ textAlign: 'center', color: 'var(--muted)', fontSize: '1.2rem' }}>Loading premium salons...</p> : (() => {
-          // If searching, use city-specific filtered salons only
-          const baseSalons = salons;
+          // If searching, use global salons to find matches across all cities
+          const baseSalons = searchQuery ? globalSalons : salons;
           
           const displayedSalons = baseSalons.filter(salon => {
             if (!searchQuery) return true; // If no search query, return all in baseSalons
-            const query = searchQuery.toLowerCase();
-            const inName = salon.name.toLowerCase().includes(query);
-            const inCity = salon.city.toLowerCase().includes(query);
-            const inArea = salon.area.toLowerCase().includes(query);
-            const inTags = salon.tags?.some(tag => tag.toLowerCase().includes(query));
-            const inServices = salon.services?.some(service => service.name.toLowerCase().includes(query));
-            return inName || inCity || inArea || inTags || inServices;
+            
+            // Map common typos/aliases
+            let query = searchQuery.toLowerCase();
+            if (query.includes('saloons')) query = query.replace('saloons', 'salon');
+            else if (query.includes('saloon')) query = query.replace('saloon', 'salon');
+
+            const inName = (salon.name || '').toLowerCase().includes(query);
+            const inCity = (salon.city || '').toLowerCase().includes(query);
+            const inArea = (salon.area || salon.locality || '').toLowerCase().includes(query);
+            const tags = salon.tags || salon.specialties || [];
+            const inTags = tags.some(tag => (tag || '').toLowerCase().includes(query));
+            const inServices = (salon.services || []).some(s => (s.name || s.service || '').toLowerCase().includes(query));
+            const inStyles = (salon.portfolioStyles || []).some(s => (s || '').toLowerCase().includes(query));
+            return inName || inCity || inArea || inTags || inServices || inStyles;
           });
 
           return (
@@ -172,7 +179,7 @@ export default function Home({ city, savedIds, onToggleSave, user }) {
                 />
               )) : (
                 <div style={{ textAlign: 'center', gridColumn: '1 / -1', padding: '60px', border: '1px dashed var(--line)', borderRadius: '20px' }}>
-                  <h3 style={{ fontSize: '1.5rem', marginBottom: '10px' }}>No salons matched your search.</h3>
+                  <h3 style={{ fontSize: '1.5rem', marginBottom: '10px' }}>No salons matched your search "{searchQuery}".</h3>
                   <p style={{ color: 'var(--muted)' }}>Try searching for a different name, area, or service.</p>
                 </div>
               )}

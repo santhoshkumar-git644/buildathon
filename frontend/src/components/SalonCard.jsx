@@ -5,26 +5,41 @@ export default function SalonCard({ salon, isSaved, onToggleSave }) {
   const salonId = salon.id || salon._id || salon.salonId;
   const minPrice = salon.services?.length ? Math.min(...salon.services.map((s) => s.price)) : 0;
   
-  // Choose sophisticated dark gradient based on name
-  const getGradient = (name) => {
-    const hash = name.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0);
-    const gradients = [
-      'linear-gradient(135deg, #161a20 0%, #0d0f12 100%)',
-      'linear-gradient(135deg, #1c1c1e 0%, #000000 100%)',
-      'linear-gradient(135deg, #1a1e24 0%, #101216 100%)'
+  // Choose sophisticated image based on name
+  const getSalonImage = (name) => {
+    const safeName = name || 'Salon';
+    const hash = safeName.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0);
+    const images = [
+      'https://images.unsplash.com/photo-1560066984-138dadb4c035?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1521590832167-7bfcbaa6362d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1580618672591-eb180b1a973f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1600948836101-f9ffda59d250?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1562322140-8baeececf3df?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1595476108010-b4d1f10d5e43?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'
     ];
-    const baseGradient = gradients[hash % gradients.length];
-    return `radial-gradient(circle at 50% 50%, rgba(232, 176, 89, 0.08) 0%, transparent 60%), ${baseGradient}`;
+    return `url(${images[hash % images.length]}) center/cover no-repeat`;
   };
 
+  const hasValidImage = salon.images && salon.images.length > 0 && typeof salon.images[0] === 'string' && salon.images[0].startsWith('http');
+  const salonNameLower = (salon.name || '').toLowerCase();
+  
   return (
     <article className="salon-card-premium">
-      <div className="card-media" style={{ background: getGradient(salon.name) }}>
-        <span className="category-emoji">
-          {salon.tags?.includes("Men's Salon") || salon.name.toLowerCase().includes("men") ? "🧔" : 
-           salon.tags?.includes("Bridal") || salon.name.toLowerCase().includes("bridal") ? "👰" : 
-           salon.tags?.includes("Beauty Parlour") ? "💄" : "💇"}
-        </span>
+      <div 
+        className="card-media" 
+        style={{ 
+          background: hasValidImage 
+            ? `url(${salon.images[0]}) center/cover no-repeat` 
+            : getSalonImage(salon.name) 
+        }}
+      >
+        {!hasValidImage && (
+          <span className="category-emoji">
+            {(salon.tags || []).includes("Men's Salon") || salonNameLower.includes("men") ? "🧔" : 
+             (salon.tags || []).includes("Bridal") || salonNameLower.includes("bridal") ? "👰" : 
+             (salon.tags || []).includes("Beauty Parlour") ? "💄" : "💇"}
+          </span>
+        )}
         <button 
           className={`save-heart-btn ${isSaved ? 'saved' : ''}`} 
           onClick={(e) => {

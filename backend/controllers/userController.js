@@ -50,6 +50,13 @@ export const getSavedSalons = async (req, res) => {
 export const signup = async (req, res) => {
   try {
     const { name, email, phone, city, password } = req.body;
+    
+    // Explicitly check if email is already in the database
+    const existingUser = await User.findOne({ email });
+    if (existingUser) {
+      return res.status(400).json({ message: 'Email is already registered. Please login.' });
+    }
+
     const newUser = new User({ name, email, phone, city, passwordHash: password, role: 'customer' }); 
     await newUser.save();
     res.status(201).json({ user: { id: newUser._id, name, email, phone, city, role: newUser.role } });
@@ -61,6 +68,13 @@ export const signup = async (req, res) => {
 export const ownerSignup = async (req, res) => {
   try {
     const { name, email, phone, city, password } = req.body;
+
+    // Explicitly check if email is already in the database
+    const existingUser = await User.findOne({ email });
+    if (existingUser) {
+      return res.status(400).json({ message: 'Email is already registered. Please login.' });
+    }
+
     const newUser = new User({ name, email, phone, city, passwordHash: password, role: 'owner' }); 
     await newUser.save();
     res.status(201).json({ user: { id: newUser._id, name, email, phone, city, role: newUser.role } });
@@ -85,8 +99,12 @@ export const login = async (req, res) => {
       ]
     });
 
-    if (!user || user.passwordHash !== password) {
-      return res.status(401).json({ message: 'Invalid credentials' });
+    if (!user) {
+      return res.status(401).json({ message: 'Account not found. Please sign up first.' });
+    }
+
+    if (user.passwordHash !== password) {
+      return res.status(401).json({ message: 'Invalid credentials. Please check your password.' });
     }
 
     res.json({ 
@@ -96,7 +114,8 @@ export const login = async (req, res) => {
         email: user.email, 
         phone: user.phone, 
         city: user.city,
-        role: user.role
+        role: user.role,
+        ownedSalonId: user.ownedSalonId || null
       }, 
       token: 'mock-token' 
     });

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { login, signup, getUserBookings, cancelBooking } from '../services/api.js';
+import { login, signup, getUserBookings, getSalonBookings, cancelBooking } from '../services/api.js';
 import ReviewModal from '../components/ReviewModal.jsx';
 import './Profile.css';
 
@@ -38,8 +38,13 @@ export default function Profile({ user, setUser }) {
   const fetchUserBookings = async () => {
     setBookingsLoading(true);
     try {
-      const res = await getUserBookings(user.id);
-      setBookings(res.data);
+      if (user.role === 'owner' && user.ownedSalonId) {
+        const res = await getSalonBookings(user.ownedSalonId);
+        setBookings(res.data);
+      } else {
+        const res = await getUserBookings(user.id);
+        setBookings(res.data);
+      }
     } catch (err) {
       // Mock fallback if API has trouble
       console.warn('Booking fetch error, loading mockup data');
@@ -74,20 +79,9 @@ export default function Profile({ user, setUser }) {
       localStorage.setItem('token', data.token);
       localStorage.setItem('user', JSON.stringify(data.user));
       setUser(data.user);
+      setLoginLoading(false);
     } catch (err) {
-      console.warn("Backend login failed, checking local storage / falling back to mock user", err);
-      
-      const mockUser = {
-        id: "mock_user_" + Date.now(),
-        name: loginInput.split('@')[0].replace(/[^a-zA-Z]/g, '') || "Guest User",
-        email: loginMethod === 'email' ? loginInput.trim() : 'guest@valoura.com',
-        phone: loginMethod === 'phone' ? loginInput.trim() : '9876543210',
-        city: 'Mumbai'
-      };
-      
-      localStorage.setItem('user', JSON.stringify(mockUser));
-      setUser(mockUser);
-    } finally {
+      setLoginError(err.response?.data?.message || 'Login failed. Please check your network connection.');
       setLoginLoading(false);
     }
   };
@@ -125,21 +119,9 @@ export default function Profile({ user, setUser }) {
       localStorage.setItem('user', JSON.stringify(data.user));
       setUser(data.user);
       alert('Registration successful!');
+      setSignupLoading(false);
     } catch (err) {
-      console.warn("Backend signup failed, registering locally (offline fallback mode)", err);
-      
-      const mockUser = {
-        id: "mock_user_" + Date.now(),
-        name: signupName.trim(),
-        email: signupMethod === 'email' ? signupInput.trim() : 'guest@valoura.com',
-        phone: signupMethod === 'phone' ? signupInput.trim() : '9876543210',
-        city: signupCity
-      };
-
-      localStorage.setItem('user', JSON.stringify(mockUser));
-      setUser(mockUser);
-      alert('Registration successful (Offline Fallback Mode)!');
-    } finally {
+      setSignupError(err.response?.data?.message || 'Signup failed. Please try again.');
       setSignupLoading(false);
     }
   };
@@ -357,7 +339,7 @@ export default function Profile({ user, setUser }) {
       </div>
 
       <section className="dashboard-section">
-        <h3>📅 Upcoming Appointments</h3>
+        <h3>📅 {user.role === 'owner' ? 'Upcoming Salon Appointments' : 'Upcoming Appointments'}</h3>
         {bookingsLoading ? (
           <p>Loading your appointments...</p>
         ) : upcomingBookings.length === 0 ? (
@@ -371,7 +353,7 @@ export default function Profile({ user, setUser }) {
               return (
                 <div key={id} className="booking-ticket-card">
                   <div className="ticket-header">
-                    <h4>{b.salonName}</h4>
+                    <h4>{user.role === 'owner' ? b.userName || 'Customer' : b.salonName}</h4>
                     <span className="ticket-status upcoming">Confirmed</span>
                   </div>
                   <div className="ticket-details">
@@ -405,7 +387,7 @@ export default function Profile({ user, setUser }) {
 
       <div className="dashboard-two-column">
         <section className="dashboard-section flex-1">
-          <h3>⌛ Past Appointments</h3>
+          <h3>⌛ {user.role === 'owner' ? 'Past Salon Appointments' : 'Past Appointments'}</h3>
           {pastBookings.length === 0 ? (
             <p className="empty-subtext">No past appointment history.</p>
           ) : (
@@ -413,7 +395,7 @@ export default function Profile({ user, setUser }) {
               {pastBookings.map((b) => (
                 <div key={b._id || b.id} className="history-item-row">
                   <div>
-                    <strong>{b.salonName}</strong>
+                    <strong>{user.role === 'owner' ? b.userName || 'Customer' : b.salonName}</strong>
                     <p>{b.date} • {b.services?.join(', ')}</p>
                   </div>
                   <span className="history-badge completed">Past Haircut</span>
@@ -424,7 +406,7 @@ export default function Profile({ user, setUser }) {
         </section>
 
         <section className="dashboard-section flex-1">
-          <h3>❌ Cancelled Bookings</h3>
+          <h3>❌ {user.role === 'owner' ? 'Cancelled Salon Bookings' : 'Cancelled Bookings'}</h3>
           {cancelledBookings.length === 0 ? (
             <p className="empty-subtext">No cancelled appointments.</p>
           ) : (
@@ -432,7 +414,7 @@ export default function Profile({ user, setUser }) {
               {cancelledBookings.map((b) => (
                 <div key={b._id || b.id} className="history-item-row">
                   <div>
-                    <strong>{b.salonName}</strong>
+                    <strong>{user.role === 'owner' ? b.userName || 'Customer' : b.salonName}</strong>
                     <p>{b.date} • {b.services?.join(', ')}</p>
                   </div>
                   <span className="history-badge cancelled">Cancelled</span>
