@@ -106,7 +106,7 @@ User Query: "${query || 'What hairstyle is in the attached image, and where can 
 
 Instructions:
 1. Respond concisely and professionally.
-2. If the user asks for salons near them, closest salons, or mentions location, check the distances provided in the database context and recommend the closest options. Explicitly state the distance (e.g. "Salon X is closest, just 1.5 km away").
+2. If the user asks for salons near them, closest salons, or mentions location, check the distances provided in the database context and recommend the closest options. Explicitly state the exact distance provided in the context (e.g. "Salon X is closest, just X.X km away"). Do NOT hallucinate distances; use ONLY the distance field provided in the context.
 3. If the user attaches a photo, analyze the style/haircut and recommend the best matching services from the database.
 4. If you successfully recommend a specific salon from the database, you MUST output the exact tag [BOOK_SALON: <salon_id>] at the end of your response, replacing <salon_id> with the actual _id/id of the recommended salon. Do not include brackets around the ID itself inside the tag.`;
 
