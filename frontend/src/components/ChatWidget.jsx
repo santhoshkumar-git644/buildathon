@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from 'react';
 import { chatWithAI } from '../services/api.js';
 import { useNavigate } from 'react-router-dom';
 
-export default function ChatWidget({ user, city }) {
+export default function ChatWidget({ user, city, userLocation }) {
   const [isOpen, setIsOpen] = useState(false);
   const [isMaximized, setIsMaximized] = useState(false);
   const [query, setQuery] = useState('');
@@ -11,28 +11,8 @@ export default function ChatWidget({ user, city }) {
   const [conversation, setConversation] = useState([{ sender: 'ai', text: `Hi ${user?.name?.split(' ')[0] || 'there'}! Need help finding the perfect salon in ${city}?` }]);
   const [loading, setLoading] = useState(false);
 
-  // Geolocation states
-  const [latitude, setLatitude] = useState(null);
-  const [longitude, setLongitude] = useState(null);
-  
   const fileInputRef = useRef(null);
   const navigate = useNavigate();
-
-  // Load user geolocation on mount
-  useEffect(() => {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(
-        (position) => {
-          setLatitude(position.coords.latitude);
-          setLongitude(position.coords.longitude);
-          console.log(`[ChatWidget Geolocation] Lat: ${position.coords.latitude}, Lon: ${position.coords.longitude}`);
-        },
-        (err) => {
-          console.warn("[ChatWidget Geolocation] Location unavailable", err);
-        }
-      );
-    }
-  }, []);
 
   const handleImageChange = (e) => {
     const file = e.target.files[0];
@@ -66,8 +46,11 @@ export default function ChatWidget({ user, city }) {
     
     setLoading(true);
 
+    const lat = userLocation ? userLocation.lat : null;
+    const lon = userLocation ? userLocation.lon : null;
+
     try {
-      const res = await chatWithAI(queryToSend, imgToSend, city, latitude, longitude);
+      const res = await chatWithAI(queryToSend, imgToSend, city, lat, lon);
       setConversation([...newChat, { sender: 'ai', text: res.data.reply }]);
     } catch (err) {
       console.warn("Backend chatWithAI failed, running ChatWidget offline fallback", err);
@@ -75,8 +58,11 @@ export default function ChatWidget({ user, city }) {
       let replyText = `I see your message: "${queryToSend}". The database server is currently offline. once you connect MongoDB, I will match you with active salons in ${city}!`;
       const queryLower = queryToSend ? queryToSend.toLowerCase() : '';
       
+      const lat = userLocation ? userLocation.lat : null;
+      const lon = userLocation ? userLocation.lon : null;
+
       if (queryLower.includes('near') || queryLower.includes('close') || queryLower.includes('location') || queryLower.includes('dist')) {
-        replyText = `Based on your geolocation (${latitude ? latitude.toFixed(4) : 'Mock Lat'}, ${longitude ? longitude.toFixed(4) : 'Mock Lon'}), the closest spots in ${city} are 'Classic Cuts Lounge' (1.2 km away) and 'Gold & Gloss Parlour' (2.4 km away). Start MongoDB and backend to retrieve exact listings!`;
+        replyText = `Based on your geolocation (${lat ? lat.toFixed(4) : 'Mock Lat'}, ${lon ? lon.toFixed(4) : 'Mock Lon'}), the closest spots in ${city} are 'Classic Cuts Lounge' (1.2 km away) and 'Gold & Gloss Parlour' (2.4 km away). Start MongoDB and backend to retrieve exact listings!`;
       } else if (imgToSend || queryLower.includes('photo') || queryLower.includes('image') || queryLower.includes('style')) {
         replyText = "That's a fantastic style in the photo! Typically, a style like this in offline mode is estimated at Rs 800 - Rs 1500 depending on the salon packages.";
       } else if (queryLower.includes('men') || queryLower.includes('guy') || queryLower.includes('boy')) {
