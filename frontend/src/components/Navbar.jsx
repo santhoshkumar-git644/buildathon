@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-export default function Navbar({ city, setCity, CITIES, setCities, onToggleSidebar, user }) {
+export default function Navbar({ city, setCity, CITIES, setCities, onToggleSidebar, user, setUserLocation }) {
   const detectLocation = () => {
     if (!navigator.geolocation) {
       alert("Geolocation is not supported by your browser.");
@@ -10,6 +10,8 @@ export default function Navbar({ city, setCity, CITIES, setCities, onToggleSideb
     navigator.geolocation.getCurrentPosition(async (position) => {
       try {
         const { latitude, longitude } = position.coords;
+        if (setUserLocation) setUserLocation({ lat: latitude, lon: longitude });
+        
         const res = await fetch(`https://nominatim.openstreetmap.org/reverse?lat=${latitude}&lon=${longitude}&format=json`);
         const data = await res.json();
         

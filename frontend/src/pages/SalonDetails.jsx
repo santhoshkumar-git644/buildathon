@@ -2,8 +2,9 @@ import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { getSalonById, getSalonReviews, summarizeReviews } from '../services/api.js';
 import ReviewCard from '../components/ReviewCard.jsx';
+import { getSalonCoordinates, calculateDistance } from '../utils/location.js';
 
-export default function SalonDetails() {
+export default function SalonDetails({ userLocation }) {
   const { id } = useParams();
   const [salon, setSalon] = useState(null);
   const [reviews, setReviews] = useState([]);
@@ -51,13 +52,19 @@ export default function SalonDetails() {
   if (loading) return <div>Loading...</div>;
   if (!salon) return <div>Salon not found.</div>;
 
+  let displayDistance = salon.distance;
+  if (userLocation && salon) {
+    const coords = getSalonCoordinates(salon);
+    displayDistance = calculateDistance(userLocation.lat, userLocation.lon, coords.lat, coords.lon);
+  }
+
   return (
     <section className="detail-layout">
       <div className="detail-header">
         <div>
           <h2>{salon.name}</h2>
           <p>{salon.address}</p>
-          <p>{salon.distance} km away • Open {salon.hours}</p>
+          <p>{displayDistance} km away • Open {salon.hours}</p>
         </div>
       </div>
       <section className="section-block">

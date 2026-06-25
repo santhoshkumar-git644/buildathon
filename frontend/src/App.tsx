@@ -25,6 +25,7 @@ function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [user, setUser] = useState(null);
   const [savedIds, setSavedIds] = useState([]);
+  const [userLocation, setUserLocation] = useState(null);
 
   const [cities, setCities] = useState(['Mumbai', 'Delhi', 'Bengaluru', 'Kolkata', 'Chennai', 'Hyderabad', 'Pune']);
 
@@ -84,6 +85,7 @@ function App() {
           setCities={setCities}
           onToggleSidebar={() => setSidebarOpen(prev => !prev)} 
           user={user}
+          setUserLocation={setUserLocation}
         />
         
         <Sidebar 
@@ -95,8 +97,8 @@ function App() {
         
         <div className="app-main-content">
           <Routes>
-            <Route path="/" element={<Home city={city} savedIds={savedIds} onToggleSave={handleToggleSave} user={user} />} />
-            <Route path="/salon/:id" element={<SalonDetails savedIds={savedIds} onToggleSave={handleToggleSave} user={user} />} />
+            <Route path="/" element={<Home city={city} savedIds={savedIds} onToggleSave={handleToggleSave} user={user} userLocation={userLocation} />} />
+            <Route path="/salon/:id" element={<SalonDetails savedIds={savedIds} onToggleSave={handleToggleSave} user={user} userLocation={userLocation} />} />
             <Route path="/booking/:id" element={<Booking user={user} />} />
             <Route path="/profile" element={<Profile user={user} setUser={setUser} />} />
             <Route path="/my-bookings" element={<MyBookings user={user} />} />

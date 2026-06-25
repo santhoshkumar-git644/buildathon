@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
 import { getPersonalizedFeed, getSalons } from '../services/api.js';
 import SalonCard from '../components/SalonCard.jsx';
+import { getSalonCoordinates, calculateDistance } from '../utils/location.js';
 
-export default function Home({ city, savedIds, onToggleSave, user }) {
+export default function Home({ city, savedIds, onToggleSave, user, userLocation }) {
   const [salons, setSalons] = useState([]);
   const [globalSalons, setGlobalSalons] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -168,9 +169,18 @@ export default function Home({ city, savedIds, onToggleSave, user }) {
             return inName || inCity || inArea || inTags || inServices || inStyles;
           });
 
+          const salonsWithDistance = displayedSalons.map(salon => {
+            if (userLocation) {
+              const coords = getSalonCoordinates(salon);
+              const dist = calculateDistance(userLocation.lat, userLocation.lon, coords.lat, coords.lon);
+              return { ...salon, distance: dist };
+            }
+            return salon;
+          });
+
           return (
             <div className="featured-grid">
-              {displayedSalons.length > 0 ? displayedSalons.map(salon => (
+              {salonsWithDistance.length > 0 ? salonsWithDistance.map(salon => (
                 <SalonCard 
                   key={salon._id || salon.id} 
                   salon={salon} 
