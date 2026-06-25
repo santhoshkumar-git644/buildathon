@@ -1,0 +1,121 @@
+.admin-dashboard-container {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.admin-header-banner {
+  background: linear-gradient(135deg, #1f2937, #4b5563);
+  color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.admin-header-banner h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.admin-header-banner p {
+  color: #d1d5db;
+  font-size: 1.1rem;
+}
+
+.admin-bookings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.admin-booking-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-ticket-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px dashed #d1d5db;
+}
+
+.admin-ticket-header h4 {
+  font-size: 1.1rem;
+  color: #111827;
+  margin: 0;
+}
+
+.ticket-status.upcoming {
+  background-color: #fef3c7;
+  color: #92400e;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.admin-ticket-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.admin-ticket-details p {
+  font-size: 0.95rem;
+  color: #4b5563;
+  margin: 0;
+}
+
+.admin-ticket-details strong {
+  color: #111827;
+}
+
+.otp-highlight {
+  color: #4f46e5;
+  font-weight: 700;
+  background-color: #e0e7ff;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+}
+
+.admin-ticket-actions {
+  display: flex;
+  margin-top: auto;
+}
+
+.btn-verify-arrival {
+  background-color: #10b981;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  font-weight: 600;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-size: 1rem;
+}
+
+.btn-verify-arrival:hover {
+  background-color: #059669;
+}
+
+.error-text {
+  color: #ef4444;
+  background-color: #fee2e2;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}

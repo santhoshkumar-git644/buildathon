@@ -79,6 +79,24 @@ export default function Sidebar({ isOpen, onClose, user, onLogout }) {
             <span className="nav-icon">👤</span>
             <span className="nav-label">Profile</span>
           </button>
+
+          {user?.role === 'owner' ? (
+            <button 
+              className={`nav-item ${isActive('/admin-dashboard') ? 'active' : ''}`}
+              onClick={() => handleNav('/admin-dashboard', null)}
+            >
+              <span className="nav-icon">🏢</span>
+              <span className="nav-label">Salon Dashboard</span>
+            </button>
+          ) : (
+            <button 
+              className={`nav-item ${isActive('/admin-register') ? 'active' : ''}`}
+              onClick={() => handleNav('/admin-register', null)}
+            >
+              <span className="nav-icon">🏢</span>
+              <span className="nav-label">Partner With Us</span>
+            </button>
+          )}
         </nav>
 
         <div className="sidebar-footer">

@@ -40,9 +40,38 @@ export const cancelBooking = async (req, res) => {
   }
 };
 
+export const verifyBooking = async (req, res) => {
+  try {
+    const booking = await Booking.findById(req.params.id);
+    if (booking) {
+      // If an OTP is provided in the body, we could verify it here
+      const { otp } = req.body;
+      if (otp && booking.otp && otp !== booking.otp) {
+        return res.status(400).json({ message: 'Invalid Verification OTP' });
+      }
+      booking.status = 'past'; // Mark as completed/past
+      const updatedBooking = await booking.save();
+      res.json(updatedBooking);
+    } else {
+      res.status(404).json({ message: 'Booking not found' });
+    }
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
 export const getSalonBookings = async (req, res) => {
   try {
     const bookings = await Booking.find({ salonId: req.params.salonId, status: 'upcoming' });
+    res.json(bookings);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
+export const getAllBookings = async (req, res) => {
+  try {
+    const bookings = await Booking.find();
     res.json(bookings);
   } catch (error) {
     res.status(500).json({ message: error.message });

@@ -9,6 +9,8 @@ import Profile from './pages/Profile.jsx';
 import SavedSalons from './pages/SavedSalons.jsx';
 import ChatbotPage from './pages/ChatbotPage.jsx';
 import MyBookings from './pages/MyBookings.jsx';
+import AdminRegister from './pages/AdminRegister.jsx';
+import AdminDashboard from './pages/AdminDashboard.jsx';
 import ChatWidget from './components/ChatWidget.jsx';
 import { toggleSaveSalonDB, fetchSavedSalonsDB } from './services/api.js';
 
@@ -100,6 +102,8 @@ function App() {
             <Route path="/my-bookings" element={<MyBookings user={user} />} />
             <Route path="/saved-salons" element={<SavedSalons savedIds={savedIds} onToggleSave={handleToggleSave} city={city} />} />
             <Route path="/chatbot" element={<ChatbotPage city={city} />} />
+            <Route path="/admin-register" element={<AdminRegister />} />
+            <Route path="/admin-dashboard" element={<AdminDashboard user={user} />} />
           </Routes>
         </div>
 

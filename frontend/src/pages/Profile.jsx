@@ -346,7 +346,12 @@ export default function Profile({ user, setUser }) {
             </p>
           </div>
         </div>
-        <button className="btn-logout-dashboard ghost" onClick={() => setUser(null)}>
+        <button className="btn-logout-dashboard ghost" onClick={() => {
+          localStorage.removeItem('token');
+          localStorage.removeItem('user');
+          setUser(null);
+          alert('Logged out successfully.');
+        }}>
           Logout 🚪
         </button>
       </div>

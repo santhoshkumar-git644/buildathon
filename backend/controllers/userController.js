@@ -50,9 +50,20 @@ export const getSavedSalons = async (req, res) => {
 export const signup = async (req, res) => {
   try {
     const { name, email, phone, city, password } = req.body;
-    const newUser = new User({ name, email, phone, city, passwordHash: password }); // Skipping bcrypt for mock
+    const newUser = new User({ name, email, phone, city, passwordHash: password, role: 'customer' }); 
     await newUser.save();
-    res.status(201).json({ user: { id: newUser._id, name, email, phone, city } });
+    res.status(201).json({ user: { id: newUser._id, name, email, phone, city, role: newUser.role } });
+  } catch (err) {
+    res.status(400).json({ message: err.message });
+  }
+};
+
+export const ownerSignup = async (req, res) => {
+  try {
+    const { name, email, phone, city, password } = req.body;
+    const newUser = new User({ name, email, phone, city, passwordHash: password, role: 'owner' }); 
+    await newUser.save();
+    res.status(201).json({ user: { id: newUser._id, name, email, phone, city, role: newUser.role } });
   } catch (err) {
     res.status(400).json({ message: err.message });
   }
@@ -84,7 +95,8 @@ export const login = async (req, res) => {
         name: user.name, 
         email: user.email, 
         phone: user.phone, 
-        city: user.city
+        city: user.city,
+        role: user.role
       }, 
       token: 'mock-token' 
     });
