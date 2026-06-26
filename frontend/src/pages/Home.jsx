@@ -59,8 +59,8 @@ export default function Home({ city, savedIds, onToggleSave, user }) {
           
           {!searchQuery && (
             <div className="animate-slide-up">
-              <h1 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.5rem)', fontWeight: 800, lineHeight: 1.1, marginBottom: '24px' }}>
-                Book the Best Salons in {city} <br/><span style={{ color: 'var(--brand)' }}>Instantly</span>
+              <h1 className="text-gradient" style={{ fontSize: 'clamp(1.5rem, 3vw, 2.5rem)', fontWeight: 800, lineHeight: 1.1, marginBottom: '24px' }}>
+                Book the Best Salons in {city} <br/><span style={{ color: '#fff' }}>Instantly</span>
               </h1>
               <p style={{ fontSize: '1.2rem', color: '#b0b6c2', marginBottom: '40px', lineHeight: 1.6, maxWidth: '500px' }}>
                 Discover top-rated salons, book premium services, and experience the ultimate grooming journey tailored just for you.
