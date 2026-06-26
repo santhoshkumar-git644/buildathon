@@ -14,10 +14,10 @@ import AdminDashboard from './pages/AdminDashboard.jsx';
 import ChatWidget from './components/ChatWidget.jsx';
 import { toggleSaveSalonDB, fetchSavedSalonsDB } from './services/api.js';
 
-function ConditionalChatWidget({ user, city }) {
+function ConditionalChatWidget({ user, city, userLocation }) {
   const location = useLocation();
   if (location.pathname === '/chatbot') return null;
-  return <ChatWidget user={user} city={city} />;
+  return <ChatWidget user={user} city={city} userLocation={userLocation} />;
 }
 
 function App() {
@@ -25,6 +25,7 @@ function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [user, setUser] = useState(null);
   const [savedIds, setSavedIds] = useState([]);
+  const [userLocation, setUserLocation] = useState(null);
 
   const [cities, setCities] = useState(['Mumbai', 'Delhi', 'Bengaluru', 'Kolkata', 'Chennai', 'Hyderabad', 'Pune']);
 
@@ -84,6 +85,7 @@ function App() {
           setCities={setCities}
           onToggleSidebar={() => setSidebarOpen(prev => !prev)} 
           user={user}
+          setUserLocation={setUserLocation}
         />
         
         <Sidebar 
@@ -95,19 +97,19 @@ function App() {
         
         <div className="app-main-content">
           <Routes>
-            <Route path="/" element={<Home city={city} savedIds={savedIds} onToggleSave={handleToggleSave} user={user} />} />
-            <Route path="/salon/:id" element={<SalonDetails savedIds={savedIds} onToggleSave={handleToggleSave} user={user} />} />
+            <Route path="/" element={<Home city={city} savedIds={savedIds} onToggleSave={handleToggleSave} user={user} userLocation={userLocation} />} />
+            <Route path="/salon/:id" element={<SalonDetails savedIds={savedIds} onToggleSave={handleToggleSave} user={user} userLocation={userLocation} />} />
             <Route path="/booking/:id" element={<Booking user={user} />} />
             <Route path="/profile" element={<Profile user={user} setUser={setUser} />} />
             <Route path="/my-bookings" element={<MyBookings user={user} />} />
             <Route path="/saved-salons" element={<SavedSalons savedIds={savedIds} onToggleSave={handleToggleSave} city={city} />} />
-            <Route path="/chatbot" element={<ChatbotPage city={city} />} />
+            <Route path="/chatbot" element={<ChatbotPage city={city} userLocation={userLocation} />} />
             <Route path="/admin-register" element={<AdminRegister />} />
             <Route path="/admin-dashboard" element={<AdminDashboard user={user} />} />
           </Routes>
         </div>
 
-        <ConditionalChatWidget user={user} city={city} />
+        <ConditionalChatWidget user={user} city={city} userLocation={userLocation} />
       </div>
     </BrowserRouter>
   );

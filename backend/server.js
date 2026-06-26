@@ -96,7 +96,33 @@ connectDB().then(async () => {
       
       // Migration step: ensure admins exist for all salons if they weren't created or were partially created
       const adminCount = await User.countDocuments({ role: 'owner' });
-      const currentSalonCount = await Salon.countDocuments();
+      let currentSalonCount = await Salon.countDocuments();
+      
+      // Ensure Classic Cuts Lounge exists (if they used an older database)
+      const classicCutsExists = await Salon.findOne({ name: 'Classic Cuts Lounge' });
+      if (!classicCutsExists) {
+        console.log('Classic Cuts Lounge is missing! Adding it now...');
+        const classicSalon = new Salon({
+          salonId: 'SAL-AI-001',
+          name: 'Classic Cuts Lounge',
+          city: 'Hyderabad',
+          area: 'Banjara Hills',
+          rating: 4.8,
+          reviewCount: 320,
+          distance: 1.5,
+          tags: ["Men's Salon", "Premium", "Hair Styling"],
+          address: 'Road No 12, Banjara Hills, Hyderabad',
+          hours: '10:00 AM - 09:00 PM',
+          images: ['https://images.unsplash.com/photo-1595476108010-b4d1f10d5e43?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'],
+          services: [
+            { name: 'Classic Fade', duration: 45, price: 800, category: 'Hair' },
+            { name: 'Beard Grooming', duration: 30, price: 400, category: 'Beard' }
+          ]
+        });
+        await classicSalon.save();
+        currentSalonCount += 1;
+      }
+
       if (adminCount < currentSalonCount) {
         console.log(`Found only ${adminCount} admins for ${currentSalonCount} salons. Regenerating admin accounts...`);
         // Clean up any partial inserts

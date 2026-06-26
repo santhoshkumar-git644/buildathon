@@ -1,9 +1,10 @@
 import { useState, useRef, useEffect } from 'react';
 import { chatWithAI, getSalons } from '../services/api.js';
 import { Link } from 'react-router-dom';
+import { getSalonCoordinates, calculateDistance } from '../utils/location.js';
 import './ChatbotPage.css';
 
-export default function ChatbotPage({ city }) {
+export default function ChatbotPage({ city, userLocation }) {
   const [messages, setMessages] = useState([
     {
       id: 1,
@@ -15,10 +16,6 @@ export default function ChatbotPage({ city }) {
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
   
-  // Geolocation state
-  const [latitude, setLatitude] = useState(null);
-  const [longitude, setLongitude] = useState(null);
-
   // Image Upload state
   const [imagePreview, setImagePreview] = useState(null);
   const [imageBase64, setImageBase64] = useState(null);
@@ -41,22 +38,6 @@ export default function ChatbotPage({ city }) {
   useEffect(() => {
     scrollToBottom();
   }, [messages]);
-
-  // Request browser geolocation on mount
-  useEffect(() => {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(
-        (position) => {
-          setLatitude(position.coords.latitude);
-          setLongitude(position.coords.longitude);
-          console.log(`[Geolocation] Location loaded: Lat ${position.coords.latitude}, Lon ${position.coords.longitude}`);
-        },
-        (error) => {
-          console.warn("[Geolocation] Permission denied or unavailable.", error);
-        }
-      );
-    }
-  }, []);
 
   const handleImageChange = (e) => {
     const file = e.target.files[0];
@@ -95,9 +76,12 @@ export default function ChatbotPage({ city }) {
     
     setLoading(true);
 
+    const lat = userLocation ? userLocation.lat : null;
+    const lon = userLocation ? userLocation.lon : null;
+
     try {
       // Fetch recommendation from API (passing image and geolocation)
-      const res = await chatWithAI(queryText, currentImgBase64, city, latitude, longitude);
+      const res = await chatWithAI(queryText, currentImgBase64, city, lat, lon);
       const rawReply = res.data.reply || '';
       
       // Extract [BOOK_SALON:id] tags
@@ -112,6 +96,15 @@ export default function ChatbotPage({ city }) {
       if (salonIds.length > 0) {
         const { data: allSalons } = await import('../services/api.js').then(m => m.getSalons());
         recommendedSalonsList = allSalons.filter(s => salonIds.includes(String(s.id || s._id)));
+        
+        // Add dynamic distance if location is available
+        if (userLocation) {
+          recommendedSalonsList = recommendedSalonsList.map(s => {
+            const coords = getSalonCoordinates(s);
+            const dist = calculateDistance(userLocation.lat, userLocation.lon, coords.lat, coords.lon);
+            return { ...s, distance: dist };
+          });
+        }
       }
 
       // Add AI reply
@@ -131,7 +124,7 @@ export default function ChatbotPage({ city }) {
 
       const queryLower = queryText.toLowerCase();
       if (queryLower.includes('near') || queryLower.includes('close') || queryLower.includes('location') || queryLower.includes('map') || queryLower.includes('address') || queryLower.includes('dist')) {
-        replyText = `Based on your location coordinates (${latitude ? latitude.toFixed(4) : 'Mock Lat'}, ${longitude ? longitude.toFixed(4) : 'Mock Lon'}), the closest salons in ${city} are:\n1. Classic Cuts Lounge (1.2 km away)\n2. Gold & Gloss Parlour (2.4 km away)\n\nYou can book appointments at any of these spots directly.`;
+        replyText = `Based on your location coordinates (${lat ? lat.toFixed(4) : 'Mock Lat'}, ${lon ? lon.toFixed(4) : 'Mock Lon'}), the closest salons in ${city} are:\n1. Classic Cuts Lounge (1.2 km away)\n2. Gold & Gloss Parlour (2.4 km away)\n\nYou can book appointments at any of these spots directly.`;
       } else if (currentImgBase64 || queryLower.includes('photo') || queryLower.includes('image') || queryLower.includes('look') || queryLower.includes('style')) {
         replyText = "That is a gorgeous style! In offline mode, I cannot run deep analysis on the photo, but this layered texture and styling would look incredible on you. Usually, matching services like styling, wash, and blow dry cost around Rs 800 - Rs 1200.";
       } else if (queryLower.includes('men') || queryLower.includes('guy') || queryLower.includes('boy')) {
@@ -189,7 +182,7 @@ export default function ChatbotPage({ city }) {
                             </div>
                             <p>{s.address || s.city}</p>
                             <div className="chat-salon-footer">
-                              <span>📍 {s.distance || '2.5'} km away</span>
+                              <span>📍 {s.distance ? typeof s.distance === 'number' ? s.distance.toFixed(1) : s.distance : '2.5'} km away</span>
                               <Link to={`/salon/${s.id || s._id}`} className="chat-salon-btn">
                                 Book Now
                               </Link>
